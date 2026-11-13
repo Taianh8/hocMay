@@ -1,0 +1,8 @@
+# Fixed V2 choices; no new tuning. PCA seeds vary on identical folds.
+cv_folds: 5
+fold_seed: 42
+pca_seeds: [42, 7, 123]
+models:
+  E1: {feature: pixels, params: {n_neighbors: 1}}
+  E4: {feature: h8_hsv, params: {n_neighbors: 5, metric: euclidean, weights: distance}}
+  E6: {feature: h8_hsv, pca_components: 128, pca_iterated_power: 3, params: {n_neighbors: 3, metric: cosine, weights: distance}}
