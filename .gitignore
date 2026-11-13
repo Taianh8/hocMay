@@ -12,3 +12,5 @@ results/models/*
 results/notebooks/
 
 .cache/
+
+results/v2/

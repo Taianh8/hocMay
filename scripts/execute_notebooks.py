@@ -9,7 +9,7 @@ root = Path(__file__).resolve().parents[1]
 out = root / 'results' / 'notebooks'
 out.mkdir(parents=True, exist_ok=True)
 records = []
-for path in sorted((root / 'notebooks').glob('[0-8][0-9]_*.ipynb')):
+for path in sorted((root / 'notebooks').glob('0[0-8]_*.ipynb')):
     print(f'Executing {path.name}', flush=True)
     start = perf_counter()
     notebook = nbformat.read(path, as_version=4)
