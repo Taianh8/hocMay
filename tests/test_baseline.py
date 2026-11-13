@@ -49,3 +49,12 @@ def test_search_fits_only_train(monkeypatch):
     train = np.array([[1], [2]]); val = np.array([[99]])
     search(train, np.array([0, 0]), val, np.array([0]), {}, 42)
     assert len(calls) == 1 and np.array_equal(calls[0][0], train)
+
+def test_macro_and_weighted_metrics():
+    from src.evaluation import metrics
+    result = metrics(np.array([0, 0, 1]), np.array([0, 1, 1]))
+    assert result['accuracy'] == pytest.approx(2 / 3)
+    assert result['weighted_precision'] == pytest.approx(5 / 6)
+    assert result['weighted_recall'] == pytest.approx(2 / 3)
+    assert result['weighted_f1'] == pytest.approx(2 / 3)
+    assert result['macro_f1'] == pytest.approx((2 / 3 + 2 / 3) / 102)

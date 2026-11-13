@@ -8,3 +8,7 @@ results/figures/*
 results/metrics/*
 results/models/*
 !**/.gitkeep
+
+results/notebooks/
+
+.cache/
