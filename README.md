@@ -104,3 +104,34 @@ Verified validation results from this machine:
 Timings are machine-dependent. PCA times include a shared 128-component fit and are not per-candidate search costs; V2 feature extraction took 7.82 s for all four variants on 2,040 images, excluding cache hashing/I/O. V1 feature extraction time was not recorded, so these are not comparable end-to-end runtimes. Exact values and full candidate timings are in `results/v2/metrics/`. E6 improves validation macro F1 by 0.1212 absolute over E1; this is a validation result after searching configurations, not an estimate of test improvement. HSV variants outperformed their corresponding RGB variants in these searches; HOG cell size 8 versus 16 was nearly tied for the best HSV configurations. More analysis is needed before attributing individual errors to visual causes.
 
 V2 plots and validation error examples are under `results/v2/figures/`; prediction tables, confusion counts and matrices under `results/v2/metrics/`; models under `results/v2/models/`. These generated files and large datasets remain ignored by Git. See `reports/V2_HANDOFF.md` for limitations and next steps.
+
+## V3: train-only robustness and final-evaluation protocol
+
+Run V3 after V2 artifacts exist, using the pinned environment and single-thread settings above:
+
+```bash
+python -m src.pipeline_v3
+python -m scripts.check_v3_artifacts
+python -m pytest -q
+python scripts/execute_v3_notebook.py
+```
+
+V3 reads the official split metadata, only train images for features, and saved validation predictions plus selected validation images for error analysis. It does not read or predict on test images. It preserves the existing V1/V2 outputs and writes to Git-ignored `results/v3/`. It verifies each re-extracted train HOG + HSV feature against the V2 cache before CV. Jupyter kernel execution needs local loopback. See [V3 handoff](reports/V3_HANDOFF.md) and `configs/experiments_v3.yaml` for the exact fixed models and complete protocol.
+
+The fixed E1, E4 and E6 configurations use the same five shuffled, stratified folds of official train (seed 42), with 816 fit and 204 holdout images per fold; each holdout has two images per class. PCA is fitted within each E6 training fold. E6 is repeated using PCA randomized-solver seeds 42, 7 and 123 on identical folds; E1 and E4 have no stochastic estimator to seed. No hyperparameters are selected from CV or from test. Means and population standard deviations below describe the five folds, which have overlapping training sets and are **not** independent replicates or confidence intervals.
+
+| Fixed model | PCA seed | Fold macro F1 | Mean ± fold SD |
+|---|---:|---|---:|
+| E1 | — | .0814, .1042, .0842, .0712, .0975 | .0877 ± .0118 |
+| E4 | — | .1660, .1960, .2074, .1750, .1817 | .1852 ± .0148 |
+| E6 | 42 | .1584, .1906, .1998, .2178, .1992 | .1932 ± .0195 |
+| E6 | 7 | .1666, .1993, .2120, .2102, .1910 | .1958 ± .0165 |
+| E6 | 123 | .1593, .1995, .2081, .2194, .1987 | .1970 ± .0203 |
+
+The configurations were selected using the separate validation set, so these fixed-model CV results do not evaluate the full hyperparameter-selection procedure. They also use only 8 train examples per class in each fold rather than 10 for the V2 model. The E6 versus E4 gap with PCA seed 42 is about 0.0080 macro F1; fold variation is larger than that gap and cannot establish that E6 generalizes better. The 56-candidate validation search and subsequent validation analysis create selection optimism. No V2/V3 test evaluation has been performed; V1 E1 test results were previously inspected, so the official test is not a fully untouched holdout for the project as a whole.
+
+`results/v3/metrics/` includes CV fold IDs, predictions, seed summaries, per-class precision/recall/F1 for E4–E6, directed confusion counts and provenance hashes. For E6, 22 classes have zero validation F1; each class has only ten validation samples. The most frequent directed errors are class 24 → 11 and 94 → 32 (four each). In the saved examples, class 24 flowers are red/pink against green leaves; class 94 images include both close crops and a smaller flower cluster on a dark background. These are observable image differences; whether color, background, lighting, scale or shape caused errors is untested. `results/v3/figures/` contains class scores, example images and the CV comparison.
+
+Mean fold-level measurements on this machine, single-threaded, for 816 training and 204 holdout images: E1 fit 0.0082 s / predict 0.0580 s / mean isolated-worker peak RSS 343.8 MiB; E4 0.0040 s / 0.0234 s / 214.1 MiB; E6 seed 42 PCA-fit-plus-train-transform and K-NN fit 0.0278 s / holdout transform plus predict 0.0026 s / 217.0 MiB. These process peaks include Python, imports, the entire train feature matrix and temporary arrays; they are not model size or standalone inference memory. Timings exclude feature extraction and disk loading. In a separate train-image pass, decoding/resizing/normalizing 1,020 images took 2.271 s total, pixels 0.002 s, HOG + HSV 1.161 s; disk/cache and machine conditions affect these measurements.
+
+For a future final evaluation, freeze E6 and its V2 configuration, including train-only randomized PCA seed 42, **before** any new test predictions. Keep training on the official 1,020 train images for comparability; predeclare metrics and error analysis, then perform at most one explicitly authorized test evaluation, report all outcomes, and do not select or retune using them. A different training policy, such as adding validation to training, requires a separately frozen protocol and changes comparability. Because V1 test feedback was already seen, disclose that exposure and prefer a genuinely new independent holdout when a stronger generalization claim is needed.
