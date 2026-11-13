@@ -1,0 +1,1 @@
+"""Oxford Flowers baseline pipeline."""

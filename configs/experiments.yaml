@@ -1,0 +1,10 @@
+seed: 42
+image_size: 64
+hog:
+  orientations: 9
+  pixels_per_cell: 8
+  cells_per_block: 2
+experiments:
+  E1: {features: pixels, model: knn, neighbors: [1, 3, 5]}
+  E2: {features: hog, model: knn, neighbors: [1, 3, 5]}
+  E3: {features: hog, model: tree, max_depth: [10, 20, null], min_samples_leaf: [1, 5]}
