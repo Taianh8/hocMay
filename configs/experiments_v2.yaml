@@ -1,0 +1,24 @@
+seed: 42
+image_size: 64
+histogram_bins: 16
+hog_variants:
+  h8: {orientations: 9, pixels_per_cell: 8, cells_per_block: 2}
+  h16: {orientations: 9, pixels_per_cell: 16, cells_per_block: 2}
+feature_variants:
+  - {id: h8_rgb, hog: h8, color: rgb}
+  - {id: h8_hsv, hog: h8, color: hsv}
+  - {id: h16_rgb, hog: h16, color: rgb}
+  - {id: h16_hsv, hog: h16, color: hsv}
+knn:
+  - {n_neighbors: 1, metric: euclidean, weights: uniform}
+  - {n_neighbors: 3, metric: euclidean, weights: distance}
+  - {n_neighbors: 5, metric: euclidean, weights: distance}
+  - {n_neighbors: 3, metric: cosine, weights: distance}
+pca_components: [64, 128]
+# PCA fits 128 randomized components once per feature set; 64 uses their prefix.
+pca_max_components: 128
+pca_iterated_power: 3
+experiments:
+  E4: {variants: [h8_rgb, h8_hsv, h16_rgb, h16_hsv], pca: false}
+  E5: {variants: [pixels], pca: true}
+  E6: {variants: [h8_rgb, h8_hsv, h16_rgb, h16_hsv], pca: true}
