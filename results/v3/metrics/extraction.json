@@ -1,0 +1,6 @@
+{
+  "samples": 1020,
+  "shared_decode_resize_normalize_seconds": 2.2712569539871765,
+  "pixel_vector_seconds": 0.001994058997297543,
+  "hog_hsv_seconds": 1.1609312929831503
+}

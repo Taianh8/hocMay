@@ -1,0 +1,26 @@
+{
+  "experiment": "E1",
+  "params": {
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "metric": "minkowski",
+    "metric_params": null,
+    "n_jobs": 1,
+    "n_neighbors": 1,
+    "p": 2,
+    "weights": "uniform"
+  },
+  "validation_metrics": {
+    "accuracy": 0.10882352941176471,
+    "macro_precision": 0.13398851878969367,
+    "macro_recall": 0.10882352941176471,
+    "macro_f1": 0.09143167238933733,
+    "weighted_precision": 0.13398851878969364,
+    "weighted_recall": 0.10882352941176471,
+    "weighted_f1": 0.0914316723893373
+  },
+  "selection_rule": "highest validation macro F1; accuracy tie-break; config order final tie-break",
+  "model_sha256": "ff3838e46f2f57be99eb833e0e5e08932edc87ee6fc61678c664bcddaaba4ed9",
+  "config_sha256": "a4bb0f8a5ad4aa4262c83bd0c3734994ca80122d9fadb057a5bb3deffe21fbb1",
+  "feature_signature": "72f15fc3ddbd0c5522c773346947cb6cd04045f9665585569118f0d73bfa85a5"
+}

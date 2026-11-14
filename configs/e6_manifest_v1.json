@@ -1,0 +1,82 @@
+{
+  "manifest_version": 1,
+  "experiment": "E6",
+  "selection": {
+    "validation_macro_f1": 0.21266311022542148,
+    "validation_accuracy": 0.23431372549019608,
+    "rule": "validation macro F1, then accuracy, then listed order",
+    "final_test": "pending; no V2/V3/V4 test evaluation"
+  },
+  "dataset": {
+    "name": "Oxford 102 Flowers",
+    "images": 8189,
+    "classes": 102,
+    "splits": {
+      "train": 1020,
+      "validation": 1020,
+      "test": 6149
+    },
+    "mapping": "official class ID = internal predicted index + 1"
+  },
+  "preprocessing": {
+    "mode": "RGB",
+    "size": [
+      64,
+      64
+    ],
+    "resampling": "Pillow bilinear",
+    "normalization": "float32 / 255",
+    "exif_transpose": false
+  },
+  "features": {
+    "variant": "h8_hsv",
+    "orientations": 9,
+    "pixels_per_cell": 8,
+    "cells_per_block": 2,
+    "block_norm": "L2-Hys",
+    "histogram_bins_per_channel": 16,
+    "block_normalization": "each block L2 normalized; concatenated equal weight",
+    "input_dimensions": 1812
+  },
+  "pca": {
+    "components": 128,
+    "svd_solver": "randomized",
+    "iterated_power": 3,
+    "random_seed": 42,
+    "training_samples": 1020
+  },
+  "knn": {
+    "n_neighbors": 3,
+    "metric": "cosine",
+    "weights": "distance",
+    "n_jobs": 1,
+    "training_samples": 1020
+  },
+  "python": "3.11.15",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "scikit-image": "0.26.0",
+    "Pillow": "11.3.0"
+  },
+  "sha256": {
+    "configs/experiments_v2.yaml": "152bf41c062950e696517346cff66f87ab1cec4a7ce150ffecbc9350c4944018",
+    "src/preprocessing.py": "851b4f518c5d68b61897941765e700112d085fd049fc3a849264da4880c0bd10",
+    "src/features_v2.py": "38cbcb7ebfca7dd6704fd5eaa223a8f6d2dfb699e595a75ae4e697003b5dc29b",
+    "results/v2/metrics/comparison.json": "21e97caade45311a10eb15f48e8150a83e543099417a47ebd0b6e126bc814187",
+    "results/v2/models/E6.pkl": "781b53eb565e804327b2a9a09ae2b6a6822ba75714bcc05b9db1d7bf40f7ab61",
+    "data/raw/102flowers.tgz": "2d01ecc807db462958cfe3d92f57a8c252b4abd240eb955770201e45f783b246",
+    "data/raw/imagelabels.mat": "4903e94206bac23bf772aadf06451916df56b58fc483a62db32a97b82656651d",
+    "data/raw/setid.mat": "46b8678f91fd95d3c8f4feab80d271a6c834a1dd896fe29fd3e6ad9ce5c8dccd",
+    "requirements-lock.txt": "661903f6349378180f7c889d9524734ff92df9474721fd2ecb19e72603c37f0c",
+    "requirements-v4-lock.txt": "2f7324af2ddea607063ccf3a9fc1422ec8f500e06c45fb81a203b178f75a008d",
+    "data/processed/features_v2.npz": "c52a686769d52aafdc1b2d129c493d6c85349d0907d3d71f314254dd17bc0d97",
+    "data/processed/features_v2.json": "dbe36eb2509554f76e49b0ef8726ef507c2e85b3aa0fb6e261e3ade79aed353c",
+    "results/v2/metrics/E6_validation_predictions.csv": "187df6e2fc4fa2668b7f0bee4a789470c8ef83a49b733261a45b026d0cd4b12d",
+    "results/v3/metrics/cv_summary.json": "7d5e29f6fdd0866d91503b36232a19cb13958ef13bb90ffd9d1e2e55510511ac"
+  },
+  "model_artifact": "results/v2/models/E6.pkl",
+  "trust": "Local trusted pickle only; matching hashes detect accidental changes, not an attacker who can replace both manifest and model.",
+  "complete_dependency_lock": "requirements-v4-lock.txt"
+}

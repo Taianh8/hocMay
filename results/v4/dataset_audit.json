@@ -1,0 +1,31 @@
+{
+  "image_count": 8189,
+  "classes": 102,
+  "split_counts": {
+    "test": 6149,
+    "train": 1020,
+    "val": 1020
+  },
+  "image_modes": {
+    "RGB": 8189
+  },
+  "files_and_decoding": "all expected image files decoded and verified",
+  "method": "SHA-256 of file bytes and decoded RGB pixels (dimensions included); 64-bit DCT pHash of grayscale 32x32, median of 63 non-DC low frequencies",
+  "phash_hamming_threshold": 4,
+  "cross_split_pairs_considered": 13584360,
+  "candidate_pairs": 8,
+  "candidate_pairs_by_split": {
+    "train-test": 2,
+    "train-val": 1,
+    "val-test": 5
+  },
+  "exact_file_pairs": 2,
+  "exact_decoded_rgb_pairs": 2,
+  "different_label_pairs": 0,
+  "dataset_sha256": {
+    "102flowers.tgz": "2d01ecc807db462958cfe3d92f57a8c252b4abd240eb955770201e45f783b246",
+    "imagelabels.mat": "4903e94206bac23bf772aadf06451916df56b58fc483a62db32a97b82656651d",
+    "setid.mat": "46b8678f91fd95d3c8f4feab80d271a6c834a1dd896fe29fd3e6ad9ce5c8dccd"
+  },
+  "candidate_csv_sha256": "fee65ad2fb60a800f55d5b96f6ca0a00362e683ce8024fe61aceb45bde192bf6"
+}

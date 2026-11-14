@@ -1,6 +1,14 @@
 # Oxford 102 Flowers — classical ML baseline
 
-Classify the Oxford 102 Flowers images using the official split and three reproducible classical ML experiments. This is a university course foundation, not a completed academic report. The results below are from the verified V1 run described in the handoff.
+Classify the Oxford 102 Flowers images using classical machine learning and the official dataset split. V1–V4 include validation experiments, train-only robustness analysis and a frozen E6 demo. The academic report remains a draft; E6 final test evaluation has not been authorized or run. For the concise handoff, see [HANDOFF.md](HANDOFF.md).
+
+## Repository layout
+
+- `notebooks/`: original V1 notebooks and V2/V3 analysis notebooks.
+- `src/`, `configs/`, `scripts/`, `tests/`: shared pipelines, experiment settings, verification and tests.
+- `data/`: local official raw dataset and feature caches; excluded from Git.
+- `results/`: metrics, figures, models and execution evidence. Selected compact CSV/JSON files are eligible for tracking; bulky models, figures and execution outputs remain ignored.
+- `reports/`: audit and historical handoffs, plus the LaTeX draft. `app.py` is the local Streamlit demo.
 
 ## Data
 
@@ -32,21 +40,20 @@ The image files must be `data/raw/jpg/image_00001.jpg` through `image_08189.jpg`
 
 ## Setup and reproduce
 
-Use Python 3.11 or 3.12; create an isolated environment and install the pinned versions recorded from Python 3.11.15 on macOS arm64:
+Use Python 3.11; create an isolated environment and install the pinned versions verified with Python 3.11.15 on macOS arm64:
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-lock.txt
+python -m pip install -r requirements-v4-lock.txt
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg
 export MPLCONFIGDIR="$PWD/.cache/matplotlib"
 python -m pytest -q
-python -m src.pipeline all
-python scripts/execute_notebooks.py
-jupyter notebook
+python -m scripts.check_v4_audit
+python scripts/verify_v4_notebooks.py
 ```
 
-Run notebooks `00` through `08` in order from the project root or `notebooks/`. They share the same implementation as the CLI. Running `python -m src.pipeline all` produces the same stages without running the notebooks. Individual stages are `data`, `eda`, `preprocess`, `features`, `train`, `evaluate`, `errors`, `sanity`; training requires a feature cache and evaluation requires a saved selection. The CLI automatically builds or verifies the cache for training, evaluation and sanity. Notebook execution requires local loopback sockets for the Jupyter kernel; executed copies and a status log are written to `results/notebooks/`. The first run reads and verifies every image, then extracts features; it may take significant time and disk space. The cache hashes image contents and settings to prevent stale reuse. The full resolved dependency set is in `requirements-lock.txt`; wheels and floating-point behavior may differ across platforms. `requirements.txt` retains compatible ranges for future upgrades.
+**Caution:** V1 notebook `05_evaluation.ipynb`, `python scripts/execute_notebooks.py`, and `python -m src.pipeline all` rerun the historical V1 test evaluation. Do not run them during routine QA or without authorization; they also overwrite generated V1 artifacts. The V4 notebook verification command checks retained V1 execution copies and executes only the read-only V2/V3 report notebooks. The complete V4 tests require the retained trusted model, data, feature cache and validation artifacts described below. Individual stages are `data`, `eda`, `preprocess`, `features`, `train`, `evaluate`, `errors`, `sanity`; training requires a feature cache and evaluation requires a saved selection. The CLI automatically builds or verifies the cache for training, evaluation and sanity. Notebook execution requires local loopback sockets for the Jupyter kernel; executed copies and a status log are written to `results/notebooks/`. The first run reads and verifies every image, then extracts features; it may take significant time and disk space. The cache hashes image contents and settings to prevent stale reuse. The V1–V3 dependency set is in `requirements-lock.txt`; V4, including Streamlit, is in `requirements-v4-lock.txt`. Wheels and floating-point behavior may differ across platforms. `requirements.txt` retains compatible ranges for future upgrades.
 
 ## Experiments and methodology
 
@@ -60,7 +67,7 @@ Resize to 64×64 RGB with bilinear interpolation and normalize to [0,1]. Pixel v
 
 ## Files and results
 
-`src/` contains shared loading, preprocessing, features, models, metrics, and staged orchestration. `notebooks/` documents each stage. `tests/` covers critical invariants. Generated data stays out of Git: `data/processed/features.npz` is a content-keyed cache; `results/metrics/` contains metadata, validation search, selection, test metrics, predictions and confusion counts; `results/figures/` contains EDA, preprocessing, confusion and error plots; `results/models/selected_model.pkl` stores the selected estimator. Pickle files must only be loaded from trusted local sources. The model and cache checksums bind artifacts to configuration and source content. The run on Python 3.11.15/macOS arm64 produced the following validation results (best configuration per experiment):
+`src/` contains shared loading, preprocessing, features, models, metrics, and staged orchestration. `notebooks/` documents each stage. `tests/` covers critical invariants. Raw data, feature caches and binary models stay out of Git; compact result tables and JSON records are eligible for tracking: `data/processed/features.npz` is a content-keyed cache; `results/metrics/` contains metadata, validation search, selection, test metrics, predictions and confusion counts; `results/figures/` contains EDA, preprocessing, confusion and error plots; `results/models/selected_model.pkl` stores the selected estimator. Pickle files must only be loaded from trusted local sources. The model and cache checksums bind artifacts to configuration and source content. The run on Python 3.11.15/macOS arm64 produced the following validation results (best configuration per experiment):
 
 | Experiment | Parameters | Accuracy | Macro F1 |
 |---|---|---:|---:|
@@ -76,17 +83,16 @@ No official class-name mapping is supplied here. Figure interpretation is delibe
 
 ## V2: feature engineering and validation-only selection
 
-V2 retains V1 configuration and artifacts, and uses `configs/experiments_v2.yaml` and `results/v2/` separately. It evaluates only the official train and validation splits for V2; no V2 model has been evaluated on test. The existing test result above is V1 E1 only. With the environment already set up as above, reproduce and verify:
+V2 retains V1 configuration and artifacts, and uses `configs/experiments_v2.yaml` and `results/v2/` separately. It evaluates only the official train and validation splits for V2; no V2 model has been evaluated on test. The existing test result above is V1 E1 only. The commands below regenerate V2 and can overwrite its historical outputs; use an isolated copy to reproduce them:
 
 ```bash
 python -m src.pipeline_v2
 python -m scripts.check_v2_artifacts
 python -m pytest -q
-python scripts/verify_v2_notebooks.py v1
-python scripts/verify_v2_notebooks.py v2
+python scripts/verify_v4_notebooks.py
 ```
 
-The verification runner routes V1 notebook outputs into `results/v2/notebook_v1_check/` so that original V1 artifacts are not overwritten; its executed notebook copies and execution records are in `results/v2/notebooks/`. Jupyter requires loopback sockets. The V2 feature cache `data/processed/features_v2.npz` contains train and validation only, with content/config/code/version signatures. V1 baseline search is recomputed and each candidate's validation score and parameters compared to saved V1 records; a mismatch aborts. The checksum check script loads only trusted local pickle files.
+V4 notebook verification checks the retained isolated V1 execution copies in `results/v2/notebooks/`, then runs the report-only V2/V3 notebooks into `results/v4/notebooks/`; it does not rerun V1 test evaluation. Jupyter requires loopback sockets. The V2 feature cache `data/processed/features_v2.npz` contains train and validation only, with content/config/code/version signatures. V1 baseline search is recomputed and each candidate's validation score and parameters compared to saved V1 records; a mismatch aborts. The checksum check script loads only trusted local pickle files.
 
 E4 concatenates independently L2-normalized grayscale HOG and RGB or HSV per-channel histograms (16 bins/channel), giving equal block weights. Two HOG cell sizes are tried: 8 and 16 pixels, with 9 orientations and 2×2 blocks. E5 uses normalized RGB pixels plus PCA. E6 applies PCA to each HOG + color variant. PCA is fit and centered using **train only**, without whitening or feature standardization. For efficiency, one randomized 128-component PCA is fitted per feature set (seed 42, 3 power iterations); the 64-component candidate uses the first 64 components of that fit. This need not equal fitting a separate randomized 64-component PCA. The four K-NN settings are listed explicitly in the YAML; the bounded V2 search has 56 candidates. Hyperparameters and model family are selected by validation macro F1, then accuracy, then configuration order; no test feedback is used. For a saved PCA model, use `pca.transform(X)[:, :record['pca_components']]` before K-NN prediction.
 
@@ -107,7 +113,7 @@ V2 plots and validation error examples are under `results/v2/figures/`; predicti
 
 ## V3: train-only robustness and final-evaluation protocol
 
-Run V3 after V2 artifacts exist, using the pinned environment and single-thread settings above:
+To reproduce V3 after V2 artifacts exist, use an isolated copy so historical V3 outputs are not overwritten, with the pinned environment and single-thread settings above:
 
 ```bash
 python -m src.pipeline_v3
@@ -116,7 +122,7 @@ python -m pytest -q
 python scripts/execute_v3_notebook.py
 ```
 
-V3 reads the official split metadata, only train images for features, and saved validation predictions plus selected validation images for error analysis. It does not read or predict on test images. It preserves the existing V1/V2 outputs and writes to Git-ignored `results/v3/`. It verifies each re-extracted train HOG + HSV feature against the V2 cache before CV. Jupyter kernel execution needs local loopback. See [V3 handoff](reports/V3_HANDOFF.md) and `configs/experiments_v3.yaml` for the exact fixed models and complete protocol.
+V3 reads the official split metadata, only train images for features, and saved validation predictions plus selected validation images for error analysis. It does not read or predict on test images. It preserves the existing V1/V2 outputs and writes V3 outputs under `results/v3/`; selected compact metrics are eligible for Git tracking. It verifies each re-extracted train HOG + HSV feature against the V2 cache before CV. Jupyter kernel execution needs local loopback. See [V3 handoff](reports/V3_HANDOFF.md) and `configs/experiments_v3.yaml` for the exact fixed models and complete protocol.
 
 The fixed E1, E4 and E6 configurations use the same five shuffled, stratified folds of official train (seed 42), with 816 fit and 204 holdout images per fold; each holdout has two images per class. PCA is fitted within each E6 training fold. E6 is repeated using PCA randomized-solver seeds 42, 7 and 123 on identical folds; E1 and E4 have no stochastic estimator to seed. No hyperparameters are selected from CV or from test. Means and population standard deviations below describe the five folds, which have overlapping training sets and are **not** independent replicates or confidence intervals.
 
@@ -135,3 +141,30 @@ The configurations were selected using the separate validation set, so these fix
 Mean fold-level measurements on this machine, single-threaded, for 816 training and 204 holdout images: E1 fit 0.0082 s / predict 0.0580 s / mean isolated-worker peak RSS 343.8 MiB; E4 0.0040 s / 0.0234 s / 214.1 MiB; E6 seed 42 PCA-fit-plus-train-transform and K-NN fit 0.0278 s / holdout transform plus predict 0.0026 s / 217.0 MiB. These process peaks include Python, imports, the entire train feature matrix and temporary arrays; they are not model size or standalone inference memory. Timings exclude feature extraction and disk loading. In a separate train-image pass, decoding/resizing/normalizing 1,020 images took 2.271 s total, pixels 0.002 s, HOG + HSV 1.161 s; disk/cache and machine conditions affect these measurements.
 
 For a future final evaluation, freeze E6 and its V2 configuration, including train-only randomized PCA seed 42, **before** any new test predictions. Keep training on the official 1,020 train images for comparability; predeclare metrics and error analysis, then perform at most one explicitly authorized test evaluation, report all outcomes, and do not select or retune using them. A different training policy, such as adding validation to training, requires a separately frozen protocol and changes comparability. Because V1 test feedback was already seen, disclose that exposure and prefer a genuinely new independent holdout when a stronger generalization claim is needed.
+
+## V4: integrity audit and frozen E6 demo
+
+V4 preserves the original V1–V3 artifacts. The cross-split duplicate audit found two byte-identical pairs, including train image 7307 and test image 7309, plus six additional candidates with perceptual-hash Hamming distance ≤4. The official split remains unchanged. The methodology, all eight pairs and limitations are in [V4_DATASET_AUDIT.md](reports/V4_DATASET_AUDIT.md); generated evidence is in `results/v4/`. The audit accessed test images for duplicate detection but did not run a new test evaluation. Combined with the previously observed V1 test result, this means the official test is not a fully independent, untouched holdout.
+
+Install the V4 environment and verify the locally retained artifacts:
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-v4-lock.txt
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg
+export MPLCONFIGDIR="$PWD/.cache/matplotlib"
+python -m pytest -q
+python -m scripts.check_v4_audit
+python -m scripts.verify_v4_notebooks
+python -m src.inference data/raw/jpg/image_06765.jpg
+streamlit run app.py --server.address 127.0.0.1
+```
+
+The CLI smoke image is from the official train split. The test suite checks the trained E6 artifact against train features and a saved validation prediction; it requires the official data, V2 feature cache, saved V2 validation predictions and original E6 model locally. Notebook QA verifies retained V1 execution copies and reruns only the V2/V3 report notebooks; it does not execute V1 notebook 05, which would evaluate test. Jupyter and the GUI need loopback access.
+
+The demo accepts JPEG/PNG up to 10 MiB and 20 megapixels and returns an official class ID from 1 to 102. It shows neither calibrated confidence nor a voting score. It uses the same RGB conversion, bilinear resize, HOG/HSV feature extraction, train-fitted PCA and K-NN as E6. E6 validation macro F1 is 0.2127 versus E4's 0.2003; the small CV gap and validation-selection bias limit any claim that E6 generalizes better. V2/V3/V4 final E6 test evaluation remains pending.
+
+`configs/e6_manifest_v1.json` records dataset/model hashes, split policy, preprocessing, PCA seed and dependency versions. The 1.4 MiB `results/v2/models/E6.pkl`, datasets, caches and binary figures are **not in Git**; selected small result tables are available for review and tracking. Back up and restore the original trusted model and its matching manifest before using the demo on another machine; installing dependencies alone does not restore it. Pickle can execute code. Only use a trusted model and trusted manifest; a matching hash cannot authenticate two maliciously replaced files. The app caches the loaded model; restart it after restoring or changing artifacts. If V2 is independently regenerated, its pickle may differ because run metadata is serialized. Do not replace the original artifact or manifest; generate and review a new versioned manifest in an isolated copy using `python -m scripts.freeze_e6 --output configs/e6_manifest_v2.json`, then explicitly use that trusted manifest with the CLI `--manifest` option or `FLOWERS_MODEL_MANIFEST` for the app. The versioned manifest freezes an artifact; it is not evidence of a new test evaluation.
+
+The academic LaTeX source `reports/latex/main.tex` is not present; the project owner chose to keep it removed. The earlier verified draft PDF remains at `results/v4/qa2/main.pdf`, and its E6 final-test section is pending. Team details and final academic review are still required. The PDF and figures are local, Git-ignored outputs. Contribution rules are in [CONTRIBUTING.md](CONTRIBUTING.md), and final handoff is in [V4_HANDOFF.md](reports/V4_HANDOFF.md).

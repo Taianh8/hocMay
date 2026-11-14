@@ -1,0 +1,15 @@
+{
+  "experiment": "E1",
+  "split": "test",
+  "metrics": {
+    "accuracy": 0.10570824524312897,
+    "macro_precision": 0.12745195191835829,
+    "macro_recall": 0.1051910923381206,
+    "macro_f1": 0.08069688954425631,
+    "weighted_precision": 0.16205151115787553,
+    "weighted_recall": 0.10570824524312897,
+    "weighted_f1": 0.08526887796864217
+  },
+  "predict_seconds": 0.9875928339997699,
+  "model_sha256": "ff3838e46f2f57be99eb833e0e5e08932edc87ee6fc61678c664bcddaaba4ed9"
+}

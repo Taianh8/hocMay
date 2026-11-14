@@ -1,0 +1,1514 @@
+[
+  {
+    "experiment": "E4",
+    "variant": "h8_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.1392156862745098,
+    "val_macro_f1": 0.13001793472890869,
+    "validation_metrics": {
+      "accuracy": 0.1392156862745098,
+      "macro_precision": 0.16769366893295673,
+      "macro_recall": 0.1392156862745098,
+      "macro_f1": 0.13001793472890869,
+      "weighted_precision": 0.1676936689329567,
+      "weighted_recall": 0.1392156862745098,
+      "weighted_f1": 0.1300179347289087
+    },
+    "fit_seconds": 0.0009945840001819306,
+    "val_predict_seconds": 0.02593558300031873,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.14411764705882352,
+    "val_macro_f1": 0.1322302352983308,
+    "validation_metrics": {
+      "accuracy": 0.14411764705882352,
+      "macro_precision": 0.16886096563543124,
+      "macro_recall": 0.14411764705882354,
+      "macro_f1": 0.1322302352983308,
+      "weighted_precision": 0.1688609656354312,
+      "weighted_recall": 0.14411764705882352,
+      "weighted_f1": 0.13223023529833078
+    },
+    "fit_seconds": 0.000713999999788939,
+    "val_predict_seconds": 0.0319864580005742,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.15294117647058825,
+    "val_macro_f1": 0.1363806991624254,
+    "validation_metrics": {
+      "accuracy": 0.15294117647058825,
+      "macro_precision": 0.17028667174758505,
+      "macro_recall": 0.15294117647058822,
+      "macro_f1": 0.1363806991624254,
+      "weighted_precision": 0.17028667174758505,
+      "weighted_recall": 0.15294117647058825,
+      "weighted_f1": 0.13638069916242543
+    },
+    "fit_seconds": 0.0007079999995767139,
+    "val_predict_seconds": 0.0297337920001155,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.14411764705882352,
+    "val_macro_f1": 0.1322302352983308,
+    "validation_metrics": {
+      "accuracy": 0.14411764705882352,
+      "macro_precision": 0.16886096563543124,
+      "macro_recall": 0.14411764705882354,
+      "macro_f1": 0.1322302352983308,
+      "weighted_precision": 0.1688609656354312,
+      "weighted_recall": 0.14411764705882352,
+      "weighted_f1": 0.13223023529833078
+    },
+    "fit_seconds": 0.0007711250000284053,
+    "val_predict_seconds": 0.02185241600000154,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.19901960784313724,
+    "val_macro_f1": 0.18698074821403826,
+    "validation_metrics": {
+      "accuracy": 0.19901960784313724,
+      "macro_precision": 0.2165840537083412,
+      "macro_recall": 0.19901960784313732,
+      "macro_f1": 0.18698074821403826,
+      "weighted_precision": 0.2165840537083411,
+      "weighted_recall": 0.19901960784313724,
+      "weighted_f1": 0.18698074821403826
+    },
+    "fit_seconds": 0.0009073329993043444,
+    "val_predict_seconds": 0.023675667000134126,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.2107843137254902,
+    "val_macro_f1": 0.19712251955009233,
+    "validation_metrics": {
+      "accuracy": 0.2107843137254902,
+      "macro_precision": 0.22909794935334749,
+      "macro_recall": 0.21078431372549022,
+      "macro_f1": 0.19712251955009233,
+      "weighted_precision": 0.22909794935334749,
+      "weighted_recall": 0.2107843137254902,
+      "weighted_f1": 0.19712251955009238
+    },
+    "fit_seconds": 0.0007264160003614961,
+    "val_predict_seconds": 0.030769832999794744,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.21862745098039216,
+    "val_macro_f1": 0.20028070441946505,
+    "validation_metrics": {
+      "accuracy": 0.21862745098039216,
+      "macro_precision": 0.24165243174557616,
+      "macro_recall": 0.21862745098039219,
+      "macro_f1": 0.20028070441946505,
+      "weighted_precision": 0.2416524317455762,
+      "weighted_recall": 0.21862745098039216,
+      "weighted_f1": 0.20028070441946508
+    },
+    "fit_seconds": 0.0007747919999019359,
+    "val_predict_seconds": 0.029623750000610016,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h8_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 1812,
+    "val_accuracy": 0.2107843137254902,
+    "val_macro_f1": 0.19712251955009233,
+    "validation_metrics": {
+      "accuracy": 0.2107843137254902,
+      "macro_precision": 0.22909794935334749,
+      "macro_recall": 0.21078431372549022,
+      "macro_f1": 0.19712251955009233,
+      "weighted_precision": 0.22909794935334749,
+      "weighted_recall": 0.2107843137254902,
+      "weighted_f1": 0.19712251955009238
+    },
+    "fit_seconds": 0.0007399999994959217,
+    "val_predict_seconds": 0.016617624999526015,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.15294117647058825,
+    "val_macro_f1": 0.14525210426260485,
+    "validation_metrics": {
+      "accuracy": 0.15294117647058825,
+      "macro_precision": 0.17083630317044401,
+      "macro_recall": 0.15294117647058822,
+      "macro_f1": 0.14525210426260485,
+      "weighted_precision": 0.17083630317044401,
+      "weighted_recall": 0.15294117647058825,
+      "weighted_f1": 0.14525210426260485
+    },
+    "fit_seconds": 0.0004433330004758318,
+    "val_predict_seconds": 0.006549875000018801,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.15784313725490196,
+    "val_macro_f1": 0.14661033729879294,
+    "validation_metrics": {
+      "accuracy": 0.15784313725490196,
+      "macro_precision": 0.17571817079617785,
+      "macro_recall": 0.15784313725490198,
+      "macro_f1": 0.14661033729879294,
+      "weighted_precision": 0.17571817079617785,
+      "weighted_recall": 0.15784313725490196,
+      "weighted_f1": 0.146610337298793
+    },
+    "fit_seconds": 0.00044587499996850966,
+    "val_predict_seconds": 0.008585083000070881,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.1676470588235294,
+    "val_macro_f1": 0.1507504273108717,
+    "validation_metrics": {
+      "accuracy": 0.1676470588235294,
+      "macro_precision": 0.1768526692175408,
+      "macro_recall": 0.16764705882352945,
+      "macro_f1": 0.1507504273108717,
+      "weighted_precision": 0.17685266921754075,
+      "weighted_recall": 0.1676470588235294,
+      "weighted_f1": 0.15075042731087174
+    },
+    "fit_seconds": 0.0004175829999439884,
+    "val_predict_seconds": 0.009095291000448924,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_rgb",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.1588235294117647,
+    "val_macro_f1": 0.14811536821558857,
+    "validation_metrics": {
+      "accuracy": 0.1588235294117647,
+      "macro_precision": 0.17772351838976072,
+      "macro_recall": 0.15882352941176472,
+      "macro_f1": 0.14811536821558857,
+      "weighted_precision": 0.17772351838976072,
+      "weighted_recall": 0.1588235294117647,
+      "weighted_f1": 0.1481153682155886
+    },
+    "fit_seconds": 0.0004195829997115652,
+    "val_predict_seconds": 0.008801417000540823,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.2088235294117647,
+    "val_macro_f1": 0.19138163114615372,
+    "validation_metrics": {
+      "accuracy": 0.2088235294117647,
+      "macro_precision": 0.2014470938079927,
+      "macro_recall": 0.20882352941176474,
+      "macro_f1": 0.19138163114615372,
+      "weighted_precision": 0.20144709380799267,
+      "weighted_recall": 0.2088235294117647,
+      "weighted_f1": 0.19138163114615372
+    },
+    "fit_seconds": 0.0004234589996485738,
+    "val_predict_seconds": 0.0068248329998823465,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.21176470588235294,
+    "val_macro_f1": 0.19304260697807493,
+    "validation_metrics": {
+      "accuracy": 0.21176470588235294,
+      "macro_precision": 0.20388484169325152,
+      "macro_recall": 0.211764705882353,
+      "macro_f1": 0.19304260697807493,
+      "weighted_precision": 0.2038848416932515,
+      "weighted_recall": 0.21176470588235294,
+      "weighted_f1": 0.19304260697807493
+    },
+    "fit_seconds": 0.00042270800076948944,
+    "val_predict_seconds": 0.008209707999412785,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.2235294117647059,
+    "val_macro_f1": 0.20022124331090982,
+    "validation_metrics": {
+      "accuracy": 0.2235294117647059,
+      "macro_precision": 0.21534531112398406,
+      "macro_recall": 0.22352941176470592,
+      "macro_f1": 0.20022124331090982,
+      "weighted_precision": 0.21534531112398406,
+      "weighted_recall": 0.2235294117647059,
+      "weighted_f1": 0.20022124331090982
+    },
+    "fit_seconds": 0.0004230410004311125,
+    "val_predict_seconds": 0.008858167000653339,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E4",
+    "variant": "h16_hsv",
+    "pca_components": null,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 372,
+    "val_accuracy": 0.21176470588235294,
+    "val_macro_f1": 0.19304260697807493,
+    "validation_metrics": {
+      "accuracy": 0.21176470588235294,
+      "macro_precision": 0.20388484169325152,
+      "macro_recall": 0.211764705882353,
+      "macro_f1": 0.19304260697807493,
+      "weighted_precision": 0.2038848416932515,
+      "weighted_recall": 0.21176470588235294,
+      "weighted_f1": 0.19304260697807493
+    },
+    "fit_seconds": 0.0004260420000719023,
+    "val_predict_seconds": 0.008854415999849152,
+    "pca_fit_seconds": 0.0,
+    "pca_val_transform_seconds": 0.0
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 64,
+    "val_accuracy": 0.1323529411764706,
+    "val_macro_f1": 0.12058424658432869,
+    "validation_metrics": {
+      "accuracy": 0.1323529411764706,
+      "macro_precision": 0.15922231859761551,
+      "macro_recall": 0.1323529411764706,
+      "macro_f1": 0.12058424658432869,
+      "weighted_precision": 0.15922231859761551,
+      "weighted_recall": 0.1323529411764706,
+      "weighted_f1": 0.12058424658432867
+    },
+    "fit_seconds": 0.00048270800016325666,
+    "val_predict_seconds": 0.0033397090001017204,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 64,
+    "val_accuracy": 0.1323529411764706,
+    "val_macro_f1": 0.11658319240955897,
+    "validation_metrics": {
+      "accuracy": 0.1323529411764706,
+      "macro_precision": 0.15520406529320327,
+      "macro_recall": 0.1323529411764706,
+      "macro_f1": 0.11658319240955897,
+      "weighted_precision": 0.15520406529320327,
+      "weighted_recall": 0.1323529411764706,
+      "weighted_f1": 0.11658319240955896
+    },
+    "fit_seconds": 0.000369040999430581,
+    "val_predict_seconds": 0.0051563340002758196,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 64,
+    "val_accuracy": 0.13431372549019607,
+    "val_macro_f1": 0.11089800822838804,
+    "validation_metrics": {
+      "accuracy": 0.13431372549019607,
+      "macro_precision": 0.14251065253295714,
+      "macro_recall": 0.13431372549019607,
+      "macro_f1": 0.11089800822838804,
+      "weighted_precision": 0.14251065253295714,
+      "weighted_recall": 0.13431372549019607,
+      "weighted_f1": 0.11089800822838805
+    },
+    "fit_seconds": 0.0003786249999393476,
+    "val_predict_seconds": 0.005451374999211112,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 64,
+    "val_accuracy": 0.15,
+    "val_macro_f1": 0.13335149794144086,
+    "validation_metrics": {
+      "accuracy": 0.15,
+      "macro_precision": 0.14960631264756666,
+      "macro_recall": 0.15000000000000002,
+      "macro_f1": 0.13335149794144086,
+      "weighted_precision": 0.14960631264756666,
+      "weighted_recall": 0.15,
+      "weighted_f1": 0.13335149794144086
+    },
+    "fit_seconds": 0.0003373750005266629,
+    "val_predict_seconds": 0.007660084000235656,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 128,
+    "val_accuracy": 0.12156862745098039,
+    "val_macro_f1": 0.10617178858622899,
+    "validation_metrics": {
+      "accuracy": 0.12156862745098039,
+      "macro_precision": 0.15196882211299745,
+      "macro_recall": 0.12156862745098039,
+      "macro_f1": 0.10617178858622899,
+      "weighted_precision": 0.15196882211299742,
+      "weighted_recall": 0.12156862745098039,
+      "weighted_f1": 0.10617178858622899
+    },
+    "fit_seconds": 0.0003688750002766028,
+    "val_predict_seconds": 0.004026374999739346,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 128,
+    "val_accuracy": 0.12450980392156863,
+    "val_macro_f1": 0.10674186938340076,
+    "validation_metrics": {
+      "accuracy": 0.12450980392156863,
+      "macro_precision": 0.15318290621545785,
+      "macro_recall": 0.12450980392156862,
+      "macro_f1": 0.10674186938340076,
+      "weighted_precision": 0.15318290621545783,
+      "weighted_recall": 0.12450980392156863,
+      "weighted_f1": 0.10674186938340076
+    },
+    "fit_seconds": 0.0003701659998114337,
+    "val_predict_seconds": 0.005969541000013123,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 128,
+    "val_accuracy": 0.12058823529411765,
+    "val_macro_f1": 0.09989174220576157,
+    "validation_metrics": {
+      "accuracy": 0.12058823529411765,
+      "macro_precision": 0.14325490936148927,
+      "macro_recall": 0.12058823529411763,
+      "macro_f1": 0.09989174220576157,
+      "weighted_precision": 0.14325490936148927,
+      "weighted_recall": 0.12058823529411765,
+      "weighted_f1": 0.09989174220576158
+    },
+    "fit_seconds": 0.00034058300025208155,
+    "val_predict_seconds": 0.006116708000263316,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E5",
+    "variant": "pixels",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 12288,
+    "model_dimensions": 128,
+    "val_accuracy": 0.14607843137254903,
+    "val_macro_f1": 0.12728548071584972,
+    "validation_metrics": {
+      "accuracy": 0.14607843137254903,
+      "macro_precision": 0.15466411924106863,
+      "macro_recall": 0.146078431372549,
+      "macro_f1": 0.12728548071584972,
+      "weighted_precision": 0.1546641192410686,
+      "weighted_recall": 0.14607843137254903,
+      "weighted_f1": 0.12728548071584972
+    },
+    "fit_seconds": 0.00037149999934626976,
+    "val_predict_seconds": 0.0075161249997108825,
+    "pca_fit_seconds": 0.2007449999991877,
+    "pca_val_transform_seconds": 0.01105429200015351
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.1607843137254902,
+    "val_macro_f1": 0.1536021129454357,
+    "validation_metrics": {
+      "accuracy": 0.1607843137254902,
+      "macro_precision": 0.179159551147291,
+      "macro_recall": 0.16078431372549026,
+      "macro_f1": 0.1536021129454357,
+      "weighted_precision": 0.17915955114729099,
+      "weighted_recall": 0.1607843137254902,
+      "weighted_f1": 0.15360211294543566
+    },
+    "fit_seconds": 0.0004633329999705893,
+    "val_predict_seconds": 0.003319833999739785,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.1676470588235294,
+    "val_macro_f1": 0.15613581912502586,
+    "validation_metrics": {
+      "accuracy": 0.1676470588235294,
+      "macro_precision": 0.18337862682997638,
+      "macro_recall": 0.16764705882352945,
+      "macro_f1": 0.15613581912502586,
+      "weighted_precision": 0.1833786268299764,
+      "weighted_recall": 0.1676470588235294,
+      "weighted_f1": 0.1561358191250259
+    },
+    "fit_seconds": 0.0003728749998117564,
+    "val_predict_seconds": 0.005144291999386041,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.16176470588235295,
+    "val_macro_f1": 0.14787597405727246,
+    "validation_metrics": {
+      "accuracy": 0.16176470588235295,
+      "macro_precision": 0.1838294676870732,
+      "macro_recall": 0.16176470588235298,
+      "macro_f1": 0.14787597405727246,
+      "weighted_precision": 0.1838294676870732,
+      "weighted_recall": 0.16176470588235295,
+      "weighted_f1": 0.14787597405727243
+    },
+    "fit_seconds": 0.00037695799983339384,
+    "val_predict_seconds": 0.0055110419998527505,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.17647058823529413,
+    "val_macro_f1": 0.16256622306608617,
+    "validation_metrics": {
+      "accuracy": 0.17647058823529413,
+      "macro_precision": 0.17313382657686183,
+      "macro_recall": 0.17647058823529416,
+      "macro_f1": 0.16256622306608617,
+      "weighted_precision": 0.17313382657686183,
+      "weighted_recall": 0.17647058823529413,
+      "weighted_f1": 0.16256622306608617
+    },
+    "fit_seconds": 0.00036383299993758556,
+    "val_predict_seconds": 0.0075907919999735896,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.15098039215686274,
+    "val_macro_f1": 0.1436250510523275,
+    "validation_metrics": {
+      "accuracy": 0.15098039215686274,
+      "macro_precision": 0.17163586856759017,
+      "macro_recall": 0.15098039215686276,
+      "macro_f1": 0.1436250510523275,
+      "weighted_precision": 0.17163586856759017,
+      "weighted_recall": 0.15098039215686274,
+      "weighted_f1": 0.1436250510523275
+    },
+    "fit_seconds": 0.00036616700072045205,
+    "val_predict_seconds": 0.0039060000008248608,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.15588235294117647,
+    "val_macro_f1": 0.14576348803837022,
+    "validation_metrics": {
+      "accuracy": 0.15588235294117647,
+      "macro_precision": 0.17384269661163967,
+      "macro_recall": 0.15588235294117647,
+      "macro_f1": 0.14576348803837022,
+      "weighted_precision": 0.17384269661163965,
+      "weighted_recall": 0.15588235294117647,
+      "weighted_f1": 0.14576348803837022
+    },
+    "fit_seconds": 0.0003573750000214204,
+    "val_predict_seconds": 0.005747125000198139,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.16372549019607843,
+    "val_macro_f1": 0.15304829970550224,
+    "validation_metrics": {
+      "accuracy": 0.16372549019607843,
+      "macro_precision": 0.18885683912485834,
+      "macro_recall": 0.16372549019607846,
+      "macro_f1": 0.15304829970550224,
+      "weighted_precision": 0.18885683912485837,
+      "weighted_recall": 0.16372549019607843,
+      "weighted_f1": 0.1530482997055022
+    },
+    "fit_seconds": 0.00041945800057874294,
+    "val_predict_seconds": 0.006336833000204933,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.1784313725490196,
+    "val_macro_f1": 0.16164861938461444,
+    "validation_metrics": {
+      "accuracy": 0.1784313725490196,
+      "macro_precision": 0.17024197916458375,
+      "macro_recall": 0.17843137254901964,
+      "macro_f1": 0.16164861938461444,
+      "weighted_precision": 0.17024197916458372,
+      "weighted_recall": 0.1784313725490196,
+      "weighted_f1": 0.16164861938461447
+    },
+    "fit_seconds": 0.0003791250001086155,
+    "val_predict_seconds": 0.007706416000473837,
+    "pca_fit_seconds": 0.02799558300011995,
+    "pca_val_transform_seconds": 0.001098082999305916
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.21764705882352942,
+    "val_macro_f1": 0.20408101284771782,
+    "validation_metrics": {
+      "accuracy": 0.21764705882352942,
+      "macro_precision": 0.21247603341766833,
+      "macro_recall": 0.21764705882352947,
+      "macro_f1": 0.20408101284771782,
+      "weighted_precision": 0.2124760334176683,
+      "weighted_recall": 0.21764705882352942,
+      "weighted_f1": 0.2040810128477178
+    },
+    "fit_seconds": 0.0004230839995216229,
+    "val_predict_seconds": 0.0033007080000970745,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.2284313725490196,
+    "val_macro_f1": 0.21259333362561234,
+    "validation_metrics": {
+      "accuracy": 0.2284313725490196,
+      "macro_precision": 0.22139402123813376,
+      "macro_recall": 0.22843137254901968,
+      "macro_f1": 0.21259333362561234,
+      "weighted_precision": 0.22139402123813373,
+      "weighted_recall": 0.2284313725490196,
+      "weighted_f1": 0.21259333362561234
+    },
+    "fit_seconds": 0.0003411249999771826,
+    "val_predict_seconds": 0.004870499999924505,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.22156862745098038,
+    "val_macro_f1": 0.20109004296369248,
+    "validation_metrics": {
+      "accuracy": 0.22156862745098038,
+      "macro_precision": 0.20798898500749557,
+      "macro_recall": 0.22156862745098044,
+      "macro_f1": 0.20109004296369248,
+      "weighted_precision": 0.20798898500749555,
+      "weighted_recall": 0.22156862745098038,
+      "weighted_f1": 0.20109004296369248
+    },
+    "fit_seconds": 0.00035974999991594814,
+    "val_predict_seconds": 0.005343958000594284,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 64,
+    "val_accuracy": 0.22941176470588234,
+    "val_macro_f1": 0.20844578206631803,
+    "validation_metrics": {
+      "accuracy": 0.22941176470588234,
+      "macro_precision": 0.20547821624052098,
+      "macro_recall": 0.2294117647058824,
+      "macro_f1": 0.20844578206631803,
+      "weighted_precision": 0.20547821624052096,
+      "weighted_recall": 0.22941176470588234,
+      "weighted_f1": 0.208445782066318
+    },
+    "fit_seconds": 0.0003335410001454875,
+    "val_predict_seconds": 0.007939041000099678,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.2088235294117647,
+    "val_macro_f1": 0.19694483625869152,
+    "validation_metrics": {
+      "accuracy": 0.2088235294117647,
+      "macro_precision": 0.21068760161389793,
+      "macro_recall": 0.20882352941176477,
+      "macro_f1": 0.19694483625869152,
+      "weighted_precision": 0.21068760161389793,
+      "weighted_recall": 0.2088235294117647,
+      "weighted_f1": 0.19694483625869152
+    },
+    "fit_seconds": 0.00037195799995970447,
+    "val_predict_seconds": 0.004287499999918509,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.22058823529411764,
+    "val_macro_f1": 0.20735298589784537,
+    "validation_metrics": {
+      "accuracy": 0.22058823529411764,
+      "macro_precision": 0.22173747021882684,
+      "macro_recall": 0.22058823529411772,
+      "macro_f1": 0.20735298589784537,
+      "weighted_precision": 0.2217374702188268,
+      "weighted_recall": 0.22058823529411764,
+      "weighted_f1": 0.20735298589784545
+    },
+    "fit_seconds": 0.00034070899982907576,
+    "val_predict_seconds": 0.005748042000050191,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.22549019607843138,
+    "val_macro_f1": 0.20525810634837602,
+    "validation_metrics": {
+      "accuracy": 0.22549019607843138,
+      "macro_precision": 0.22307832653103093,
+      "macro_recall": 0.22549019607843143,
+      "macro_f1": 0.20525810634837602,
+      "weighted_precision": 0.22307832653103093,
+      "weighted_recall": 0.22549019607843138,
+      "weighted_f1": 0.20525810634837605
+    },
+    "fit_seconds": 0.0004240829994159867,
+    "val_predict_seconds": 0.006437041000026511,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h8_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 1812,
+    "model_dimensions": 128,
+    "val_accuracy": 0.23431372549019608,
+    "val_macro_f1": 0.21266311022542148,
+    "validation_metrics": {
+      "accuracy": 0.23431372549019608,
+      "macro_precision": 0.21877009927114643,
+      "macro_recall": 0.23431372549019613,
+      "macro_f1": 0.21266311022542148,
+      "weighted_precision": 0.2187700992711464,
+      "weighted_recall": 0.23431372549019608,
+      "weighted_f1": 0.21266311022542148
+    },
+    "fit_seconds": 0.0003925000000890577,
+    "val_predict_seconds": 0.007888375000220549,
+    "pca_fit_seconds": 0.02793641700009175,
+    "pca_val_transform_seconds": 0.0015705830001024879
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.16176470588235295,
+    "val_macro_f1": 0.15160447827244944,
+    "validation_metrics": {
+      "accuracy": 0.16176470588235295,
+      "macro_precision": 0.1659458897927434,
+      "macro_recall": 0.16176470588235298,
+      "macro_f1": 0.15160447827244944,
+      "weighted_precision": 0.1659458897927434,
+      "weighted_recall": 0.16176470588235295,
+      "weighted_f1": 0.15160447827244947
+    },
+    "fit_seconds": 0.0004123329999856651,
+    "val_predict_seconds": 0.003291666999757581,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.16862745098039217,
+    "val_macro_f1": 0.15586346744234392,
+    "validation_metrics": {
+      "accuracy": 0.16862745098039217,
+      "macro_precision": 0.17145245392870026,
+      "macro_recall": 0.1686274509803922,
+      "macro_f1": 0.15586346744234392,
+      "weighted_precision": 0.17145245392870026,
+      "weighted_recall": 0.16862745098039217,
+      "weighted_f1": 0.15586346744234392
+    },
+    "fit_seconds": 0.00036087500029680086,
+    "val_predict_seconds": 0.005156750000423926,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.17058823529411765,
+    "val_macro_f1": 0.15081291958766788,
+    "validation_metrics": {
+      "accuracy": 0.17058823529411765,
+      "macro_precision": 0.16868369153451945,
+      "macro_recall": 0.1705882352941177,
+      "macro_f1": 0.15081291958766788,
+      "weighted_precision": 0.16868369153451948,
+      "weighted_recall": 0.17058823529411765,
+      "weighted_f1": 0.1508129195876679
+    },
+    "fit_seconds": 0.0003525419997458812,
+    "val_predict_seconds": 0.005866416000571917,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.17647058823529413,
+    "val_macro_f1": 0.16092567945245684,
+    "validation_metrics": {
+      "accuracy": 0.17647058823529413,
+      "macro_precision": 0.16790653297585592,
+      "macro_recall": 0.17647058823529418,
+      "macro_f1": 0.16092567945245684,
+      "weighted_precision": 0.1679065329758559,
+      "weighted_recall": 0.17647058823529413,
+      "weighted_f1": 0.16092567945245687
+    },
+    "fit_seconds": 0.0003717909994520596,
+    "val_predict_seconds": 0.0077170410004328005,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.1568627450980392,
+    "val_macro_f1": 0.1475440005346494,
+    "validation_metrics": {
+      "accuracy": 0.1568627450980392,
+      "macro_precision": 0.17499870474321091,
+      "macro_recall": 0.1568627450980392,
+      "macro_f1": 0.1475440005346494,
+      "weighted_precision": 0.1749987047432109,
+      "weighted_recall": 0.1568627450980392,
+      "weighted_f1": 0.1475440005346494
+    },
+    "fit_seconds": 0.00037775000055262353,
+    "val_predict_seconds": 0.0039019579999148846,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.16176470588235295,
+    "val_macro_f1": 0.14762908347786757,
+    "validation_metrics": {
+      "accuracy": 0.16176470588235295,
+      "macro_precision": 0.17482267923892822,
+      "macro_recall": 0.16176470588235298,
+      "macro_f1": 0.14762908347786757,
+      "weighted_precision": 0.17482267923892816,
+      "weighted_recall": 0.16176470588235295,
+      "weighted_f1": 0.14762908347786757
+    },
+    "fit_seconds": 0.0003774169999815058,
+    "val_predict_seconds": 0.005669000000125379,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.16862745098039217,
+    "val_macro_f1": 0.15208244220078088,
+    "validation_metrics": {
+      "accuracy": 0.16862745098039217,
+      "macro_precision": 0.18224892557602929,
+      "macro_recall": 0.16862745098039222,
+      "macro_f1": 0.15208244220078088,
+      "weighted_precision": 0.18224892557602923,
+      "weighted_recall": 0.16862745098039217,
+      "weighted_f1": 0.1520824422007809
+    },
+    "fit_seconds": 0.00035804199978883844,
+    "val_predict_seconds": 0.006459750000431086,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_rgb",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.18137254901960784,
+    "val_macro_f1": 0.16400476571222508,
+    "validation_metrics": {
+      "accuracy": 0.18137254901960784,
+      "macro_precision": 0.16723498776379775,
+      "macro_recall": 0.18137254901960786,
+      "macro_f1": 0.16400476571222508,
+      "weighted_precision": 0.16723498776379775,
+      "weighted_recall": 0.18137254901960784,
+      "weighted_f1": 0.16400476571222505
+    },
+    "fit_seconds": 0.00035687499985215254,
+    "val_predict_seconds": 0.007814708999831055,
+    "pca_fit_seconds": 0.011730041000191704,
+    "pca_val_transform_seconds": 0.0002964160003102734
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.21764705882352942,
+    "val_macro_f1": 0.20149101750334938,
+    "validation_metrics": {
+      "accuracy": 0.21764705882352942,
+      "macro_precision": 0.218872227349736,
+      "macro_recall": 0.21764705882352947,
+      "macro_f1": 0.20149101750334938,
+      "weighted_precision": 0.218872227349736,
+      "weighted_recall": 0.21764705882352942,
+      "weighted_f1": 0.20149101750334938
+    },
+    "fit_seconds": 0.00042004199985967716,
+    "val_predict_seconds": 0.003260334000515286,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.21666666666666667,
+    "val_macro_f1": 0.19771199407479442,
+    "validation_metrics": {
+      "accuracy": 0.21666666666666667,
+      "macro_precision": 0.21769565142163977,
+      "macro_recall": 0.2166666666666667,
+      "macro_f1": 0.19771199407479442,
+      "weighted_precision": 0.21769565142163982,
+      "weighted_recall": 0.21666666666666667,
+      "weighted_f1": 0.19771199407479445
+    },
+    "fit_seconds": 0.0003627090000009048,
+    "val_predict_seconds": 0.005483750000166765,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.23333333333333334,
+    "val_macro_f1": 0.21111885124036053,
+    "validation_metrics": {
+      "accuracy": 0.23333333333333334,
+      "macro_precision": 0.23768276099911662,
+      "macro_recall": 0.23333333333333342,
+      "macro_f1": 0.21111885124036053,
+      "weighted_precision": 0.2376827609991166,
+      "weighted_recall": 0.23333333333333334,
+      "weighted_f1": 0.2111188512403605
+    },
+    "fit_seconds": 0.0004078330002812436,
+    "val_predict_seconds": 0.006119540999861783,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 64,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 64,
+    "val_accuracy": 0.23333333333333334,
+    "val_macro_f1": 0.21099044905056955,
+    "validation_metrics": {
+      "accuracy": 0.23333333333333334,
+      "macro_precision": 0.21775628174446796,
+      "macro_recall": 0.23333333333333342,
+      "macro_f1": 0.21099044905056955,
+      "weighted_precision": 0.21775628174446793,
+      "weighted_recall": 0.23333333333333334,
+      "weighted_f1": 0.21099044905056955
+    },
+    "fit_seconds": 0.00038779199985583546,
+    "val_predict_seconds": 0.007750583000415645,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 1,
+      "metric": "euclidean",
+      "weights": "uniform"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.2107843137254902,
+    "val_macro_f1": 0.1942209850447831,
+    "validation_metrics": {
+      "accuracy": 0.2107843137254902,
+      "macro_precision": 0.20510970494124744,
+      "macro_recall": 0.21078431372549022,
+      "macro_f1": 0.1942209850447831,
+      "weighted_precision": 0.2051097049412475,
+      "weighted_recall": 0.2107843137254902,
+      "weighted_f1": 0.1942209850447831
+    },
+    "fit_seconds": 0.0003861249997498817,
+    "val_predict_seconds": 0.0038807920000181184,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.21470588235294116,
+    "val_macro_f1": 0.19638303393539663,
+    "validation_metrics": {
+      "accuracy": 0.21470588235294116,
+      "macro_precision": 0.20951143847392092,
+      "macro_recall": 0.21470588235294122,
+      "macro_f1": 0.19638303393539663,
+      "weighted_precision": 0.2095114384739209,
+      "weighted_recall": 0.21470588235294116,
+      "weighted_f1": 0.1963830339353966
+    },
+    "fit_seconds": 0.0003965839996453724,
+    "val_predict_seconds": 0.006055957999706152,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 5,
+      "metric": "euclidean",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.2284313725490196,
+    "val_macro_f1": 0.2049087063750644,
+    "validation_metrics": {
+      "accuracy": 0.2284313725490196,
+      "macro_precision": 0.2199424468233804,
+      "macro_recall": 0.22843137254901966,
+      "macro_f1": 0.2049087063750644,
+      "weighted_precision": 0.21994244682338043,
+      "weighted_recall": 0.2284313725490196,
+      "weighted_f1": 0.20490870637506445
+    },
+    "fit_seconds": 0.0005071660007160972,
+    "val_predict_seconds": 0.006618916999286739,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  },
+  {
+    "experiment": "E6",
+    "variant": "h16_hsv",
+    "pca_components": 128,
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "input_dimensions": 372,
+    "model_dimensions": 128,
+    "val_accuracy": 0.23333333333333334,
+    "val_macro_f1": 0.2101712398295225,
+    "validation_metrics": {
+      "accuracy": 0.23333333333333334,
+      "macro_precision": 0.21311913941838537,
+      "macro_recall": 0.23333333333333334,
+      "macro_f1": 0.2101712398295225,
+      "weighted_precision": 0.2131191394183854,
+      "weighted_recall": 0.23333333333333334,
+      "weighted_f1": 0.2101712398295225
+    },
+    "fit_seconds": 0.0004047499996886472,
+    "val_predict_seconds": 0.007895167000242509,
+    "pca_fit_seconds": 0.01071208299981663,
+    "pca_val_transform_seconds": 0.00028191699948365567
+  }
+]

@@ -1,0 +1,137 @@
+{
+  "experiments": [
+    {
+      "experiment": "E1",
+      "variant": "pixels",
+      "params": {
+        "n_neighbors": 1
+      },
+      "val_accuracy": 0.10882352941176471,
+      "val_macro_f1": 0.09143167238933733,
+      "input_dimensions": 12288,
+      "model_dimensions": 12288,
+      "fit_seconds": 0.024855167000168876,
+      "val_predict_seconds": 0.2449797919998673,
+      "pca_fit_seconds": 0.0,
+      "pca_val_transform_seconds": 0.0
+    },
+    {
+      "experiment": "E2",
+      "variant": "hog",
+      "params": {
+        "n_neighbors": 1
+      },
+      "val_accuracy": 0.060784313725490195,
+      "val_macro_f1": 0.05836135970968135,
+      "input_dimensions": 1764,
+      "model_dimensions": 1764,
+      "fit_seconds": 0.0008001249998415005,
+      "val_predict_seconds": 0.029003708999880473,
+      "pca_fit_seconds": 0.0,
+      "pca_val_transform_seconds": 0.0
+    },
+    {
+      "experiment": "E3",
+      "variant": "hog",
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "val_accuracy": 0.024509803921568627,
+      "val_macro_f1": 0.023034284785437953,
+      "input_dimensions": 1764,
+      "model_dimensions": 1764,
+      "fit_seconds": 16.79606716699982,
+      "val_predict_seconds": 0.0026547920006123604,
+      "pca_fit_seconds": 0.0,
+      "pca_val_transform_seconds": 0.0
+    },
+    {
+      "experiment": "E4",
+      "variant": "h8_hsv",
+      "pca_components": null,
+      "params": {
+        "n_neighbors": 5,
+        "metric": "euclidean",
+        "weights": "distance"
+      },
+      "input_dimensions": 1812,
+      "model_dimensions": 1812,
+      "val_accuracy": 0.21862745098039216,
+      "val_macro_f1": 0.20028070441946505,
+      "validation_metrics": {
+        "accuracy": 0.21862745098039216,
+        "macro_precision": 0.24165243174557616,
+        "macro_recall": 0.21862745098039219,
+        "macro_f1": 0.20028070441946505,
+        "weighted_precision": 0.2416524317455762,
+        "weighted_recall": 0.21862745098039216,
+        "weighted_f1": 0.20028070441946508
+      },
+      "fit_seconds": 0.0007747919999019359,
+      "val_predict_seconds": 0.029623750000610016,
+      "pca_fit_seconds": 0.0,
+      "pca_val_transform_seconds": 0.0
+    },
+    {
+      "experiment": "E5",
+      "variant": "pixels",
+      "pca_components": 64,
+      "params": {
+        "n_neighbors": 3,
+        "metric": "cosine",
+        "weights": "distance"
+      },
+      "input_dimensions": 12288,
+      "model_dimensions": 64,
+      "val_accuracy": 0.15,
+      "val_macro_f1": 0.13335149794144086,
+      "validation_metrics": {
+        "accuracy": 0.15,
+        "macro_precision": 0.14960631264756666,
+        "macro_recall": 0.15000000000000002,
+        "macro_f1": 0.13335149794144086,
+        "weighted_precision": 0.14960631264756666,
+        "weighted_recall": 0.15,
+        "weighted_f1": 0.13335149794144086
+      },
+      "fit_seconds": 0.0003373750005266629,
+      "val_predict_seconds": 0.007660084000235656,
+      "pca_fit_seconds": 0.2007449999991877,
+      "pca_val_transform_seconds": 0.01105429200015351
+    },
+    {
+      "experiment": "E6",
+      "variant": "h8_hsv",
+      "pca_components": 128,
+      "params": {
+        "n_neighbors": 3,
+        "metric": "cosine",
+        "weights": "distance"
+      },
+      "input_dimensions": 1812,
+      "model_dimensions": 128,
+      "val_accuracy": 0.23431372549019608,
+      "val_macro_f1": 0.21266311022542148,
+      "validation_metrics": {
+        "accuracy": 0.23431372549019608,
+        "macro_precision": 0.21877009927114643,
+        "macro_recall": 0.23431372549019613,
+        "macro_f1": 0.21266311022542148,
+        "weighted_precision": 0.2187700992711464,
+        "weighted_recall": 0.23431372549019608,
+        "weighted_f1": 0.21266311022542148
+      },
+      "fit_seconds": 0.0003925000000890577,
+      "val_predict_seconds": 0.007888375000220549,
+      "pca_fit_seconds": 0.02793641700009175,
+      "pca_val_transform_seconds": 0.0015705830001024879
+    }
+  ],
+  "selected_experiment": "E6",
+  "selection_rule": "validation macro F1, then accuracy, then listed order",
+  "v2_feature_extraction_seconds_all_variants": 7.824192834000314,
+  "v1_feature_signature": "72f15fc3ddbd0c5522c773346947cb6cd04045f9665585569118f0d73bfa85a5",
+  "v2_feature_signature": "7e69d43d73ec56da38e1469ef9256085f1c120a2c5ba7c8a2164c4392e7c69d5",
+  "config_sha256": "152bf41c062950e696517346cff66f87ab1cec4a7ce150ffecbc9350c4944018"
+}

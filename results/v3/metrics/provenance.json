@@ -1,0 +1,14 @@
+{
+  "configs/experiments_v3.yaml": "66d8dfc7b81f1b0bbfb25d37514e0a3337713cedf4765d5761b088c9d9d343c0",
+  "configs/experiments_v2.yaml": "152bf41c062950e696517346cff66f87ab1cec4a7ce150ffecbc9350c4944018",
+  "data/raw/imagelabels.mat": "4903e94206bac23bf772aadf06451916df56b58fc483a62db32a97b82656651d",
+  "data/raw/setid.mat": "46b8678f91fd95d3c8f4feab80d271a6c834a1dd896fe29fd3e6ad9ce5c8dccd",
+  "data/processed/features_v2.npz": "c52a686769d52aafdc1b2d129c493d6c85349d0907d3d71f314254dd17bc0d97",
+  "results/v2/metrics/comparison.json": "21e97caade45311a10eb15f48e8150a83e543099417a47ebd0b6e126bc814187",
+  "src/pipeline_v3.py": "73bdab1dfad231f4f9611aa36bfc1ed35921ef20154bc55789508070b0e4273f",
+  "src/preprocessing.py": "851b4f518c5d68b61897941765e700112d085fd049fc3a849264da4880c0bd10",
+  "src/features_v2.py": "38cbcb7ebfca7dd6704fd5eaa223a8f6d2dfb699e595a75ae4e697003b5dc29b",
+  "results/v2/metrics/E4_validation_predictions.csv": "93a180b0634f4735088049b2004882a1f06404c1c805e62bd84420881adcf411",
+  "results/v2/metrics/E5_validation_predictions.csv": "4115c6955d10901881ed2e8f4a89399db0b3eb84efc84a26eec499fa2dc3cb22",
+  "results/v2/metrics/E6_validation_predictions.csv": "187df6e2fc4fa2668b7f0bee4a789470c8ef83a49b733261a45b026d0cd4b12d"
+}
