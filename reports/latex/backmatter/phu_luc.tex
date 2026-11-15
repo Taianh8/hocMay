@@ -1,0 +1,9 @@
+\appendix
+\titleformat{\chapter}[display]{\centering\bfseries\fontsize{14pt}{16pt}\selectfont}{Phụ lục \thechapter}{0.3cm}{\MakeUppercase}
+\renewcommand{\cftchappresnum}{PHỤ LỤC~}
+\sloppy
+\chapter{Cấu hình và tái lập}
+Cấu hình gốc nằm trong \texttt{configs/experiments.yaml}, \texttt{configs/experiments\_v2.yaml}, \texttt{configs/experiments\_v3.yaml} và \texttt{configs/e6\_manifest\_v1.json}. Dữ liệu chính thức, model pickle và hình sinh ra không nằm đầy đủ trong Git; kiểm tra README trước khi chạy. Lệnh \texttt{python -m pytest -q} kiểm tra tích hợp; \texttt{python -m scripts.check\_v4\_audit} xác minh dữ liệu và các cặp ứng viên đã lưu. Không chạy lại test trong quá trình tái lập tài liệu.
+
+
+Để tạo lại đường học trong bản sao làm việc có đủ dữ liệu và cache V2, chạy \texttt{python -m scripts.duong\_hoc}. Script dùng năm fold V3, các tập con lồng nhau với 2, 4, 6 và 8 ảnh/lớp, fit riêng PCA cho từng tập con và không dự đoán validation chính thức hoặc test. Kết quả, ID mẫu, dự đoán và checksum được lưu trong \texttt{results/duong\_hoc/}; hai hình được lưu trong \texttt{reports/latex/figures/}. Lệnh có thể ghi đè các tệp đường học đã sinh, vì vậy cần sao lưu kết quả cũ trước khi chạy lại.

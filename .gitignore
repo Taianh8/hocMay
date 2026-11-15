@@ -10,27 +10,20 @@ __pycache__/
 .env.*
 !.env.example
 
+# Dữ liệu gốc, cache và output sinh ra không được đưa vào Git.
 data/raw/*
 data/processed/*
-results/figures/*
-results/models/*
-results/notebooks/
+results/
 
-# Keep compact machine-readable experiment evidence reviewable; ignore bulk outputs.
-results/metrics/*
-!results/metrics/*.json
-!results/metrics/*.csv
-results/v2/*
-!results/v2/metrics/
-results/v2/metrics/*
-!results/v2/metrics/*.json
-!results/v2/metrics/*.csv
-results/v3/*
-!results/v3/metrics/
-results/v3/metrics/*
-!results/v3/metrics/*.json
-!results/v3/metrics/*.csv
-results/v4/*
-!results/v4/dataset_audit.json
-!results/v4/duplicate_candidates.csv
+# Giữ mã nguồn, hình và PDF báo cáo; bỏ qua tệp trung gian LaTeX.
+reports/latex/*.aux
+reports/latex/*.log
+reports/latex/*.out
+reports/latex/*.toc
+reports/latex/*.lof
+reports/latex/*.lot
+reports/latex/*.synctex.gz
+
+# Manifest được tạo cho model cục bộ, không thay manifest lịch sử.
+configs/e6_manifest_moi.json
 !**/.gitkeep

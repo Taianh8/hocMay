@@ -1,27 +1,22 @@
-"""Execute read-only V2/V3 report notebooks; validate prior V1 execution copies.
-
-V1 notebook 05 re-evaluates test, so it is intentionally not re-executed here.
-"""
+"""Kiểm tra 11 bản notebook được thực thi bởi execute_notebooks.py."""
 import json
 from pathlib import Path
 import nbformat
-from nbclient import NotebookClient
 
 ROOT = Path(__file__).resolve().parents[1]
-out = ROOT/'results/v4/notebooks'
-out.mkdir(parents=True, exist_ok=True)
-for path in sorted((ROOT/'notebooks').glob('0[0-8]_*.ipynb')):
-    saved = ROOT/'results/v2/notebooks'/path.name
-    notebook = nbformat.read(saved, as_version=4)
-    codes = [c for c in notebook.cells if c.cell_type=='code']
+out = ROOT / 'results/notebooks'
+log = out / 'execution.json'
+if not log.is_file():
+    raise SystemExit('Chưa có output notebook. Hãy chạy: python scripts/execute_notebooks.py')
+records = json.loads(log.read_text())
+expected = sorted(p.name for p in (ROOT/'notebooks').glob('[0-9][0-9]_*.ipynb'))
+if len(expected) != 11 or [r['notebook'] for r in records] != expected or not all(r['status']=='passed' for r in records):
+    raise ValueError('Danh sách hoặc trạng thái thực thi notebook không đầy đủ')
+for name in expected:
+    path = out/name
+    notebook = nbformat.read(path, as_version=4)
+    codes = [c for c in notebook.cells if c.cell_type == 'code']
     if not all(c.execution_count is not None for c in codes) or any(o.output_type=='error' for c in codes for o in c.outputs):
-        raise ValueError(f'Prior V1 notebook execution is incomplete: {saved}')
-    print(f'{path.name}: prior isolated V1 execution verified')
-for name in ('09_v2_experiments.ipynb', '10_v3_robustness.ipynb'):
-    notebook = nbformat.read(ROOT/'notebooks'/name, as_version=4)
-    try:
-        NotebookClient(notebook, timeout=1800, kernel_name='python3', resources={'metadata': {'path': str(ROOT)}}).execute()
-    finally:
-        nbformat.write(notebook, out/name)
-    print(f'{name}: executed')
-(out/'verification.json').write_text(json.dumps({'prior_v1_notebooks_checked':9, 'executed_read_only_notebooks':['09_v2_experiments.ipynb','10_v3_robustness.ipynb'], 'test_re_evaluated':False},indent=2)+'\n')
+        raise ValueError(f'Notebook có lỗi hoặc chưa chạy đầy đủ: {name}')
+    print(f'{name}: đã thực thi')
+print('Đã kiểm tra 11 notebook; output mặc định chỉ đánh giá validation.')
