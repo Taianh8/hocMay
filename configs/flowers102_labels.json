@@ -1,0 +1,516 @@
+{
+  "source": "https://github.com/tensorflow/datasets/blob/master/tensorflow_datasets/datasets/oxford_flowers102/oxford_flowers102_dataset_builder.py",
+  "description": "Danh sách tên tiếng Anh theo thứ tự nhãn TFDS; ID Oxford là chỉ số + 1. Tên Việt được bổ sung cho một số lớp; chưa có thì giữ tên gốc.",
+  "labels": [
+    {
+      "class_id": 1,
+      "name_en": "pink primrose",
+      "name_vi": "Hoa anh thảo hồng"
+    },
+    {
+      "class_id": 2,
+      "name_en": "hard-leaved pocket orchid",
+      "name_vi": "Lan hài lá cứng"
+    },
+    {
+      "class_id": 3,
+      "name_en": "canterbury bells",
+      "name_vi": "Hoa chuông Canterbury"
+    },
+    {
+      "class_id": 4,
+      "name_en": "sweet pea",
+      "name_vi": "Hoa đậu thơm"
+    },
+    {
+      "class_id": 5,
+      "name_en": "english marigold",
+      "name_vi": null
+    },
+    {
+      "class_id": 6,
+      "name_en": "tiger lily",
+      "name_vi": "Hoa ly hổ"
+    },
+    {
+      "class_id": 7,
+      "name_en": "moon orchid",
+      "name_vi": "Lan hồ điệp"
+    },
+    {
+      "class_id": 8,
+      "name_en": "bird of paradise",
+      "name_vi": "Hoa thiên điểu"
+    },
+    {
+      "class_id": 9,
+      "name_en": "monkshood",
+      "name_vi": "Hoa ô đầu"
+    },
+    {
+      "class_id": 10,
+      "name_en": "globe thistle",
+      "name_vi": null
+    },
+    {
+      "class_id": 11,
+      "name_en": "snapdragon",
+      "name_vi": "Hoa mõm sói"
+    },
+    {
+      "class_id": 12,
+      "name_en": "colt's foot",
+      "name_vi": null
+    },
+    {
+      "class_id": 13,
+      "name_en": "king protea",
+      "name_vi": null
+    },
+    {
+      "class_id": 14,
+      "name_en": "spear thistle",
+      "name_vi": null
+    },
+    {
+      "class_id": 15,
+      "name_en": "yellow iris",
+      "name_vi": "Hoa diên vĩ vàng"
+    },
+    {
+      "class_id": 16,
+      "name_en": "globe-flower",
+      "name_vi": null
+    },
+    {
+      "class_id": 17,
+      "name_en": "purple coneflower",
+      "name_vi": "Cúc cánh tím"
+    },
+    {
+      "class_id": 18,
+      "name_en": "peruvian lily",
+      "name_vi": "Hoa loa kèn Peru"
+    },
+    {
+      "class_id": 19,
+      "name_en": "balloon flower",
+      "name_vi": "Hoa cát cánh"
+    },
+    {
+      "class_id": 20,
+      "name_en": "giant white arum lily",
+      "name_vi": null
+    },
+    {
+      "class_id": 21,
+      "name_en": "fire lily",
+      "name_vi": null
+    },
+    {
+      "class_id": 22,
+      "name_en": "pincushion flower",
+      "name_vi": null
+    },
+    {
+      "class_id": 23,
+      "name_en": "fritillary",
+      "name_vi": null
+    },
+    {
+      "class_id": 24,
+      "name_en": "red ginger",
+      "name_vi": "Hoa gừng đỏ"
+    },
+    {
+      "class_id": 25,
+      "name_en": "grape hyacinth",
+      "name_vi": "Hoa dạ lan hương nho"
+    },
+    {
+      "class_id": 26,
+      "name_en": "corn poppy",
+      "name_vi": "Hoa anh túc đỏ"
+    },
+    {
+      "class_id": 27,
+      "name_en": "prince of wales feathers",
+      "name_vi": null
+    },
+    {
+      "class_id": 28,
+      "name_en": "stemless gentian",
+      "name_vi": null
+    },
+    {
+      "class_id": 29,
+      "name_en": "artichoke",
+      "name_vi": null
+    },
+    {
+      "class_id": 30,
+      "name_en": "sweet william",
+      "name_vi": null
+    },
+    {
+      "class_id": 31,
+      "name_en": "carnation",
+      "name_vi": "Hoa cẩm chướng"
+    },
+    {
+      "class_id": 32,
+      "name_en": "garden phlox",
+      "name_vi": null
+    },
+    {
+      "class_id": 33,
+      "name_en": "love in the mist",
+      "name_vi": null
+    },
+    {
+      "class_id": 34,
+      "name_en": "mexican aster",
+      "name_vi": "Hoa cánh bướm Mexico"
+    },
+    {
+      "class_id": 35,
+      "name_en": "alpine sea holly",
+      "name_vi": null
+    },
+    {
+      "class_id": 36,
+      "name_en": "ruby-lipped cattleya",
+      "name_vi": null
+    },
+    {
+      "class_id": 37,
+      "name_en": "cape flower",
+      "name_vi": null
+    },
+    {
+      "class_id": 38,
+      "name_en": "great masterwort",
+      "name_vi": null
+    },
+    {
+      "class_id": 39,
+      "name_en": "siam tulip",
+      "name_vi": "Hoa nghệ cảnh"
+    },
+    {
+      "class_id": 40,
+      "name_en": "lenten rose",
+      "name_vi": null
+    },
+    {
+      "class_id": 41,
+      "name_en": "barbeton daisy",
+      "name_vi": null
+    },
+    {
+      "class_id": 42,
+      "name_en": "daffodil",
+      "name_vi": "Hoa thủy tiên vàng"
+    },
+    {
+      "class_id": 43,
+      "name_en": "sword lily",
+      "name_vi": "Hoa lay ơn"
+    },
+    {
+      "class_id": 44,
+      "name_en": "poinsettia",
+      "name_vi": "Hoa trạng nguyên"
+    },
+    {
+      "class_id": 45,
+      "name_en": "bolero deep blue",
+      "name_vi": null
+    },
+    {
+      "class_id": 46,
+      "name_en": "wallflower",
+      "name_vi": null
+    },
+    {
+      "class_id": 47,
+      "name_en": "marigold",
+      "name_vi": null
+    },
+    {
+      "class_id": 48,
+      "name_en": "buttercup",
+      "name_vi": "Hoa mao lương"
+    },
+    {
+      "class_id": 49,
+      "name_en": "oxeye daisy",
+      "name_vi": null
+    },
+    {
+      "class_id": 50,
+      "name_en": "common dandelion",
+      "name_vi": "Bồ công anh"
+    },
+    {
+      "class_id": 51,
+      "name_en": "petunia",
+      "name_vi": "Hoa dạ yến thảo"
+    },
+    {
+      "class_id": 52,
+      "name_en": "wild pansy",
+      "name_vi": null
+    },
+    {
+      "class_id": 53,
+      "name_en": "primula",
+      "name_vi": null
+    },
+    {
+      "class_id": 54,
+      "name_en": "sunflower",
+      "name_vi": "Hoa hướng dương"
+    },
+    {
+      "class_id": 55,
+      "name_en": "pelargonium",
+      "name_vi": null
+    },
+    {
+      "class_id": 56,
+      "name_en": "bishop of llandaff",
+      "name_vi": null
+    },
+    {
+      "class_id": 57,
+      "name_en": "gaura",
+      "name_vi": null
+    },
+    {
+      "class_id": 58,
+      "name_en": "geranium",
+      "name_vi": null
+    },
+    {
+      "class_id": 59,
+      "name_en": "orange dahlia",
+      "name_vi": null
+    },
+    {
+      "class_id": 60,
+      "name_en": "pink-yellow dahlia?",
+      "name_vi": "Thược dược cam"
+    },
+    {
+      "class_id": 61,
+      "name_en": "cautleya spicata",
+      "name_vi": null
+    },
+    {
+      "class_id": 62,
+      "name_en": "japanese anemone",
+      "name_vi": "Cautleya spicata"
+    },
+    {
+      "class_id": 63,
+      "name_en": "black-eyed susan",
+      "name_vi": "Hải quỳ Nhật Bản"
+    },
+    {
+      "class_id": 64,
+      "name_en": "silverbush",
+      "name_vi": "Cúc mắt đen"
+    },
+    {
+      "class_id": 65,
+      "name_en": "californian poppy",
+      "name_vi": null
+    },
+    {
+      "class_id": 66,
+      "name_en": "osteospermum",
+      "name_vi": "Anh túc California"
+    },
+    {
+      "class_id": 67,
+      "name_en": "spring crocus",
+      "name_vi": null
+    },
+    {
+      "class_id": 68,
+      "name_en": "bearded iris",
+      "name_vi": "Hoa nghệ tây mùa xuân"
+    },
+    {
+      "class_id": 69,
+      "name_en": "windflower",
+      "name_vi": "Hoa diên vĩ râu"
+    },
+    {
+      "class_id": 70,
+      "name_en": "tree poppy",
+      "name_vi": null
+    },
+    {
+      "class_id": 71,
+      "name_en": "gazania",
+      "name_vi": null
+    },
+    {
+      "class_id": 72,
+      "name_en": "azalea",
+      "name_vi": null
+    },
+    {
+      "class_id": 73,
+      "name_en": "water lily",
+      "name_vi": "Hoa đỗ quyên"
+    },
+    {
+      "class_id": 74,
+      "name_en": "rose",
+      "name_vi": "Hoa súng"
+    },
+    {
+      "class_id": 75,
+      "name_en": "thorn apple",
+      "name_vi": "Hoa hồng"
+    },
+    {
+      "class_id": 76,
+      "name_en": "morning glory",
+      "name_vi": "Cà độc dược"
+    },
+    {
+      "class_id": 77,
+      "name_en": "passion flower",
+      "name_vi": "Hoa lạc tiên"
+    },
+    {
+      "class_id": 78,
+      "name_en": "lotus",
+      "name_vi": "Hoa sen"
+    },
+    {
+      "class_id": 79,
+      "name_en": "toad lily",
+      "name_vi": null
+    },
+    {
+      "class_id": 80,
+      "name_en": "anthurium",
+      "name_vi": "Hoa hồng môn"
+    },
+    {
+      "class_id": 81,
+      "name_en": "frangipani",
+      "name_vi": "Hoa đại"
+    },
+    {
+      "class_id": 82,
+      "name_en": "clematis",
+      "name_vi": "Hoa ông lão"
+    },
+    {
+      "class_id": 83,
+      "name_en": "hibiscus",
+      "name_vi": "Hoa dâm bụt"
+    },
+    {
+      "class_id": 84,
+      "name_en": "columbine",
+      "name_vi": null
+    },
+    {
+      "class_id": 85,
+      "name_en": "desert-rose",
+      "name_vi": null
+    },
+    {
+      "class_id": 86,
+      "name_en": "tree mallow",
+      "name_vi": "Hoa cẩm quỳ thân gỗ"
+    },
+    {
+      "class_id": 87,
+      "name_en": "magnolia",
+      "name_vi": "Hoa mộc lan"
+    },
+    {
+      "class_id": 88,
+      "name_en": "cyclamen",
+      "name_vi": "Hoa anh thảo Cyclamen"
+    },
+    {
+      "class_id": 89,
+      "name_en": "watercress",
+      "name_vi": null
+    },
+    {
+      "class_id": 90,
+      "name_en": "canna lily",
+      "name_vi": "Hoa dong riềng"
+    },
+    {
+      "class_id": 91,
+      "name_en": "hippeastrum",
+      "name_vi": "Hoa huệ tây Hippeastrum"
+    },
+    {
+      "class_id": 92,
+      "name_en": "bee balm",
+      "name_vi": "Hoa bạc hà ong"
+    },
+    {
+      "class_id": 93,
+      "name_en": "ball moss",
+      "name_vi": null
+    },
+    {
+      "class_id": 94,
+      "name_en": "foxglove",
+      "name_vi": "Hoa địa hoàng"
+    },
+    {
+      "class_id": 95,
+      "name_en": "bougainvillea",
+      "name_vi": "Hoa giấy"
+    },
+    {
+      "class_id": 96,
+      "name_en": "camellia",
+      "name_vi": "Hoa trà"
+    },
+    {
+      "class_id": 97,
+      "name_en": "mallow",
+      "name_vi": null
+    },
+    {
+      "class_id": 98,
+      "name_en": "mexican petunia",
+      "name_vi": "Dạ yến thảo Mexico"
+    },
+    {
+      "class_id": 99,
+      "name_en": "bromelia",
+      "name_vi": null
+    },
+    {
+      "class_id": 100,
+      "name_en": "blanket flower",
+      "name_vi": "Hoa chăn"
+    },
+    {
+      "class_id": 101,
+      "name_en": "trumpet creeper",
+      "name_vi": "Hoa kèn leo"
+    },
+    {
+      "class_id": 102,
+      "name_en": "blackberry lily",
+      "name_vi": "Hoa rẻ quạt"
+    }
+  ]
+}
