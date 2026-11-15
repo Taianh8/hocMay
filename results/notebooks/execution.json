@@ -1,47 +1,57 @@
 [
   {
     "notebook": "00_data_source.ipynb",
-    "seconds": 14.64,
+    "seconds": 14.48,
     "status": "passed"
   },
   {
     "notebook": "01_eda.ipynb",
-    "seconds": 13.77,
+    "seconds": 12.74,
     "status": "passed"
   },
   {
     "notebook": "02_preprocessing.ipynb",
-    "seconds": 12.65,
+    "seconds": 11.6,
     "status": "passed"
   },
   {
     "notebook": "03_features.ipynb",
-    "seconds": 14.15,
+    "seconds": 14.1,
     "status": "passed"
   },
   {
     "notebook": "04_model.ipynb",
-    "seconds": 62.53,
+    "seconds": 64.18,
     "status": "passed"
   },
   {
     "notebook": "05_evaluation.ipynb",
-    "seconds": 15.81,
+    "seconds": 15.65,
     "status": "passed"
   },
   {
     "notebook": "06_error_analysis.ipynb",
-    "seconds": 12.77,
+    "seconds": 10.69,
     "status": "passed"
   },
   {
     "notebook": "07_conclusion.ipynb",
-    "seconds": 2.64,
+    "seconds": 2.44,
     "status": "passed"
   },
   {
     "notebook": "08_sanity_checks.ipynb",
-    "seconds": 15.16,
+    "seconds": 15.12,
+    "status": "passed"
+  },
+  {
+    "notebook": "09_v2_experiments.ipynb",
+    "seconds": 1.24,
+    "status": "passed"
+  },
+  {
+    "notebook": "10_v3_robustness.ipynb",
+    "seconds": 51.97,
     "status": "passed"
   }
 ]

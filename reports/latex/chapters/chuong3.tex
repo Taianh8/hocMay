@@ -1,0 +1,25 @@
+\chapter{Phân tích mã nguồn và chức năng}
+\section{Cách tổ chức dự án}
+Nhóm em chia mã thành các phần để việc đọc và kiểm tra được rõ ràng hơn. Thư mục \texttt{src/} chứa mã tải dữ liệu, tiền xử lý, trích xuất đặc trưng, huấn luyện và đánh giá. Các tệp trong \texttt{configs/} ghi cấu hình thí nghiệm và seed; \texttt{notebooks/} trình bày quá trình phân tích; \texttt{tests/} kiểm tra các bất biến quan trọng. Thư mục \texttt{results/} lưu chỉ số, hình và dự đoán sinh ra từ các lần chạy, còn \texttt{reports/} chứa tài liệu bàn giao và báo cáo.
+
+Các thí nghiệm dùng ID E1–E6 để giữ cách gọi nhất quán giữa mã nguồn, bảng kết quả và báo cáo. V1 gồm E1 pixel + K-NN, E2 HOG + K-NN và E3 HOG + cây quyết định. V2 bổ sung E4 HOG + màu + K-NN, E5 pixel + PCA + K-NN và E6 HOG + màu + PCA + K-NN. V3 kiểm tra độ ổn định của một số cấu hình đã chọn; V4 kiểm tra toàn vẹn dữ liệu và ảnh trùng.
+\section{Luồng huấn luyện và đánh giá}
+Khi huấn luyện, ảnh và nhãn được ghép theo ID rồi chia theo metadata chính thức. Mỗi cấu hình được fit trên train và dự đoán validation. Nhóm lựa chọn dựa trên F1 vĩ mô của validation; Accuracy được dùng khi cần phân biệt các kết quả bằng nhau. Việc lựa chọn sau khi thử nhiều cấu hình có thể làm điểm validation của cấu hình thắng cao hơn hiệu năng thực tế, nên kết quả validation không được diễn giải như kết quả test.
+
+Các chỉ số và tham số được ghi vào JSON/CSV để nhóm có thể đối chiếu lại bảng trong báo cáo. Các phép kiểm tra xác nhận số chiều, nhãn, khả năng đọc ảnh, tính không giao nhau của split và việc PCA chỉ nhận dữ liệu train. Các kiểm tra này giúp phát hiện lỗi triển khai, nhưng không thay thế việc đọc mã và xem xét liệu tập đánh giá có thực sự độc lập hay không.
+\section{Tái lập và các giới hạn khi bàn giao}
+Môi trường đã được kiểm chứng trước đó dùng Python 3.11.15 trên macOS arm64, với phiên bản thư viện ghi trong các tệp lock. Để tái lập, cần dữ liệu chính thức và artifact cục bộ khớp manifest; các tệp lớn như ảnh và model pickle không nằm đầy đủ trong Git. Hướng dẫn kiểm tra và lệnh chạy được ghi trong README. Pickle chỉ được nạp từ nguồn tin cậy vì định dạng này có thể thực thi mã khi mở.
+
+Hiện tệp model E6 gốc không còn trong workspace; nhóm cần khôi phục đúng bản tin cậy khớp manifest trước khi chạy lại phần suy luận tích hợp. Kết quả lịch sử và các biểu đồ được trình bày trong báo cáo dựa trên artifact đã được lưu và kiểm chứng, không được thay bằng điểm giả hoặc kết quả test chưa chạy.
+\section{Các notebook và thứ tự sử dụng}
+Các notebook 00–04 lần lượt kiểm tra nguồn dữ liệu, phân tích khám phá, tiền xử lý, đặc trưng và tìm mô hình V1. Notebook 05 đánh giá trên validation; notebook 06 phân tích lỗi validation; notebook 07 tổng hợp và notebook 08 kiểm tra tính nhất quán. Cách tổ chức này giúp thành viên mới có thể chạy từng phần theo thứ tự, đồng thời nhìn thấy bước nào tạo ra từng tệp kết quả.
+
+Notebook 09 tạo và xem thí nghiệm V2 nếu kết quả chưa có; notebook 10 tạo và xem phân tích V3 nếu kết quả chưa có. Các notebook này cần các bước trước hoàn tất. Chúng không tự tạo kết quả test E6. Nếu chạy lại trên dữ liệu hoặc môi trường khác, thành viên cần đọc kết quả mới thay vì mặc định các hình trong báo cáo cũ chính là output của lần chạy đó.
+
+Ngoài notebook, thư mục \texttt{scripts/} có lệnh tạo đường học và kiểm tra nguồn gốc. Chương trình kiểm tra đối chiếu ID tập con, dự đoán đã lưu, chỉ số tính lại và checksum của các đầu vào. Lệnh kiểm tra không thay thế việc đánh giá test; mục đích là phát hiện sai khác giữa báo cáo, dữ liệu đã lưu và phép tính đã thực hiện.
+\section{Quản lý cấu hình và tệp sinh ra}
+Các cấu hình V1, V2, V3 được đặt ở các file riêng để thay đổi ở một giai đoạn không tự thay đổi ý nghĩa của giai đoạn khác. Những thông số như kích thước ảnh, cấu hình HOG, số thành phần PCA và lựa chọn K-NN cần được ghi rõ vì thay đổi một thông số có thể làm thay đổi số chiều hoặc khoảng cách giữa các ảnh.
+
+Trong quá trình chạy, các tệp lớn như cache đặc trưng, model và ảnh dự đoán được tạo dưới \texttt{data/processed/} hoặc \texttt{results/}. Các thư mục này không phải nguồn dữ liệu gốc; chúng có thể được tạo lại sau khi dữ liệu chính thức và môi trường đã sẵn sàng. Tuy nhiên, nếu một kết quả cần được dùng làm bằng chứng cho báo cáo, nhóm nên lưu phiên bản và checksum ở nơi an toàn trước khi xóa hoặc chạy lại.
+
+Một model pickle cần có nguồn gốc tin cậy. Hash trong manifest giúp phát hiện file bị thay đổi so với manifest, nhưng không chứng minh an toàn nếu cả model và manifest đều đến từ một nguồn không đáng tin. Khi tạo lại E6 trên máy khác, artifact mới có thể có hash khác; nhóm phải ghi manifest mới, không sửa manifest cũ để che giấu sự khác biệt.
