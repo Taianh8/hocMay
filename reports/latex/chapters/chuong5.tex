@@ -1,0 +1,27 @@
+\chapter{Thảo luận và so sánh}
+\section{So sánh các cách biểu diễn ảnh}
+Trong kết quả validation, E2 với HOG xám có F1 thấp hơn E1 dùng pixel. Một khả năng là HOG nhấn mạnh cạnh nhưng không giữ màu, trong khi màu là một đặc điểm có thể hữu ích khi phân biệt hoa. Tuy nhiên, nhóm em chưa thực hiện một thí nghiệm có kiểm soát chỉ thay đổi riêng màu, nên đây là giả thuyết chứ không phải kết luận về nguyên nhân.
+
+E4 dùng HOG kết hợp histogram HSV đạt F1 validation 0,2003, cao hơn E2 trong lưới đã thử. Kết quả này cho thấy cấu hình kết hợp đáng để xem xét, nhưng E4 và E2 còn khác về tham số K-NN và cách chuẩn hóa khối. Tương tự, E5 cao hơn E1 và E6 cao hơn E4 trên validation, song metric khoảng cách và số láng giềng cũng khác; nhóm không thể khẳng định riêng PCA đã tạo ra toàn bộ mức tăng.
+\section{Mô hình nào tốt hơn trong thí nghiệm này?}
+Nếu xét đúng tiêu chí lựa chọn của V2 là F1 vĩ mô validation, E6 đứng đầu với 0,2127; E4 đứng tiếp theo với 0,2003. Nếu xét trung bình năm fold trên train, E6 seed 42 đạt 0,1932 và E4 đạt 0,1852. Do sự khác biệt giữa E4 và E6 khá nhỏ so với biến thiên giữa các fold, nhóm em chọn E6 làm ứng viên để đánh giá tiếp nhưng chưa thể kết luận nó luôn tốt hơn E4 trên dữ liệu khác.
+
+Đường học cho thấy điểm trên phần fit và phần holdout cách xa nhau, đồng thời điểm holdout có xu hướng tăng khi có thêm ảnh fit. Tuy nhiên, các đường train của K-NN được tính trên chính dữ liệu đã fit nên có lợi thế do mỗi mẫu nằm trong tập láng giềng. Một đánh giá mạnh hơn cần kiểm tra trên dữ liệu độc lập và có thể thử thêm các cách chia khác đã định trước, thay vì dựa duy nhất vào điểm train bằng 1,0.
+\section{Giới hạn dữ liệu và phân tích lỗi}
+Validation có ít ảnh cho từng lớp: E6 có 22 lớp đạt F1 bằng 0 với 10 ảnh validation mỗi lớp. Khi xem ví dụ lớp 94, nhóm nhận thấy tỉ lệ chủ thể và phần nền giữa các ảnh có khác nhau. Màu sắc, ánh sáng, nền và kích thước có thể ảnh hưởng đến HOG hoặc histogram, nhưng nhóm chưa có thí nghiệm đối chứng để xác nhận tác động riêng của từng yếu tố.
+
+Kiểm toán SHA-256 và pHash ngưỡng Hamming 4 ghi nhận hai cặp ảnh trùng byte giữa các split và sáu ứng viên gần trùng. Trong đó ảnh train 7307 trùng byte ảnh test 7309. Phương pháp pHash có thể bỏ sót ảnh đã cắt, xoay hoặc biến đổi và cũng có thể báo nhầm. Nhóm giữ nguyên split chính thức và công bố phát hiện này như một hạn chế khi giải thích kết quả.
+
+V1 E1 từng được đánh giá test; kết quả này không phải kết quả của E6 và output test cũ đã được xóa theo yêu cầu của nhóm. Việc test V1 từng được quan sát cùng cặp trùng train–test khiến tập test không còn hoàn toàn chưa được xem trong toàn dự án. Chưa có kết quả test E6; nhóm không dự đoán thêm trên test để vẽ các đường học trong báo cáo này.
+\section{Vì sao điểm trên tập fit cần được đọc thận trọng}
+Trong bài học về overfitting, một dấu hiệu thường gặp là mô hình đạt kết quả cao trên dữ liệu huấn luyện nhưng thấp hơn trên dữ liệu chưa dùng để fit. Biểu đồ của nhóm cũng có khoảng cách lớn như vậy. Tuy nhiên, K-NN có một đặc điểm riêng: khi yêu cầu dự đoán lại một ảnh nằm trong train, ảnh đó nằm trong tập tham chiếu và có khoảng cách rất nhỏ hoặc bằng không với chính nó. Do đó điểm trên tập fit có thể đạt 1,0 mà chưa nói lên khả năng dự đoán ảnh mới.
+
+Để nhận định chắc hơn, nhóm cần xem điểm trên phần giữ lại, quan sát độ ổn định ở nhiều fold và nếu có điều kiện thì kiểm tra trên một tập độc lập. Nhóm cũng cần xem các ví dụ sai theo từng lớp và kiểm tra xem sự thay đổi về đặc trưng hay tham số có tạo cải thiện nhất quán không. Các đường học hiện tại là một công cụ chẩn đoán, không phải bằng chứng đủ để xác định chính xác mức overfitting của từng mô hình.
+\section{Nguy cơ thiên lệch khi chọn trên validation}
+Nhóm chọn từ 56 cấu hình V2 bằng cùng một tập validation. Khi thử nhiều cấu hình, một kết quả có thể cao một phần do phù hợp với các ảnh cụ thể trong validation. Sau khi chọn, nếu tiếp tục xem cùng validation để điều chỉnh thêm thì nguy cơ đó tăng lên. Vì mỗi lớp có 10 ảnh validation, chỉ một vài dự đoán thay đổi cũng có thể làm chỉ số theo lớp thay đổi rõ rệt.
+
+Kiểm định chéo V3 sử dụng train chính thức, nên các ảnh validation không nằm trong fold. Tuy vậy, E1, E4 và E6 đã được chọn cấu hình dựa trên validation trước khi được đưa vào CV. Vì thế CV giúp quan sát độ ổn định của những cấu hình cố định này, nhưng không phải một quy trình nested CV dùng để đánh giá độc lập toàn bộ bước chọn hyperparameter.
+\section{Ảnh hưởng của ảnh trùng và giới hạn kết luận}
+Split không giao nhau theo ID không bảo đảm nội dung ảnh khác nhau. Kiểm toán cho thấy một ảnh train trùng byte với một ảnh test dù có ID khác. K-NN dựa vào sự gần nhau của vector, nên việc ảnh trùng giữa các split là một lý do cần thận trọng khi diễn giải điểm test. Nhóm không tính hay suy đoán mức điểm bị ảnh hưởng bao nhiêu vì chưa có phép đánh giá riêng được cho phép.
+
+Các cặp gần trùng được tìm bằng pHash là danh sách để xem xét, không phải kết quả xác nhận tất cả ảnh liên quan trong bộ dữ liệu. Phép hash có thể bỏ sót ảnh bị cắt, xoay hoặc thay đổi mạnh về màu; một cặp gần theo hash cũng cần được xem lại. Giữ nguyên split giúp đối chiếu với quy trình chính thức, còn một tập độc lập đã kiểm tra trùng sẽ phù hợp hơn nếu nhóm cần kết luận về ứng dụng thực tế.
