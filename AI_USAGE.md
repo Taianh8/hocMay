@@ -15,3 +15,5 @@ Theo yêu cầu của nhóm, Codex hỗ trợ tính đường học E1/E4/E6 t�
 Theo yêu cầu của nhóm, Codex cập nhật thông tin bìa, mở rộng phần giải thích, cấu hình notebook tự chạy và dọn output. Nội dung report dùng số liệu đã được chạy trước khi xóa output; nhóm cần kiểm tra kết quả mới sau khi chạy lại.
 
 Codex hỗ trợ sửa hướng dẫn cài đặt, đăng ký kernel `.venv` trong dự án, chuẩn bị model E6 từ train/validation và kiểm thử lại notebook/UI. Không có đánh giá test mới trong bước này.
+
+Codex hỗ trợ cải thiện giao diện nhận diện, bổ sung tên lớp từ TensorFlow Datasets và hiển thị ảnh tham khảo thuộc train. Tên tiếng Việt chỉ được bổ sung cho một số lớp; nhóm cần rà soát cách gọi trước khi sử dụng trong báo cáo. Không có đánh giá test mới.
