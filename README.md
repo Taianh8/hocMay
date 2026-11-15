@@ -96,7 +96,7 @@ streamlit run app.py
 
 Lần đầu, lệnh chuẩn bị sẽ tạo cache, huấn luyện E1–E6 trên train/validation và tạo `configs/e6_manifest_moi.json`; việc này có thể mất vài phút. Không có dự đoán test mới. Nếu đã có model/manifest cục bộ hợp lệ, lệnh sẽ dùng lại. Nếu thấy thông báo kết quả không đầy đủ hoặc E6 không được chọn, hãy kiểm tra thông báo và `results/` trước khi chạy tiếp; không tự sửa manifest để ép model.
 
-Sau lệnh Streamlit, mở địa chỉ được in trong Terminal, thường là `http://localhost:8501`. Tải JPEG/PNG tối đa 10 MiB và 20 megapixel; ứng dụng trả mã lớp Oxford 1–102, không hiển thị confidence chưa được hiệu chuẩn. Dừng ứng dụng bằng **Ctrl+C**.
+Sau lệnh Streamlit, mở địa chỉ được in trong Terminal, thường là `http://localhost:8501`. Tải JPEG/PNG tối đa 10 MiB và 20 megapixel; ứng dụng hiển thị tên nhóm hoa dự đoán, mã lớp và tối đa ba ảnh tham khảo cùng lớp lấy từ tập train. Tên tiếng Việt chỉ được bổ sung cho một số lớp; lớp chưa có tên Việt giữ tên tiếng Anh. Các ảnh tham khảo không chứng minh dự đoán đúng và ứng dụng không hiển thị confidence chưa được hiệu chuẩn. Tên gốc theo [TensorFlow Datasets](https://github.com/tensorflow/datasets/blob/master/tensorflow_datasets/datasets/oxford_flowers102/oxford_flowers102_dataset_builder.py). Dừng ứng dụng bằng **Ctrl+C**.
 
 Chỉ nạp model pickle và manifest tin cậy. Hash chỉ phát hiện thay đổi ngoài ý muốn, không bảo vệ nếu cả model và manifest đều bị thay. Model và dữ liệu không được lưu trong Git.
 

@@ -72,7 +72,12 @@ def test_streamlit_upload_flow(monkeypatch):
     assert not app.exception
     manifest, payload = load_current()
     expected = predict_image(image.getvalue(), manifest, payload)
-    assert len(app.success) == 1 and f'Mã lớp Oxford dự đoán: {expected}' in app.success[0].value
+    from src.flower_catalog import load_catalog, display_name
+    result_cards = [element.value for element in app.markdown if '<div class="result-card">' in element.value]
+    assert len(result_cards) == 1
+    assert display_name(load_catalog()[expected]) in result_cards[0]
+    assert f'{expected:02d}' in result_cards[0]
+    assert any('ĐỐI CHIẾU BẰNG MẮT' in element.value for element in app.markdown)
 
 
 def test_modified_manifest_preprocessing_rejected(tmp_path):

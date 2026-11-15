@@ -81,13 +81,18 @@ def image_features(data: bytes, manifest: dict) -> np.ndarray:
         raise ValueError(f'Không thể giải mã ảnh: {exc}') from exc
 
 
-def predict_image(data: bytes, manifest: dict, payload: dict) -> int:
-    """Return an official 1–102 class ID; no probability or confidence claim."""
+def predict_with_features(data: bytes, manifest: dict, payload: dict) -> tuple[int, np.ndarray]:
+    """Dự đoán mã lớp và trả vector PCA để tìm ảnh train tham khảo."""
     vector = image_features(data, manifest).reshape(1, -1)
     projected = payload['pca'].transform(vector)[:, :manifest['pca']['components']]
     prediction = np.asarray(payload['model'].predict(projected))
     if prediction.shape != (1,) or not 0 <= int(prediction[0]) < 102: raise ValueError('Dự đoán của model không hợp lệ')
-    return int(prediction[0]) + 1
+    return int(prediction[0]) + 1, projected
+
+
+def predict_image(data: bytes, manifest: dict, payload: dict) -> int:
+    """Trả mã lớp Oxford 1–102, không diễn giải điểm thành xác suất."""
+    return predict_with_features(data, manifest, payload)[0]
 
 
 def main():
