@@ -1,14 +1,32 @@
 \chapter{Tổng kết và hướng phát triển}
-Qua đề tài, nhóm em đã thực hiện các bước từ kiểm tra ảnh và nhãn, tiền xử lý, trích xuất đặc trưng đến huấn luyện, so sánh mô hình và phân tích lỗi. Từ các cấu hình đã thử, E6 có điểm validation cao nhất, còn đường học và kiểm định chéo cho thấy cần tiếp tục kiểm tra tính ổn định khi dữ liệu huấn luyện thay đổi.
+\section{Tổng kết kết quả đạt được}
+Trong bài tập lớn môn Học máy, nhóm em đã thực hiện một quy trình nghiên cứu và thực nghiệm hoàn chỉnh, tuân thủ nghiêm ngặt các nguyên tắc phương pháp luận:
+\begin{enumerate}
+    \item \textbf{Khảo sát và kiểm toán dữ liệu: } Sử dụng bộ dữ liệu Oxford 102 Flowers với đúng phân chia chính thức (train 1.020, val 1.020, test 6.149 ảnh). Phát hiện và công bố minh bạch hai ảnh trùng byte giữa các tập dữ liệu thông qua kiểm toán SHA-256 và pHash.
+    \item \textbf{Phát triển đa dạng phương án: } Xây dựng và đánh giá hệ thống 7 nhóm thí nghiệm (E1–E7) bao quát cả hai họ thuật toán cốt lõi là K-NN và Cây quyết định trên các biểu diễn đặc trưng từ đơn giản (Pixel thô) đến nâng cao (HOG biên cạnh, Histogram màu HSV và giảm chiều PCA).
+    \item \textbf{Chống rò rỉ dữ liệu tuyệt đối: } Thiết lập quy trình phân tách nghiêm ngặt: mọi phép biến đổi tham số (PCA) chỉ được fit trên tập train hoặc train-fold trong kiểm định chéo. Toàn bộ quá trình tinh chỉnh và chọn mô hình được thực hiện trên validation và CV, chỉ mở tập test đúng một lần duy nhất cho mô hình cuối đã đóng băng.
+    \item \textbf{Kết quả thực nghiệm khách quan: }
+    \begin{itemize}
+        \item Trên tập validation, mô hình E6 (HOG + HSV + PCA 128 chiều + 3-NN Cosine) đạt hiệu năng cao nhất với Accuracy 23,43\% và Macro F1 0,2127.
+        \item Cây quyết định công bằng E7 đạt Macro F1 validation 0,0891, vượt trội so với cây quyết định V1 (0,0230) nhưng vẫn thua kém đáng kể so với K-NN.
+        \item Trên tập test chính thức gồm 6.149 ảnh, mô hình cuối E6 đạt Accuracy \textbf{26,02\%} và Macro F1 \textbf{0,2349}, vượt trội mốc ngẫu nhiên (0,98\%) hơn 26 lần và vượt baseline E1 (13,45\% Accuracy, 0,1103 Macro F1) hơn 2,1 lần.
+    \end{itemize}
+    \item \textbf{Phân tích lỗi có đối chứng: } Bác bỏ giả thuyết kích thước ảnh bằng thực nghiệm kiểm soát; đối chiếu và giải thích sâu sắc các cặp nhầm lẫn phổ biến dựa trên đặc tính màu sắc, góc chụp và nền lá.
+    \item \textbf{Sản phẩm ứng dụng thực tế: } Xây dựng giao diện web tương tác bằng Streamlit cho phép người dùng tải ảnh, nhận diện top-3 gợi ý kèm tên loài chính thức và đối chiếu ảnh tham khảo từ tập huấn luyện.
+\end{enumerate}
 
-Kết quả hiện tại vẫn có những giới hạn: số ảnh train của mỗi lớp ít, validation đã được dùng để chọn trong 56 cấu hình, một số ảnh trùng giữa các split và test V1 đã từng được quan sát. Ngoài ra, model E6 gốc hiện thiếu trong workspace và cần được khôi phục từ bản tin cậy khớp manifest nếu nhóm muốn chạy lại phần suy luận. Do đó, nhóm chưa thể khẳng định chất lượng triển khai thực tế hoặc đưa ra điểm test cuối cho E6.
+\section{Hạn chế của giải pháp}
+Nhóm em trung thực nhìn nhận các hạn chế kỹ thuật hiện tại:
+\begin{itemize}
+    \item \textbf{Hiệu năng tổng thể còn khiêm tốn: } Độ chính xác 26,02\% trên tập test cho thấy các phương pháp trích xuất đặc trưng cổ điển (HOG, Color Histogram) kết hợp với thuật toán học máy truyền thống (K-NN, Cây quyết định) chưa đủ mạnh để giải quyết bài toán phân loại hoa 102 lớp phức tạp ở mức ứng dụng thương mại.
+    \item \textbf{Mẫu huấn luyện thưa: } Mỗi lớp chỉ có 10–20 mẫu huấn luyện. K-NN bị hạn chế bởi mật độ mẫu trong không gian nhiều chiều, dễ bị nhiễu bởi góc chụp và nền cảnh.
+    \item \textbf{Chưa tách biệt nền hoa: } Mô hình xử lý toàn bộ ảnh mà chưa có cơ chế phân đoạn (segmentation) để cô lập phần cánh hoa, dẫn đến việc nền lá xanh chi phối vector đặc trưng ở nhiều lớp.
+\end{itemize}
 
-Trong thời gian tới, nhóm em đề xuất kiểm tra kỹ các cặp ảnh trùng, bổ sung dữ liệu độc lập và thử các biến đổi ảnh có cơ sở từ phân tích lỗi. Trước khi đánh giá E6 trên test, nhóm cần được cho phép, đồng thời khóa model, seed, chính sách train và các chỉ số sẽ báo cáo. Kết quả cần được trình bày đầy đủ dù tốt hay xấu và không được dùng để tiếp tục chọn mô hình. Với những giới hạn hiện tại, hệ thống phù hợp làm tài liệu học tập và nghiên cứu ban đầu hơn là một công cụ nhận diện hoa đáng tin cậy trong mọi điều kiện thực tế.
-\section{Kinh nghiệm rút ra}
-Qua việc làm đề tài, nhóm em thấy rằng kết quả của một mô hình không chỉ phụ thuộc vào tên thuật toán mà còn phụ thuộc vào cách xử lý ảnh, đặc trưng được chọn, số lượng dữ liệu và cách chia tập. Một mô hình đơn giản như K-NN vẫn cần được kiểm tra kỹ: nếu chỉ nhìn điểm trên tập train, nhóm có thể đánh giá quá cao khả năng của mô hình đối với ảnh chưa gặp.
-
-Nhóm cũng nhận thấy việc lưu cấu hình và dự đoán quan trọng không kém việc tạo biểu đồ. Khi có ID ảnh, nhãn và dự đoán, nhóm có thể tính lại một chỉ số hoặc kiểm tra các ảnh bị nhầm. Khi thiếu artifact cục bộ, người nhận dự án cần có lệnh chạy rõ ràng để tạo lại thay vì dựa vào một con số không biết nguồn gốc. Đây là lý do README và các notebook được tổ chức theo thứ tự chạy, bắt đầu từ dữ liệu chính thức.
-\section{Các bước có thể thực hiện tiếp}
-Trước mắt, các thành viên có thể kiểm tra lại dữ liệu và chạy notebook theo hướng dẫn, sau đó đối chiếu điểm validation với bảng kết quả đã ghi. Nếu xuất hiện khác biệt, cần kiểm tra phiên bản thư viện, seed, split và việc khớp ảnh với nhãn trước khi kết luận mô hình thay đổi. Các output sinh trong lần chạy mới cần được lưu riêng nếu nhóm muốn so sánh giữa các máy.
-
-Về nghiên cứu tiếp theo, nhóm có thể xem các ảnh lỗi để đề xuất một thay đổi cụ thể về tiền xử lý hoặc đặc trưng, rồi đánh giá thay đổi đó bằng quy trình đã định trước trên train và validation. Nếu mục tiêu là báo cáo khả năng tổng quát hóa, cần ưu tiên dữ liệu độc lập, kiểm tra ảnh trùng và hạn chế số lần dùng tập đánh giá. Nhóm chưa thực hiện các bước đó trong báo cáo này và không đưa ra số liệu dự đoán cho chúng.
+\section{Hướng phát triển tiếp theo}
+Dựa trên những kinh nghiệm thu được, nhóm em đề xuất các hướng nghiên cứu mở rộng:
+\begin{enumerate}
+    \item \textbf{Áp dụng kỹ thuật tiền xử lý phân tách nền: } Thử nghiệm các phương pháp trích xuất vùng quan tâm (Saliency Detection hoặc GrabCut) để loại bỏ nền lá trước khi tính histogram màu và HOG.
+    \item \textbf{Mô hình học biểu diễn sâu (Deep Learning): } Khảo sát trích xuất vector đặc trưng ngữ nghĩa bằng các mạng tích chập tiền huấn luyện (ResNet, EfficientNet) hoặc Vision Transformer (ViT) kết hợp bộ phân loại K-NN/SVM, kỳ vọng nâng độ chính xác lên trên 80–90\%.
+    \item \textbf{Thu thập và chuẩn hóa dữ liệu mở rộng: } Bổ sung các mẫu ảnh chụp hoa trong tự nhiên tại Việt Nam để làm giàu tập tham chiếu và tăng độ bền vững khi ứng dụng thực tế.
+\end{enumerate}

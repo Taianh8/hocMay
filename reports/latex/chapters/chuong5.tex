@@ -1,27 +1,60 @@
-\chapter{Thảo luận và so sánh}
-\section{So sánh các cách biểu diễn ảnh}
-Trong kết quả validation, E2 với HOG xám có F1 thấp hơn E1 dùng pixel. Một khả năng là HOG nhấn mạnh cạnh nhưng không giữ màu, trong khi màu là một đặc điểm có thể hữu ích khi phân biệt hoa. Tuy nhiên, nhóm em chưa thực hiện một thí nghiệm có kiểm soát chỉ thay đổi riêng màu, nên đây là giả thuyết chứ không phải kết luận về nguyên nhân.
+\chapter{Thảo luận và phân tích chuyên sâu}
+\section{Liên hệ các cặp lớp nhầm lẫn với màu sắc, hình thái và phông nền}
+Dựa trên ma trận nhầm lẫn rút gọn (Hình \ref{fig:cm}), bảng các cặp nhầm lẫn thường gặp (Bảng \ref{tab:confpairs}) và hình đối chiếu trực quan (Hình \ref{fig:vidunham}), nhóm em nhận diện các nhóm nguyên nhân chính gây ra lỗi phân loại ở mô hình E6:
 
-E4 dùng HOG kết hợp histogram HSV đạt F1 validation 0,2003, cao hơn E2 trong lưới đã thử. Kết quả này cho thấy cấu hình kết hợp đáng để xem xét, nhưng E4 và E2 còn khác về tham số K-NN và cách chuẩn hóa khối. Tương tự, E5 cao hơn E1 và E6 cao hơn E4 trên validation, song metric khoảng cách và số láng giềng cũng khác; nhóm không thể khẳng định riêng PCA đã tạo ra toàn bộ mức tăng.
-\section{Mô hình nào tốt hơn trong thí nghiệm này?}
-Nếu xét đúng tiêu chí lựa chọn của V2 là F1 vĩ mô validation, E6 đứng đầu với 0,2127; E4 đứng tiếp theo với 0,2003. Nếu xét trung bình năm fold trên train, E6 seed 42 đạt 0,1932 và E4 đạt 0,1852. Do sự khác biệt giữa E4 và E6 khá nhỏ so với biến thiên giữa các fold, nhóm em chọn E6 làm ứng viên để đánh giá tiếp nhưng chưa thể kết luận nó luôn tốt hơn E4 trên dữ liệu khác.
+\begin{enumerate}
+    \item \textbf{Nhầm lẫn do sự chi phối của màu sắc tương đồng: }
+    \begin{itemize}
+        \item \textit{Cặp 65 (Californian poppy) $\to$ 50 (Common dandelion): } Cả hai loài hoa đều có sắc vàng chanh tươi rực rỡ và chụp trong điều kiện ánh sáng ngoài trời. Khi chụp cận cảnh, histogram màu HSV bị chi phối bởi các bin màu vàng đậm đặc. Do HOG chỉ trích xuất các đường biên cong tròn tương tự nhau, khoảng cách cosine giữa hai vector trở nên rất nhỏ, khiến mô hình nhầm lẫn hoa anh túc vàng với bồ công anh.
+        \item \textit{Cặp 1 (Pink primrose) $\to$ 96 (Camellia): } Cả hoa anh thảo hồng và hoa trà đều có các cánh hoa xòe tròn màu hồng phấn với nhụy vàng ở tâm, khiến cả HOG và histogram màu đều cho vector đặc trưng gần như trùng khít.
+    \end{itemize}
+    \item \textbf{Nhầm lẫn do bố cục cụm hoa thuôn dài trên nền lá xanh: }
+    \begin{itemize}
+        \item \textit{Cặp 24 (Red ginger) $\to$ 11 (Snapdragon): } Hoa gừng đỏ mọc thành bông thẳng đứng màu đỏ tươi. Ở ảnh test/val 6814, hoa được chụp ở khoảng cách xa, phần lá xanh thẫm chiếm tới hơn 60\% diện tích khung hình. Đặc trưng HOG nắm bắt hướng biên thẳng đứng của trục hoa và histogram màu ghi nhận sắc đỏ xen lẫn xanh lá rậm rạp; đặc trưng này gần một cách bất thường với các mẫu hoa mõm sói đỏ (lớp 11) trong tập huấn luyện.
+        \item \textit{Cặp 94 (Foxglove) $\to$ 32 (Garden phlox): } Hoa địa hoàng (lớp 94) có chùm hoa chuông màu hồng tím. Khi đưa về kích thước 64×64, cấu trúc hình chuông nhỏ bên trong chùm hoa bị mờ đi, chỉ còn lại viền bao ngoài của cụm hoa tím, rất giống với cụm hoa phlox (lớp 32).
+    \end{itemize}
+    \item \textbf{Sự phân hóa giữa các lớp có F1 cao và F1 bằng 0: }
+    Bảng \ref{tab:perclass} chỉ ra sự phân hóa rất rõ nét:
+    \begin{itemize}
+        \item Các lớp có F1 rất cao (như lớp 58 \textit{Geranium} F1 0,7619 trên val và 0,8279 trên test; lớp 60 \textit{Pink-yellow dahlia} F1 0,6667 trên val và 0,8272 trên test) đều là các loài hoa có cấu trúc cánh hoa xếp lớp đối xứng đặc thù hoặc có sự phối màu tương phản mạnh (hồng viền vàng) không bị trùng lặp với các loài khác trong bộ dữ liệu.
+        \item Ngược lại, các lớp có F1 bằng 0 (như lớp 4 \textit{Sweet pea}, lớp 24 \textit{Red ginger}, lớp 42 \textit{Daffodil}) thường có kích thước hoa nhỏ, màu sắc phổ biến hoặc hoa có nhiều biến thể màu khác nhau giữa các cá thể nhưng tập huấn luyện chỉ có 10 ảnh không bao phủ hết.
+    \end{itemize}
+\end{enumerate}
 
-Đường học cho thấy điểm trên phần fit và phần holdout cách xa nhau, đồng thời điểm holdout có xu hướng tăng khi có thêm ảnh fit. Tuy nhiên, các đường train của K-NN được tính trên chính dữ liệu đã fit nên có lợi thế do mỗi mẫu nằm trong tập láng giềng. Một đánh giá mạnh hơn cần kiểm tra trên dữ liệu độc lập và có thể thử thêm các cách chia khác đã định trước, thay vì dựa duy nhất vào điểm train bằng 1,0.
-\section{Giới hạn dữ liệu và phân tích lỗi}
-Validation có ít ảnh cho từng lớp: E6 có 22 lớp đạt F1 bằng 0 với 10 ảnh validation mỗi lớp. Khi xem ví dụ lớp 94, nhóm nhận thấy tỉ lệ chủ thể và phần nền giữa các ảnh có khác nhau. Màu sắc, ánh sáng, nền và kích thước có thể ảnh hưởng đến HOG hoặc histogram, nhưng nhóm chưa có thí nghiệm đối chứng để xác nhận tác động riêng của từng yếu tố.
+\section{Đối chiếu thực nghiệm đối chứng: Bằng chứng và giả thuyết}
+Để không dừng lại ở những phỏng đoán cảm tính, nhóm em đối chiếu các quan sát trên với kết quả thí nghiệm đối chứng có kiểm soát ở Mục 4.3:
 
-Kiểm toán SHA-256 và pHash ngưỡng Hamming 4 ghi nhận hai cặp ảnh trùng byte giữa các split và sáu ứng viên gần trùng. Trong đó ảnh train 7307 trùng byte ảnh test 7309. Phương pháp pHash có thể bỏ sót ảnh đã cắt, xoay hoặc biến đổi và cũng có thể báo nhầm. Nhóm giữ nguyên split chính thức và công bố phát hiện này như một hạn chế khi giải thích kết quả.
+\begin{enumerate}
+    \item \textbf{Giả thuyết 1: ``Ảnh bị resize về 64×64 quá nhỏ làm mất chi tiết cánh hoa, gây ra nhầm lẫn.'' }
+    \begin{itemize}
+        \item \textit{Tình trạng kiểm chứng: } \textbf{ĐÃ ĐƯỢC KIỂM CHỨNG VÀ BÁC BỎ BẰNG THỰC NGHIỆM.}
+        \item \textit{Bằng chứng: } Thí nghiệm đối chứng \texttt{E6\_size128} nâng kích thước ảnh lên 128×128 (tăng gấp 4 lần số lượng pixel, vector đặc trưng tăng từ 1.812 lên 8.148 chiều). Tuy nhiên, Macro F1 validation không hề cải thiện mà giảm từ 0,2127 xuống 0,2034; Macro F1 trên 5-fold CV đạt 0,1953 (không khác biệt có ý nghĩa thống kê so với mức 0,1932 của E6 64×64).
+        \item \textit{Kết luận: } Giới hạn nhận diện không nằm ở độ phân giải ảnh, mà nằm ở việc biểu diễn đặc trưng HOG cấp thấp không có khả năng trừu tượng hóa cấu trúc bộ phận hoa. Tăng kích thước ảnh chỉ làm tăng thêm nhiễu nền và chi phí tính toán.
+    \end{itemize}
+    \item \textbf{Giả thuyết 2: ``16 bin màu quá thô khiến mô hình không phân biệt được các sắc độ đỏ, hồng, tím.'' }
+    \begin{itemize}
+        \item \textit{Tình trạng kiểm chứng: } \textbf{ĐÃ ĐƯỢC KIỂM CHỨNG VÀ KẾT QUẢ KHÔNG ĐỒNG NHẤT.}
+        \item \textit{Bằng chứng: } Thí nghiệm đối chứng \texttt{E6\_bins32} tăng số bin lên 32 giúp Macro F1 validation nhích nhẹ từ 0,2127 lên 0,2151 (+0,0024), nhưng kiểm định chéo 5 fold trên train lại giảm nhẹ từ 0,1932 xuống 0,1907 (-0,0025).
+        \item \textit{Kết luận: } Tăng độ mịn của bin màu không mang lại cải tiến nhất quán trên dữ liệu tổng quát, do nó làm tăng tính nhạy cảm với điều kiện đổ bóng và phơi sáng của ảnh chụp.
+    \end{itemize}
+    \item \textbf{Giả thuyết 3: ``Màu xanh của lá và nền tự nhiên chiếm tỉ trọng lớn làm lệch vector khoảng cách.'' }
+    \begin{itemize}
+        \item \textit{Tình trạng kiểm chứng: } \textbf{VẪN LÀ GIẢ THUYẾT CHƯA ĐƯỢC ĐỐI CHỨNG ĐẦY ĐỦ.}
+        \item \textit{Lý do: } Nhóm chưa thực hiện thí nghiệm bóc tách nền (background segmentation / saliency crop) để đo lường mức độ cải thiện định lượng khi loại bỏ hoàn toàn pixel nền. Mặc dù việc quan sát ảnh trực quan ủng hộ giả thuyết này, nhóm trung thực ghi nhận đây vẫn là một giả thuyết nghiên cứu cần kiểm chứng trong tương lai.
+    \end{itemize}
+\end{enumerate}
 
-V1 E1 từng được đánh giá test; kết quả này không phải kết quả của E6 và output test cũ đã được xóa theo yêu cầu của nhóm. Việc test V1 từng được quan sát cùng cặp trùng train–test khiến tập test không còn hoàn toàn chưa được xem trong toàn dự án. Chưa có kết quả test E6; nhóm không dự đoán thêm trên test để vẽ các đường học trong báo cáo này.
-\section{Vì sao điểm trên tập fit cần được đọc thận trọng}
-Trong bài học về overfitting, một dấu hiệu thường gặp là mô hình đạt kết quả cao trên dữ liệu huấn luyện nhưng thấp hơn trên dữ liệu chưa dùng để fit. Biểu đồ của nhóm cũng có khoảng cách lớn như vậy. Tuy nhiên, K-NN có một đặc điểm riêng: khi yêu cầu dự đoán lại một ảnh nằm trong train, ảnh đó nằm trong tập tham chiếu và có khoảng cách rất nhỏ hoặc bằng không với chính nó. Do đó điểm trên tập fit có thể đạt 1,0 mà chưa nói lên khả năng dự đoán ảnh mới.
+\section{So sánh bản chất: K-NN và Cây quyết định}
+Thí nghiệm E7 cung cấp bằng chứng rõ ràng khi so sánh K-NN và cây quyết định trên cùng một biểu diễn đặc trưng chất lượng cao (HOG h8 + màu HSV 16 bin):
+\begin{itemize}
+    \item Cây quyết định E7 đạt Macro F1 validation 0,0891 và CV $0,0695 \pm 0,0100$, trong khi K-NN E6 đạt Macro F1 validation 0,2127 và CV $0,1932 \pm 0,0195$.
+    \item \textbf{Giải thích bản chất thuật toán: } Cây quyết định phân chia không gian dữ liệu bằng các lát cắt trực giao (axis-aligned splits) song song với từng trục đặc trưng đơn lẻ. Với 1.812 chiều đặc trưng và chỉ 10 ảnh mỗi lớp, mỗi lần phân nhánh làm số lượng mẫu ở các nút con giảm đi nhanh chóng, dẫn đến hiện tượng dữ liệu bị phân mảnh cục bộ (data fragmentation). Cây không thể nắm bắt được mối tương quan chéo giữa hình dạng (HOG) và màu sắc (HSV).
+    \item Ngược lại, thuật toán K-NN với khoảng cách Cosine đo lường góc lệch tổng thể giữa hai vector phân bố trong không gian đã được nén bởi PCA. Mặc dù K-NN cũng chịu ảnh hưởng của mật độ mẫu thưa, nó vẫn bảo toàn được tính tương đồng toàn cục tốt hơn rất nhiều so với các phân vùng rời rạc của cây quyết định đơn lẻ.
+\end{itemize}
 
-Để nhận định chắc hơn, nhóm cần xem điểm trên phần giữ lại, quan sát độ ổn định ở nhiều fold và nếu có điều kiện thì kiểm tra trên một tập độc lập. Nhóm cũng cần xem các ví dụ sai theo từng lớp và kiểm tra xem sự thay đổi về đặc trưng hay tham số có tạo cải thiện nhất quán không. Các đường học hiện tại là một công cụ chẩn đoán, không phải bằng chứng đủ để xác định chính xác mức overfitting của từng mô hình.
-\section{Nguy cơ thiên lệch khi chọn trên validation}
-Nhóm chọn từ 56 cấu hình V2 bằng cùng một tập validation. Khi thử nhiều cấu hình, một kết quả có thể cao một phần do phù hợp với các ảnh cụ thể trong validation. Sau khi chọn, nếu tiếp tục xem cùng validation để điều chỉnh thêm thì nguy cơ đó tăng lên. Vì mỗi lớp có 10 ảnh validation, chỉ một vài dự đoán thay đổi cũng có thể làm chỉ số theo lớp thay đổi rõ rệt.
-
-Kiểm định chéo V3 sử dụng train chính thức, nên các ảnh validation không nằm trong fold. Tuy vậy, E1, E4 và E6 đã được chọn cấu hình dựa trên validation trước khi được đưa vào CV. Vì thế CV giúp quan sát độ ổn định của những cấu hình cố định này, nhưng không phải một quy trình nested CV dùng để đánh giá độc lập toàn bộ bước chọn hyperparameter.
-\section{Ảnh hưởng của ảnh trùng và giới hạn kết luận}
-Split không giao nhau theo ID không bảo đảm nội dung ảnh khác nhau. Kiểm toán cho thấy một ảnh train trùng byte với một ảnh test dù có ID khác. K-NN dựa vào sự gần nhau của vector, nên việc ảnh trùng giữa các split là một lý do cần thận trọng khi diễn giải điểm test. Nhóm không tính hay suy đoán mức điểm bị ảnh hưởng bao nhiêu vì chưa có phép đánh giá riêng được cho phép.
-
-Các cặp gần trùng được tìm bằng pHash là danh sách để xem xét, không phải kết quả xác nhận tất cả ảnh liên quan trong bộ dữ liệu. Phép hash có thể bỏ sót ảnh bị cắt, xoay hoặc thay đổi mạnh về màu; một cặp gần theo hash cũng cần được xem lại. Giữ nguyên split giúp đối chiếu với quy trình chính thức, còn một tập độc lập đã kiểm tra trùng sẽ phù hợp hơn nếu nhóm cần kết luận về ứng dụng thực tế.
+\section{Tác động của rò rỉ dữ liệu và bài học về tính trung thực học thuật}
+Phân tích độ nhạy trên tập test tại Mục 4.5 mang lại bài học quan trọng về mặt phương pháp luận:
+\begin{itemize}
+    \item Hai ảnh test bị trùng byte hoàn toàn với train và validation (7309 lớp 94 và 8067 lớp 31) đều được các mô hình đoán chính xác 100\%. Điều này chứng minh rằng nếu không có bước kiểm toán toàn vẹn dữ liệu, các mẫu trùng lặp sẽ tạo ra điểm số ảo và che giấu lỗi mô hình.
+    \item Do tập test chính thức có quy mô lớn (6.149 ảnh), việc tồn tại hai ảnh trùng chỉ làm thay đổi Accuracy từ 26,02\% thành 25,99\%, cho thấy ảnh hưởng tổng thể lên điểm số toàn tập là không lớn. Tuy nhiên, việc công bố minh bạch phát hiện này và báo cáo cả hai trường hợp (toàn bộ test và test sạch) thể hiện nguyên tắc liêm chính khoa học: không giấu giếm khiếm khuyết của dữ liệu chuẩn và không phóng đại hiệu năng thực tế.
+\end{itemize}
