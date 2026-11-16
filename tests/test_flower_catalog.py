@@ -16,6 +16,33 @@ def test_catalog_id_mapping():
     assert labels[102]['name_en']=='blackberry lily'
 
 
+def test_flower_names_json_structure():
+    import json
+    p = ROOT / 'configs/flower_names.json'
+    assert p.is_file()
+    data = json.loads(p.read_text())
+    assert len(data) == 102
+    for i in range(1, 103):
+        assert str(i) in data
+        assert isinstance(data[str(i)]['name_en'], str) and len(data[str(i)]['name_en']) > 0
+
+
+def test_top_k_predictions():
+    from src.inference import predict_top_k
+    manifest, payload = load_frozen_model(default_manifest_path())
+    data = (ROOT / 'data/raw/jpg/image_06765.jpg').read_bytes()
+    top_classes, projected = predict_top_k(data, manifest, payload, k=3)
+    assert 1 <= len(top_classes) <= 3
+    # Classes must be distinct
+    c_ids = [c['class_id'] for c in top_classes]
+    assert len(set(c_ids)) == len(c_ids)
+    for c in top_classes:
+        assert 1 <= c['class_id'] <= 102
+        assert 0 < c['vote_share'] <= 1.0
+    # Top 1 must match predict_image
+    assert c_ids[0] == predict_image(data, manifest, payload)
+
+
 def test_references_are_training_images_of_predicted_class():
     manifest, payload = load_frozen_model(default_manifest_path())
     data=(ROOT/'data/raw/jpg/image_06765.jpg').read_bytes()
@@ -37,3 +64,15 @@ def test_reference_mismatch_rejected():
     manifest['sha256']['data/processed/features_v2.npz']='0'*64
     with pytest.raises(ValueError, match='tham khảo'):
         load_reference_index(manifest,payload)
+
+
+def test_catalog_rejects_wrong_official_name(tmp_path, monkeypatch):
+    import json
+    import src.flower_catalog as catalog_module
+    data=json.loads((ROOT/'configs/flower_names.json').read_text())
+    data['92']['name_en']='wrong flower'
+    path=tmp_path/'flower_names.json'; path.write_text(json.dumps(data))
+    monkeypatch.setattr(catalog_module,'CATALOG',path)
+    import pytest
+    with pytest.raises(ValueError, match='không khớp'):
+        catalog_module.load_catalog()
