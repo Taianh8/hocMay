@@ -1,0 +1,11 @@
+# Kiểm toán quy trình lựa chọn và đánh giá cuối
+
+Bản so sánh V5 ban đầu ghi `selected_model: E6`, vì mã chọn trong E1–E7 và loại các biến thể đối chứng. Tuy nhiên prompt yêu cầu chọn trong bảng hợp nhất gồm cả biến thể bằng Macro F1 validation rồi Accuracy. `E6_bins32` đạt Macro F1 validation **0,2151180506**, cao hơn E6 **0,2126631102**; nếu áp dụng quy tắc cho toàn bộ ứng viên thì `E6_bins32` đứng đầu. Bản đối chiếu mới `results/v5/unified_comparison_v2.json` ghi đầy đủ ứng viên và hash nguồn; bản gốc được giữ nguyên.
+
+Lần đánh giá test đã được một tiến trình thực hiện cho E1 và E6 fit lại trên train+validation, không phải `E6_bins32`. Vì người dùng giới hạn test đúng một lần, không chạy lại và không báo cáo test E6 là test của `E6_bins32`. `results/final_test/metrics.json` và các dự đoán E1/E6 được giữ nguyên. `scripts/doi_chieu_final.py` chỉ tính lại chỉ số từ CSV dự đoán đã lưu, kiểm tra ID/nhãn chính thức, ma trận và hai ảnh trùng lấy từ kiểm toán V4; không gọi model dự đoán. Kết quả đối chiếu tại `results/final_test/verification.json`.
+
+Do test đã được quan sát, sai lệch lựa chọn không thể sửa bằng việc tiếp tục đánh giá `E6_bins32` trên cùng test mà vẫn xem đó là đánh giá một lần độc lập. Muốn so sánh công bằng và kết luận tổng quát hóa, nhóm cần một holdout mới độc lập đã kiểm tra trùng, cùng quy trình và lựa chọn được định trước. `scripts/run_final_test.py` từ chối chạy nếu manifest hoặc output test đã tồn tại, kể cả sau lần chạy bị gián đoạn. Không tự xóa khóa hay output để chạy lại.
+
+Manifest V2 được tạo cuối `scripts/run_final_test.py`, sau khi dự đoán test, và không ghi hash hai file model được fit lại. Vì vậy không có bằng chứng từ chính manifest rằng model/luật đã được khóa trước test. Sau các thay đổi UI, hash `src/flower_catalog.py` hiện không còn khớp manifest V2 lịch sử. `configs/kiem_toan_final_v3.json` chỉ ghi hash các file model và kết quả **sau sự kiện** để phát hiện thay đổi về sau; không thay thế bằng chứng khóa trước test hoặc xác thực nguồn.
+
+Lock lịch sử đã chuyển từ `requirements-lock.txt` sang `docs/requirements-v1-v3-lock.txt` theo yêu cầu dọn repository. Manifest V1 giữ nguyên tham chiếu đường dẫn cũ; muốn kiểm tra toàn bộ manifest V1 theo đúng đường dẫn lịch sử phải đối chiếu riêng file lưu trữ này, không sửa manifest cũ.

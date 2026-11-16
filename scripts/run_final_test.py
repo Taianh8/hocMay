@@ -73,7 +73,14 @@ def compute_metrics_dict(y_true, y_pred):
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
+    # Không chạy lại test nếu đã tồn tại bất kỳ dấu vết kết quả hoặc manifest.
+    # Một lần chạy bị gián đoạn cũng phải được con người rà soát, không tự retry.
+    manifest = ROOT / 'configs/e6_manifest_v2.json'
+    if manifest.exists() or (OUT.exists() and any(OUT.iterdir())):
+        raise RuntimeError('Đã có manifest hoặc artifact test cuối; từ chối chạy lại test.')
+    OUT.mkdir(parents=True, exist_ok=False)
+    marker = OUT / '.test_started'
+    marker.write_text('Đã bắt đầu đánh giá test; không tự chạy lại.\n')
     OUT_MODELS.mkdir(parents=True, exist_ok=True)
 
     df = load_dataset()

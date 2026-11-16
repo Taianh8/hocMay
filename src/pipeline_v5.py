@@ -177,14 +177,17 @@ def run_5fold_cv(X_train_raw, y_train, exp_name, exp_cfg, cfg, fold_seed=42):
         y_va_fold = y_train[val_idx]
 
         if exp_name == 'E7':
-            # E7 winner is no PCA, criterion=gini, max_depth=20, min_samples_leaf=1
-            clf = DecisionTreeClassifier(criterion='gini', max_depth=20, min_samples_leaf=1,
-                                         random_state=cfg['decision_tree']['random_state'])
-            t0 = perf_counter()
-            clf.fit(X_tr_fold, y_tr_fold)
-            fit_sec = perf_counter() - t0
-            pred = clf.predict(X_va_fold)
+            if not exp_cfg or exp_cfg['feature'] not in ('h8_hsv', 'h8_hsv_pca'):
+                raise ValueError('Cần cấu hình E7 thắng trên validation')
             pca_sec = 0.0
+            if exp_cfg['feature'] == 'h8_hsv_pca':
+                pca = PCA(n_components=cfg['pca_components'], svd_solver='randomized',
+                          iterated_power=cfg['pca_iterated_power'], random_state=cfg['seed'])
+                t0 = perf_counter(); pca.fit(X_tr_fold); pca_sec = perf_counter() - t0
+                X_tr_fold = pca.transform(X_tr_fold); X_va_fold = pca.transform(X_va_fold)
+            clf = DecisionTreeClassifier(**exp_cfg['params'], random_state=cfg['decision_tree']['random_state'])
+            t0 = perf_counter(); clf.fit(X_tr_fold, y_tr_fold); fit_sec = perf_counter() - t0
+            pred = clf.predict(X_va_fold)
         else:
             pca = PCA(n_components=exp_cfg['pca_components'], svd_solver='randomized',
                       iterated_power=cfg['pca_iterated_power'], random_state=cfg['seed'])
@@ -213,6 +216,13 @@ def run_5fold_cv(X_train_raw, y_train, exp_name, exp_cfg, cfg, fold_seed=42):
         })
 
     return cv_records
+
+
+def select_best(candidates):
+    """Chọn mọi ứng viên theo validation F1, rồi accuracy; giữ thứ tự khi hòa."""
+    if not candidates:
+        raise ValueError('Không có ứng viên để chọn')
+    return max(candidates, key=lambda row: (row['val_macro_f1'], row['val_accuracy']))
 
 
 def build_unified_comparison():
@@ -290,10 +300,8 @@ def build_unified_comparison():
                 'fit_seconds': w['fit_seconds'] + w['pca_fit_seconds']
             })
 
-    # Selection rule: validation macro F1, then validation accuracy
-    # For core model selection (E1–E7):
-    core_candidates = [u for u in unified if u['experiment'] in [f'E{i}' for i in range(1, 8)]]
-    selected = sorted(core_candidates, key=lambda x: (x['val_macro_f1'], x['val_accuracy']), reverse=True)[0]
+    # Tất cả cấu hình trong bảng, kể cả đối chứng, đều thuộc tập ứng viên.
+    selected = select_best(unified)
 
     out_data = {
         'unified_comparison': unified,
@@ -306,6 +314,8 @@ def build_unified_comparison():
 
 
 def run():
+    if (OUT / 'validation_search.json').exists():
+        raise FileExistsError('Đã có kết quả V5; không tự ghi đè. Dùng bản sao cách ly để tái lập.')
     cfg = load_config()
     df = load_dataset()
     selected, arrays = extract_or_load_features(df, cfg)
@@ -332,7 +342,7 @@ def run():
 
     # 5-fold CV on train only
     cv_records = []
-    cv_records.extend(run_5fold_cv(arrays['h8_hsv'][train_mask], y_train, 'E7', None, cfg))
+    cv_records.extend(run_5fold_cv(arrays['h8_hsv'][train_mask], y_train, 'E7', best_e7, cfg))
     cv_records.extend(run_5fold_cv(arrays['E6_size128'][train_mask], y_train, 'E6_size128',
                                   cfg['controlled_experiments']['E6_size128'], cfg))
     cv_records.extend(run_5fold_cv(arrays['E6_bins32'][train_mask], y_train, 'E6_bins32',

@@ -1,0 +1,9 @@
+split_a,image_id_a,class_id_a,split_b,image_id_b,class_id_b,file_exact,decoded_rgb_exact,phash_hamming
+val,1835,78,test,1858,78,False,False,0
+val,7015,39,test,7040,39,False,False,0
+val,7029,39,test,8080,39,False,False,0
+train,7307,94,test,7309,94,True,True,0
+val,8077,31,test,8067,31,True,True,0
+val,1929,78,test,1959,78,False,False,2
+train,1855,78,test,1844,78,False,False,4
+train,5746,13,val,5768,13,False,False,4
