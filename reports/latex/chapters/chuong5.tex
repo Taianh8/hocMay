@@ -11,18 +11,18 @@ E6 và E6\_bins32 đều dùng K-NN $k=3$, khoảng cách cosine, trọng số t
 \toprule
 Fold & E6 & E6\_bins32 & Hiệu số (32--16)\\
 \midrule
-1 & 0,1662 & 0,1707 & +0,0044\\
-2 & 0,1977 & 0,1794 & -0,0183\\
-3 & 0,2063 & 0,1912 & -0,0152\\
-4 & 0,2124 & 0,2210 & +0,0086\\
-5 & 0,1937 & 0,1914 & -0,0023\\
+1 & 0,1584 & 0,1707 & +0,0123\\
+2 & 0,1906 & 0,1794 & -0,0112\\
+3 & 0,1998 & 0,1912 & -0,0086\\
+4 & 0,2178 & 0,2210 & +0,0032\\
+5 & 0,1992 & 0,1914 & -0,0078\\
 \midrule
-Mean $\pm$ SD & 0,1953 $\pm$ 0,0178 & 0,1907 $\pm$ 0,0190 & -0,0045\\
+Mean $\pm$ SD & 0,1932 $\pm$ 0,0195 & 0,1907 $\pm$ 0,0170 & -0,0025\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Ở validation, E6\_bins32 đạt 0,2151 và E6 đạt 0,2127, nên thứ tự là bins32 trước. Trên CV train, E6 đạt trung bình 0,1953, cao hơn 0,1907 của bins32; độ lệch chuẩn lần lượt khoảng 0,0178 và 0,0190. Hiệu số theo cặp chỉ dương ở fold 1 và 4, âm ở ba fold còn lại; không có một hướng nhất quán. Vì validation và CV cho thứ tự ngược nhau, chênh lệch 0,0025 trên validation hoặc 0,0045 trên mean CV nên được xem là nằm trong nhiễu của cách chia nhỏ và số mẫu ít, không phải bằng chứng rằng 32 bin tốt hơn một cách chắc chắn. Nhóm không dùng kiểm định ý nghĩa thống kê để biến chênh lệch này thành kết luận mạnh hơn.
+Ở validation, E6\_bins32 đạt 0,2151 và E6 đạt 0,2127, nên thứ tự là bins32 trước. Trên CV train, E6 đạt trung bình 0,1932 $\pm$ 0,0195, còn bins32 đạt 0,1907 $\pm$ 0,0170. Hiệu số theo cặp là dương ở fold 1 và 4, âm ở 2, 3 và 5; không có một hướng nhất quán. Vì validation và CV cho thứ tự ngược nhau, chênh lệch 0,0025 trên validation hoặc 0,0025 trên mean CV nên được xem là nằm trong nhiễu của cách chia nhỏ và số mẫu ít, không phải bằng chứng rằng E6 hay 32 bin tốt hơn một cách chắc chắn. Nhóm không dùng kiểm định ý nghĩa thống kê để biến chênh lệch này thành kết luận mạnh hơn.
 
 Đối chứng độ phân giải cũng cho kết quả không đồng nhất: E6\_size128 đạt validation 0,2034 và CV $0,1953\pm0,0159$, thấp hơn validation E6 nhưng CV trung bình hơi cao hơn E6. Thay đổi kích thước ảnh đồng thời thay số ô HOG và số chiều trước PCA, nên đây là so sánh hai pipeline chứ không cô lập riêng ảnh hưởng của độ phân giải. Từ các artifact hiện có chỉ có thể kết luận rằng chưa thấy lợi ích ổn định của hai biến thể này.
 

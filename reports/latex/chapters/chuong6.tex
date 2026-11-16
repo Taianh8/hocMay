@@ -2,7 +2,7 @@
 \section{Tổng kết kết quả}
 Nhóm đã xây dựng một pipeline có kiểm tra split, tiền xử lý thống nhất, trích xuất pixel/HOG/HSV, PCA fit trong phạm vi train và các cấu hình K-NN/cây quyết định. Kết quả validation tốt nhất trong bảng hợp nhất là biến thể E6 dùng 32 bin với macro F1 0,2151; E6 16 bin đạt 0,2127.
 
-Tuy nhiên, CV năm fold cho E6 đạt $0,1953\pm0,0178$, còn biến thể 32 bin đạt $0,1907\pm0,0190$, với hiệu số theo fold đổi dấu. Vì vậy nhóm không xem chênh lệch nhỏ là bằng chứng ổn định.
+Tuy nhiên, CV năm fold cho E6 đạt $0,1932\pm0,0195$, còn biến thể 32 bin đạt $0,1907\pm0,0170$, với hiệu số theo fold đổi dấu. Vì vậy nhóm không xem chênh lệch nhỏ là bằng chứng ổn định.
 
 Đối chứng E3/E7 cho thấy việc thêm histogram HSV vào cùng họ cây quyết định cải thiện validation từ 0,0230 lên 0,0891, nhưng cây vẫn thấp hơn K-NN trên biểu diễn HOG+HSV. Kết quả này ủng hộ việc nghiên cứu đặc trưng trước khi quy kết hoàn toàn cho thuật toán. Phân tích lỗi cũng cho thấy hiệu năng giữa các lớp rất không đều; các cặp nhầm nổi bật liên quan đến màu, biên, hình dạng và nền, nhưng các liên hệ trực quan chưa phải bằng chứng nhân quả.
 

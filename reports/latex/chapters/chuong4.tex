@@ -13,7 +13,7 @@ Nhóm em chia quá trình thử nghiệm thành các giai đoạn chặt chẽ:
 Bảng validation không sử dụng dự đoán test. Theo quy tắc chọn Macro F1 validation rồi Accuracy trên toàn bộ E1–E7 và biến thể, E6\_bins32 đứng đầu với 0,2151; lần test đã thực hiện trên E6 16 bin nên không phải test của ứng viên đứng đầu. Không chạy lại test sau khi phát hiện sai lệch.
 
 \section{Bảng so sánh tổng hợp các thí nghiệm (E1–E7 và biến thể)}
-Bảng \ref{tab:unified} tổng hợp kết quả của tất cả các cấu hình đại diện từ E1 đến E7 cùng các biến thể đối chứng, được trích xuất trực tiếp từ các artifact \path{results/v2/metrics/comparison.json}, \path{results/v3/metrics/cv_summary.json} và \path{results/v5/unified_comparison.json}. Mốc ngẫu nhiên (random guess) đối với bài toán 102 lớp là $1/102 \approx 0,0098$ (0,98\%).
+Bảng \ref{tab:unified} tổng hợp kết quả của tất cả các cấu hình đại diện từ E1 đến E7 cùng các biến thể đối chứng, được trích xuất trực tiếp từ các artifact \path{results/v2/metrics/comparison.json}, \path{results/v3/metrics/cv_summary.json} và \path{results/v5/unified_comparison.json}. Mốc ngẫu nhiên (random guess) đối với bài toán 102 lớp là $1/102 \approx 0,0098$ (0,98\%). Trong các bảng CV, ký hiệu $\pm$ dùng độ lệch chuẩn tổng thể (population SD, \texttt{ddof=0}) của macro F1 giữa năm fold.
 
 \begin{table}[htbp]
 \centering
