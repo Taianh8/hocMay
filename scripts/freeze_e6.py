@@ -24,7 +24,7 @@ def main():
     if record != recorded or pca.random_state != 42 or pca.n_components_ != 128 or pca.n_samples_ != 1020 or model.n_samples_fit_ != 1020 or not np.array_equal(model.classes_, np.arange(102)):
         raise ValueError('E6 model, class mapping or training configuration does not match V2 selection')
     if digest(ROOT/'configs/experiments_v2.yaml') != comparison['config_sha256']: raise ValueError('V2 configuration checksum mismatch')
-    files = ['configs/experiments_v2.yaml', 'src/preprocessing.py', 'src/features_v2.py', 'results/v2/metrics/comparison.json', 'results/v2/models/E6.pkl', 'data/raw/102flowers.tgz', 'data/raw/imagelabels.mat', 'data/raw/setid.mat', 'requirements-lock.txt', 'requirements-v4-lock.txt', 'data/processed/features_v2.npz', 'data/processed/features_v2.json', 'results/v2/metrics/E6_validation_predictions.csv']
+    files = ['configs/experiments_v2.yaml', 'src/preprocessing.py', 'src/features_v2.py', 'results/v2/metrics/comparison.json', 'results/v2/models/E6.pkl', 'data/raw/102flowers.tgz', 'data/raw/imagelabels.mat', 'data/raw/setid.mat', 'docs/requirements-v1-v3-lock.txt', 'requirements-v4-lock.txt', 'data/processed/features_v2.npz', 'data/processed/features_v2.json', 'results/v2/metrics/E6_validation_predictions.csv']
     v3_summary = ROOT/'results/v3/metrics/cv_summary.json'
     if v3_summary.is_file(): files.append('results/v3/metrics/cv_summary.json')
     versions = {p: importlib.metadata.version(p) for p in ('numpy','scipy','scikit-learn','scikit-image','Pillow')}

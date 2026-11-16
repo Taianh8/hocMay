@@ -9,16 +9,16 @@ Cấu hình thí nghiệm được lưu trữ đầy đủ trong thư mục \tex
     \item \texttt{experiments\_v2.yaml}: Cấu hình không gian đặc trưng và mô hình V2 (E4–E6).
     \item \texttt{experiments\_v3.yaml}: Cấu hình kiểm định chéo và phân tích độ ổn định V3.
     \item \texttt{experiments\_v5.yaml}: Cấu hình cây quyết định E7 và thí nghiệm đối chứng kiểm tra giả thuyết phân tích lỗi.
-    \item \texttt{e6\_manifest\_v2.json}: Manifest đóng băng mô hình cuối E6 và baseline E1 cùng các mã băm SHA-256 xác thực và kết quả test chính thức.
+    \item \texttt{e6\_manifest\_v2.json}: Manifest lịch sử của lần test E6 16 bin và E1; mã chọn ban đầu bỏ qua biến thể 32 bin và manifest được tạo sau dự đoán. Xem \texttt{docs/kiem\_toan\_quy\_trinh.md}.
 \end{itemize}
 
 Để tái lập các kết quả trong báo cáo:
 \begin{enumerate}
     \item Chuẩn bị môi trường và dữ liệu theo hướng dẫn trong \texttt{README.md}.
     \item Chạy toàn bộ kiểm thử tự động: \texttt{python -m pytest -q}.
-    \item Chạy pipeline V5 và tạo bảng so sánh hợp nhất: \texttt{python -m src.pipeline\_v5}.
+    \item Tái lập pipeline V5 trong bản sao cách ly (không ghi đè kết quả hiện có): \texttt{python -m src.pipeline\_v5}.
     \item Tạo lại đường học: \texttt{python -m scripts.duong\_hoc}.
     \item Sinh các hình vẽ và ma trận phân tích lỗi: \texttt{python -m scripts.tao\_hinh\_phan\_tich\_loi}.
     \item Khởi chạy giao diện demo: \texttt{streamlit run app.py}.
 \end{enumerate}
-Toàn bộ artifact sinh ra được lưu tách biệt theo từng phiên bản trong \texttt{results/v2/}, \texttt{results/v3/}, \texttt{results/v4/}, \texttt{results/v5/} và \texttt{results/final\_test/}.
+Không chạy lại đánh giá test đã thực hiện. Các artifact sinh ra được lưu tách biệt theo từng phiên bản trong \texttt{results/v2/}, \texttt{results/v3/}, \texttt{results/v4/}, \texttt{results/v5/} và \texttt{results/final\_test/}.
