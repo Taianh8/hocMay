@@ -1,0 +1,154 @@
+\chapter{Bảng chi tiết và đối chiếu artifact}
+\section{Kết quả per-class trên test cuối}
+Phụ lục này giữ lại bảng chi tiết từ các CSV đã lưu để người đọc có thể kiểm tra các nhận xét về lớp tốt/xấu trong Chương 5. E1 và E6 được đánh giá trên cùng 6.149 ảnh test, nhưng E6 sử dụng biểu diễn HOG+HSV+PCA còn E1 dùng pixel. Tên lớp lấy từ bảng nhãn đã lưu; support là số ảnh test của lớp.
+\begin{longtable}{r l r r r r r}
+\caption{Per-class test của E1 và E6: precision, recall và F1.}\label{tab:perclassfull}\\
+\toprule Mã & Tên lớp & Support & E1 Prec. & E1 Rec. & E1 F1 & E6 F1 \\ \midrule\endfirsthead
+\multicolumn{7}{c}{\textit{Bảng \thetable\ (tiếp theo)}}\\
+\toprule Mã & Tên lớp & Support & E1 Prec. & E1 Rec. & E1 F1 & E6 F1 \\ \midrule\endhead
+\midrule \multicolumn{7}{r}{Tiếp tục ở trang sau}\\ \endfoot
+\bottomrule\endlastfoot
+1 & pink primrose & 20 & 0.027 & 0.100 & 0.042 & 0.083 \\
+2 & hard-leaved pocket orchid & 40 & 0.344 & 0.525 & 0.416 & 0.395 \\
+3 & canterbury bells & 20 & 0.000 & 0.000 & 0.000 & 0.186 \\
+4 & sweet pea & 36 & 0.000 & 0.000 & 0.000 & 0.047 \\
+5 & english marigold & 45 & 0.080 & 0.156 & 0.106 & 0.248 \\
+6 & tiger lily & 25 & 0.041 & 0.160 & 0.066 & 0.073 \\
+7 & moon orchid & 20 & 0.032 & 0.050 & 0.039 & 0.286 \\
+8 & bird of paradise & 65 & 0.158 & 0.046 & 0.071 & 0.173 \\
+9 & monkshood & 26 & 0.111 & 0.077 & 0.091 & 0.414 \\
+10 & globe thistle & 25 & 0.088 & 0.120 & 0.102 & 0.105 \\
+11 & snapdragon & 67 & 0.000 & 0.000 & 0.000 & 0.059 \\
+12 & colt's foot & 67 & 0.144 & 0.284 & 0.191 & 0.351 \\
+13 & king protea & 29 & 0.079 & 0.103 & 0.090 & 0.027 \\
+14 & spear thistle & 28 & 0.086 & 0.214 & 0.122 & 0.092 \\
+15 & yellow iris & 29 & 0.350 & 0.241 & 0.286 & 0.130 \\
+16 & globe-flower & 21 & 0.075 & 0.429 & 0.128 & 0.078 \\
+17 & purple coneflower & 65 & 0.417 & 0.077 & 0.130 & 0.316 \\
+18 & peruvian lily & 62 & 0.400 & 0.032 & 0.060 & 0.165 \\
+19 & balloon flower & 29 & 0.000 & 0.000 & 0.000 & 0.159 \\
+20 & giant white arum lily & 36 & 0.080 & 0.056 & 0.066 & 0.156 \\
+21 & fire lily & 20 & 0.000 & 0.000 & 0.000 & 0.127 \\
+22 & pincushion flower & 39 & 0.000 & 0.000 & 0.000 & 0.038 \\
+23 & fritillary & 71 & 0.142 & 0.211 & 0.169 & 0.254 \\
+24 & red ginger & 22 & 0.300 & 0.136 & 0.188 & 0.182 \\
+25 & grape hyacinth & 21 & 0.100 & 0.048 & 0.065 & 0.056 \\
+26 & corn poppy & 21 & 0.059 & 0.238 & 0.094 & 0.098 \\
+27 & prince of wales feathers & 20 & 0.286 & 0.100 & 0.148 & 0.299 \\
+28 & stemless gentian & 46 & 1.000 & 0.022 & 0.043 & 0.180 \\
+29 & artichoke & 58 & 0.060 & 0.086 & 0.070 & 0.237 \\
+30 & sweet william & 65 & 0.000 & 0.000 & 0.000 & 0.316 \\
+31 & carnation & 32 & 0.016 & 0.062 & 0.026 & 0.114 \\
+32 & garden phlox & 25 & 0.000 & 0.000 & 0.000 & 0.069 \\
+33 & love in the mist & 26 & 0.081 & 0.231 & 0.120 & 0.096 \\
+34 & mexican aster & 20 & 0.041 & 0.250 & 0.070 & 0.233 \\
+35 & alpine sea holly & 23 & 0.056 & 0.304 & 0.095 & 0.280 \\
+36 & ruby-lipped cattleya & 55 & 0.556 & 0.091 & 0.156 & 0.263 \\
+37 & cape flower & 88 & 0.114 & 0.557 & 0.190 & 0.611 \\
+38 & great masterwort & 36 & 0.016 & 0.028 & 0.020 & 0.139 \\
+39 & siam tulip & 21 & 0.062 & 0.286 & 0.103 & 0.120 \\
+40 & lenten rose & 47 & 0.000 & 0.000 & 0.000 & 0.171 \\
+41 & barbeton daisy & 107 & 0.136 & 0.075 & 0.096 & 0.205 \\
+42 & daffodil & 39 & 0.053 & 0.051 & 0.052 & 0.027 \\
+43 & sword lily & 110 & 0.070 & 0.027 & 0.039 & 0.054 \\
+44 & poinsettia & 73 & 0.400 & 0.027 & 0.051 & 0.260 \\
+45 & bolero deep blue & 20 & 0.037 & 0.050 & 0.043 & 0.133 \\
+46 & wallflower & 176 & 0.396 & 0.119 & 0.183 & 0.483 \\
+47 & marigold & 47 & 0.125 & 0.128 & 0.126 & 0.426 \\
+48 & buttercup & 51 & 0.139 & 0.314 & 0.193 & 0.333 \\
+49 & oxeye daisy & 29 & 0.222 & 0.276 & 0.246 & 0.254 \\
+50 & common dandelion & 72 & 0.132 & 0.375 & 0.196 & 0.364 \\
+51 & petunia & 238 & 0.160 & 0.017 & 0.030 & 0.384 \\
+52 & wild pansy & 65 & 0.556 & 0.077 & 0.135 & 0.237 \\
+53 & primula & 73 & 0.091 & 0.014 & 0.024 & 0.150 \\
+54 & sunflower & 41 & 0.667 & 0.293 & 0.407 & 0.450 \\
+55 & pelargonium & 51 & 0.091 & 0.294 & 0.140 & 0.368 \\
+56 & bishop of llandaff & 89 & 0.479 & 0.764 & 0.589 & 0.765 \\
+57 & gaura & 47 & 0.111 & 0.532 & 0.183 & 0.327 \\
+58 & geranium & 94 & 0.457 & 0.734 & 0.563 & 0.828 \\
+59 & orange dahlia & 47 & 0.364 & 0.255 & 0.300 & 0.796 \\
+60 & pink-yellow dahlia? & 89 & 0.244 & 0.213 & 0.228 & 0.827 \\
+61 & cautleya spicata & 30 & 0.138 & 0.133 & 0.136 & 0.597 \\
+62 & japanese anemone & 35 & 0.065 & 0.086 & 0.074 & 0.222 \\
+63 & black-eyed susan & 34 & 0.350 & 0.412 & 0.378 & 0.730 \\
+64 & silverbush & 32 & 0.085 & 0.219 & 0.123 & 0.629 \\
+65 & californian poppy & 82 & 0.188 & 0.341 & 0.242 & 0.627 \\
+66 & osteospermum & 41 & 0.092 & 0.415 & 0.151 & 0.656 \\
+67 & spring crocus & 22 & 0.000 & 0.000 & 0.000 & 0.046 \\
+68 & bearded iris & 34 & 0.138 & 0.500 & 0.217 & 0.254 \\
+69 & windflower & 34 & 0.500 & 0.176 & 0.261 & 0.110 \\
+70 & tree poppy & 42 & 0.188 & 0.071 & 0.103 & 0.106 \\
+71 & gazania & 58 & 1.000 & 0.017 & 0.034 & 0.463 \\
+72 & azalea & 76 & 0.059 & 0.092 & 0.072 & 0.154 \\
+73 & water lily & 174 & 0.174 & 0.046 & 0.073 & 0.122 \\
+74 & rose & 151 & 0.170 & 0.106 & 0.131 & 0.162 \\
+75 & thorn apple & 100 & 0.138 & 0.190 & 0.160 & 0.170 \\
+76 & morning glory & 87 & 0.214 & 0.034 & 0.059 & 0.167 \\
+77 & passion flower & 231 & 0.233 & 0.061 & 0.096 & 0.186 \\
+78 & lotus & 117 & 0.113 & 0.197 & 0.143 & 0.253 \\
+79 & toad lily & 21 & 0.000 & 0.000 & 0.000 & 0.082 \\
+80 & anthurium & 85 & 0.160 & 0.047 & 0.073 & 0.164 \\
+81 & frangipani & 146 & 1.000 & 0.021 & 0.040 & 0.155 \\
+82 & clematis & 92 & 0.182 & 0.022 & 0.039 & 0.112 \\
+83 & hibiscus & 111 & 0.170 & 0.072 & 0.101 & 0.071 \\
+84 & columbine & 66 & 0.018 & 0.015 & 0.016 & 0.031 \\
+85 & desert-rose & 43 & 1.000 & 0.023 & 0.045 & 0.101 \\
+86 & tree mallow & 38 & 0.052 & 0.079 & 0.062 & 0.227 \\
+87 & magnolia & 43 & 0.000 & 0.000 & 0.000 & 0.392 \\
+88 & cyclamen & 134 & 0.103 & 0.022 & 0.037 & 0.101 \\
+89 & watercress & 164 & 0.558 & 0.146 & 0.232 & 0.243 \\
+90 & canna lily & 62 & 0.059 & 0.016 & 0.025 & 0.037 \\
+91 & hippeastrum & 56 & 0.138 & 0.464 & 0.212 & 0.336 \\
+92 & bee balm & 46 & 0.039 & 0.087 & 0.054 & 0.130 \\
+93 & ball moss & 26 & 0.038 & 0.038 & 0.038 & 0.000 \\
+94 & foxglove & 142 & 0.172 & 0.035 & 0.058 & 0.106 \\
+95 & bougainvillea & 108 & 0.167 & 0.019 & 0.033 & 0.116 \\
+96 & camellia & 71 & 0.046 & 0.127 & 0.068 & 0.052 \\
+97 & mallow & 46 & 0.130 & 0.065 & 0.087 & 0.000 \\
+98 & mexican petunia & 62 & 0.100 & 0.016 & 0.028 & 0.138 \\
+99 & bromelia & 43 & 0.000 & 0.000 & 0.000 & 0.179 \\
+100 & blanket flower & 29 & 0.286 & 0.069 & 0.111 & 0.119 \\
+101 & trumpet creeper & 38 & 0.000 & 0.000 & 0.000 & 0.109 \\
+102 & blackberry lily & 28 & 0.125 & 0.036 & 0.056 & 0.215 \\
+\end{longtable}
+\section{Đối chiếu các artifact và sự kiện}
+Bảng \ref{tab:artifactledger} ghi lại các artifact được dùng trực tiếp trong báo cáo. Bảng này không phải danh sách mọi file trong repository; chỉ liệt kê các nguồn tạo ra số liệu, hình và kết luận chính. Các file test được giữ nguyên sau lần đánh giá cuối và không có bước dự đoán mới trong quá trình hoàn thiện báo cáo.
+\begin{longtable}{p{0.29\textwidth}p{0.29\textwidth}p{0.34\textwidth}}
+\caption{Sổ đối chiếu artifact dùng trong báo cáo.}\label{tab:artifactledger}\\
+\toprule Nguồn & Nội dung kiểm tra & Vai trò trong báo cáo \\ \midrule\endfirsthead
+\multicolumn{3}{c}{\textit{Bảng \thetable\ (tiếp theo)}}\\\toprule Nguồn & Nội dung kiểm tra & Vai trò trong báo cáo \\ \midrule\endhead
+\midrule \multicolumn{3}{r}{Tiếp tục ở trang sau}\\ \endfoot
+\bottomrule\endlastfoot
+\path{results/v5/unified_comparison_v2.json} & Bảng E1--E7 và biến thể, điểm validation/CV & Xác định biến thể E6 32 bin đứng đầu validation khi xét toàn bộ ứng viên. \\
+\path{results/v5/cv.json} & Năm fold trên train cho E7, E6\_size128 và E6\_bins32 & Tính mean, độ lệch chuẩn và hiệu số theo cặp fold. \\
+\path{results/v5/validation_top10_confusions.csv} & Các cặp lớp nhầm nhiều nhất trên validation & Tạo bảng cặp nhầm và chọn ví dụ để xem ảnh. \\
+\path{results/v5/validation_top10_f1.csv} & Các lớp có F1 cao nhất trên validation & Đối chiếu độ không đồng đều giữa các lớp. \\
+\path{results/v5/validation_bottom10_f1.csv} & Các lớp có F1 thấp nhất trên validation & Nêu rõ các lớp F1 bằng 0 mà không suy diễn nguyên nhân. \\
+\path{results/final_test/metrics.json} & Chỉ số E1/E6 trên 6.149 ảnh và sensitivity 6.147 ảnh & Báo cáo test cuối và độ nhạy khi loại hai ảnh trùng. \\
+\path{results/final_test/E1_per_class.csv} & Precision, recall, F1 từng lớp của E1 & So sánh baseline theo lớp với E6. \\
+\path{results/final_test/E6_per_class.csv} & Tên lớp, support và chỉ số từng lớp của E6 & Lập bảng đầy đủ ở phụ lục này. \\
+\path{results/final_test/verification.json} & Kiểm tra lại chỉ số từ CSV và trạng thái lựa chọn & Xác nhận không có dự đoán mới và E6 không phải winner đầy đủ. \\
+\texttt{docs/kiem\_toan\_quy\_trinh.md} & Thứ tự sự kiện, manifest và giới hạn test & Giải thích sai lệch quy trình và yêu cầu holdout mới. \\
+\end{longtable}
+\section{Bảng kiểm định chéo theo từng fold}
+Mean và độ lệch chuẩn có thể che khuất việc một biến thể thắng hay thua ở từng lần chia. Bảng \ref{tab:cvfull} giữ lại các giá trị macro F1 theo fold của hai biến thể histogram màu. Hiệu số được tính theo công thức E6\_bins32 trừ E6\_size128; đây là phép đối chiếu trong phạm vi train, không phải điểm validation hay test.
+\begin{table}[H]\centering\small
+\caption{Macro F1 từng fold của hai biến thể E6.}\label{tab:cvfull}
+\begin{tabular}{c|rrr}
+\toprule
+Fold & E6\_size128 & E6\_bins32 & Hiệu số \\
+\midrule
+1 & 0,1662 & 0,1707 & +0,0044\\
+2 & 0,1977 & 0,1794 & -0,0183\\
+3 & 0,2063 & 0,1912 & -0,0152\\
+4 & 0,2124 & 0,2210 & +0,0086\\
+5 & 0,1937 & 0,1914 & -0,0023\\
+\midrule
+Mean & 0,1953 & 0,1907 & -0,0045\\
+Độ lệch chuẩn & 0,0178 & 0,0190 & --\\
+\bottomrule
+\end{tabular}
+\end{table}
+Hiệu số dương ở hai fold và âm ở ba fold. Mẫu hình này là lý do nhóm không dùng một lần thắng trên validation để khẳng định biến thể 32 bin tốt hơn. Khi đọc bảng cùng với kết quả validation 0,2151 so với 0,2127, kết luận phù hợp nhất là hai cấu hình có chênh lệch nhỏ và thứ tự phụ thuộc cách chia dữ liệu.
+\section{Nguyên tắc tái lập và diễn giải}
+Các bảng trong phụ lục được sinh từ artifact đã lưu, không chạy lại mô hình. Khi tái lập trong tương lai, nhóm cần ghi phiên bản môi trường, seed, hash cấu hình và đường dẫn output trước khi so sánh. Không được dùng test đã quan sát để chọn lại mô hình; nếu thay đổi đặc trưng hoặc quy tắc chọn, phải tạo phiên bản thí nghiệm mới và dùng holdout độc lập.
