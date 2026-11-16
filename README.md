@@ -41,7 +41,7 @@ python scripts/chuan_bi_ui.py
 streamlit run app.py
 ```
 
-UI hiện dùng E6 fit trên train, hiển thị tối đa ba lớp có phiếu K-NN; tỷ lệ phiếu **không phải xác suất đã hiệu chuẩn**. Model test fit train+validation là artifact khác. Chỉ nạp pickle và manifest tin cậy. Ảnh chụp giao diện: **[CẦN NHÓM BỔ SUNG]**.
+UI hiện dùng E6 fit trên train, hiển thị tối đa ba lớp có phiếu K-NN; tỷ lệ phiếu **không phải xác suất đã hiệu chuẩn**. Model test fit train+validation là artifact khác. Chỉ nạp pickle và manifest tin cậy. Ảnh chụp giao diện: **[CẦN NHÓM ĐIỀN]**.
 
 5. Kiểm thử: `python -m pytest -q`. Tái tạo V5 trong bản sao cách ly vì output V5 hiện đã có. **Không chạy `scripts/run_final_test.py`, `python -m src.pipeline all` hoặc `python -m src.pipeline evaluate` để đánh giá test lại.**
 
