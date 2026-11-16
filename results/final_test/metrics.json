@@ -1,0 +1,78 @@
+{
+  "protocol": "Ch\u1ec9 ch\u1ea1y \u0111\u00fang m\u1ed9t l\u1ea7n tr\u00ean test sau khi \u0111\u00e3 ch\u1ed1t m\u00f4 h\u00ecnh cu\u1ed1i tr\u00ean validation/CV",
+  "training_split": "train + val (2040 images)",
+  "test_split": "test (6149 images)",
+  "duplicate_images_excluded_in_sensitivity": [
+    8067,
+    7309
+  ],
+  "duplicate_details": [
+    {
+      "test_image_id": 7309,
+      "true_class_id": 94,
+      "e1_pred_class_id": 94,
+      "e1_correct": true,
+      "e6_pred_class_id": 94,
+      "e6_correct": true
+    },
+    {
+      "test_image_id": 8067,
+      "true_class_id": 31,
+      "e1_pred_class_id": 31,
+      "e1_correct": true,
+      "e6_pred_class_id": 31,
+      "e6_correct": true
+    }
+  ],
+  "E1_baseline": {
+    "full_test": {
+      "accuracy": 0.134493413563181,
+      "macro_precision": 0.18350853216885724,
+      "macro_recall": 0.14187692054504963,
+      "macro_f1": 0.11033815227603036,
+      "weighted_precision": 0.21984677630531746,
+      "weighted_recall": 0.134493413563181,
+      "weighted_f1": 0.11587790554000692,
+      "samples": 6149,
+      "fit_seconds": 0.03934891600511037,
+      "predict_seconds": 2.5663073750038166
+    },
+    "clean_test_sensitivity": {
+      "accuracy": 0.13421181063933627,
+      "macro_precision": 0.18314034000019488,
+      "macro_recall": 0.1415133479101157,
+      "macro_f1": 0.11010485554356715,
+      "weighted_precision": 0.2191693231676642,
+      "weighted_recall": 0.13421181063933627,
+      "weighted_f1": 0.11558252617428885,
+      "samples": 6147
+    }
+  },
+  "E6_final_model": {
+    "full_test": {
+      "accuracy": 0.2602049113677021,
+      "macro_precision": 0.2435035258724409,
+      "macro_recall": 0.27526886248457216,
+      "macro_f1": 0.23494597181319443,
+      "weighted_precision": 0.3046490453314942,
+      "weighted_recall": 0.2602049113677021,
+      "weighted_f1": 0.2508270178388114,
+      "samples": 6149,
+      "pca_fit_seconds": 0.052505458996165544,
+      "pca_test_transform_seconds": 0.015489833996980451,
+      "knn_fit_seconds": 0.000588916998822242,
+      "knn_predict_seconds": 0.10876395899686031,
+      "total_fit_seconds": 0.053094375994987786
+    },
+    "clean_test_sensitivity": {
+      "accuracy": 0.25996421018382954,
+      "macro_precision": 0.24324095203720272,
+      "macro_recall": 0.27493836640818153,
+      "macro_f1": 0.23466595022210296,
+      "weighted_precision": 0.30439264832137897,
+      "weighted_recall": 0.25996421018382954,
+      "weighted_f1": 0.25058665052746965,
+      "samples": 6147
+    }
+  }
+}
