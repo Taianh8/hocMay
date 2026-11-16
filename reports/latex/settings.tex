@@ -1,0 +1,306 @@
+% =====================================================
+% settings.tex
+% Cấu hình chung cho báo cáo
+% Sinh viên chủ yếu sửa thông tin cá nhân ở mục 7.
+% =====================================================
+
+% =========================
+% 1. CẤU HÌNH TIẾNG VIỆT VÀ FONT
+% =========================
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{Tinos}}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+
+% =========================
+% 2. CẤU HÌNH TRANG
+% =========================
+\usepackage[
+    a4paper,
+    left=3.0cm,
+    right=1.5cm,
+    top=2.0cm,
+    bottom=2.0cm
+]{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+% Cỡ chữ mặc định của nội dung là 13pt. Các phần có quy định riêng
+% bằng \fontsize trong tài liệu vẫn giữ nguyên cỡ chữ được chỉ định.
+\makeatletter
+\renewcommand{\normalsize}{%
+    \@setfontsize\normalsize{13pt}{15.6pt}%
+    \abovedisplayskip 13pt plus 3pt minus 7pt%
+    \abovedisplayshortskip 0pt plus 4pt%
+    \belowdisplayshortskip 6.5pt plus 3.5pt minus 3pt%
+    \belowdisplayskip \abovedisplayskip
+    \let\@listi\@listI
+}
+\makeatother
+\normalsize
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{6pt}
+
+% =========================
+% 3. GÓI HỖ TRỢ
+% =========================
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\setlist[itemize]{
+    label=-,
+    leftmargin=1.27cm,
+    labelsep=0.5em
+}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+
+% =========================
+% 4. HYPERLINK
+% =========================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue
+}
+
+% Số trang đặt giữa phía trên; áp dụng cả cho trang mở đầu chương.
+\setlength{\headheight}{17pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% =========================
+% 5. ĐÁNH SỐ HÌNH, BẢNG THEO CHƯƠNG
+% =========================
+\counterwithin{table}{chapter}
+\counterwithin{figure}{chapter}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+
+% Môi trường riêng cho sơ đồ để đánh số và lập danh mục độc lập.
+\newfloat{sodo}{H}{los}[chapter]
+\floatname{sodo}{Sơ đồ}
+\renewcommand{\thesodo}{\thechapter.\arabic{sodo}}
+\makeatletter
+\newcommand{\l@sodo}[2]{%
+    \begingroup
+    \let\ReportOriginalNumberline\numberline
+    \renewcommand{\numberline}[1]{%
+        \ReportOriginalNumberline{Sơ đồ~##1}}%
+    \@dottedtocline{1}{0pt}{2.8cm}{#1}{#2}%
+    \endgroup
+}
+\makeatother
+
+\captionsetup{
+    font=normalsize,
+    labelfont=normalfont,
+    textfont=normalfont,
+    labelsep=period,
+    justification=centering
+}
+\captionsetup[table]{name=Bảng,position=top}
+\captionsetup[figure]{name=Hình,position=bottom}
+\captionsetup[sodo]{name=Sơ đồ,position=bottom}
+
+\renewcommand{\listtablename}{BẢNG}
+\renewcommand{\listfigurename}{HÌNH, SƠ ĐỒ}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\bibname}{TÀI LIỆU THAM KHẢO}
+
+% =========================
+% 6. ĐỊNH DẠNG TIÊU ĐỀ CHƯƠNG, MỤC
+% =========================
+\titleformat{\chapter}
+  [display]
+  {\centering\bfseries\fontsize{14pt}{16pt}\selectfont}
+  {Chương \thechapter}
+  {0.3cm}
+  {\MakeUppercase}
+
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+
+\titleformat{\section}
+  {\bfseries\fontsize{13pt}{15pt}\selectfont}
+  {\thesection}
+  {0.5em}
+  {}
+
+\titleformat{\subsection}
+  {\bfseries\itshape\fontsize{13pt}{15pt}\selectfont}
+  {\thesubsection}
+  {0.5em}
+  {}
+
+\titleformat{\subsubsection}
+  {\itshape\fontsize{13pt}{15pt}\selectfont}
+  {\thesubsubsection}
+  {0.5em}
+  {}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% =========================
+% 7. ĐỊNH DẠNG MỤC LỤC
+% =========================
+\renewcommand{\cftchapfont}{\bfseries\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftchappagefont}{\bfseries\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftchappresnum}{CHƯƠNG~}
+\renewcommand{\cftchapaftersnum}{.}
+\setlength{\cftchapnumwidth}{2.5cm}
+\renewcommand{\cftsecfont}{\bfseries\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftsecpagefont}{\bfseries\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecfont}{\itshape\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftsubsecpagefont}{\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftsubsecaftersnum}{.}
+\renewcommand{\cftsubsubsecfont}{\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftsubsubsecpagefont}{\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\cftsubsubsecaftersnum}{.}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforechapskip}{6pt}
+
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\fontsize{14pt}{16pt}\selectfont\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{18pt}
+
+\makeatletter
+\newcommand{\ReportListTable}[4]{%
+    {\bfseries\fontsize{13pt}{14pt}\selectfont #1:\par}
+    \vspace{6pt}
+    \begingroup
+    \fontsize{12pt}{13pt}\selectfont
+    \renewcommand{\arraystretch}{1.5}
+    \def\ReportListPrefix{#3}%
+    \def\numberline##1{\ReportListPrefix~##1.\enspace}%
+    \def\contentsline##1##2##3##4{##2\dotfill & ##3\\\hline}%
+    \def\addvspace##1{}%
+    \def\select@language##1{}%
+    \makeatletter
+    \noindent
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{\dimexpr\textwidth-3.5cm\relax}|>{\centering\arraybackslash}p{2.6cm}|}
+        \hline
+        \multicolumn{1}{|c|}{\bfseries #2} & \bfseries Trang \\
+        \hline
+        \@input{\jobname.#4}%
+    \end{tabular}
+    \par
+    % Mở lại tệp danh mục để các caption phía sau tiếp tục ghi dữ liệu.
+    \let\contentsline\@gobblefour
+    \let\addvspace\@gobble
+    \let\select@language\@gobble
+    \@starttoc{#4}%
+    \makeatother
+    \endgroup
+}
+
+\newcommand{\CombinedLists}{%
+    \chapter*{\fontsize{13pt}{14pt}\selectfont DANH MỤC CÁC BẢNG, SƠ ĐỒ, HÌNH}
+    \addcontentsline{toc}{chapter}{DANH MỤC CÁC BẢNG, SƠ ĐỒ, HÌNH}
+    \ReportListTable{BẢNG}{Tên bảng}{Bảng}{lot}
+    \vspace{14pt}
+    \ReportListTable{SƠ ĐỒ}{Tên sơ đồ}{Sơ đồ}{los}
+    \vspace{14pt}
+    \ReportListTable{HÌNH}{Tên hình}{Hình}{lof}
+}
+\makeatother
+
+% =========================
+% 8. THÔNG TIN SINH VIÊN/BÁO CÁO
+% Sinh viên chỉ cần sửa phần này.
+% =========================
+\newcommand{\BoGiaoDuc}{BỘ GIÁO DỤC VÀ ĐÀO TẠO}
+\newcommand{\TenTruong}{TRƯỜNG ĐẠI HỌC ĐẠI NAM}
+
+\newcommand{\TenSinhVien}{NGUYỄN DUY TÀI ANH, PHẠM ĐĂNG THAO}
+\newcommand{\MaSinhVien}{1871020020, 1871020548}
+\newcommand{\KhoaHoc}{K18}
+\newcommand{\Lop}{CNTT 18-12}
+
+\newcommand{\NhomBaoCao}{Nhóm 20}
+\newcommand{\MaDeTai}{Đề tài 7}
+\newcommand{\DanhSachThanhVien}{%
+\begin{tabular}{lcc}
+\textbf{Họ và tên} & \textbf{Mã sinh viên} & \textbf{Ngày sinh}\\
+Nguyễn Duy Tài Anh & 1871020020 & 20/10/2006\\
+Phạm Đăng Thao & 1871020548 & 24/07/2006
+\end{tabular}%
+}
+\newcommand{\TenBaoCao}{PHÂN LOẠI ẢNH HOA}
+\newcommand{\LoaiBaoCao}{BÁO CÁO MÔN HỌC MÁY}
+\newcommand{\Nganh}{PHÁT TRIỂN PHẦN MỀM}
+\newcommand{\ChuyenNganh}{PHÁT TRIỂN PHẦN MỀM}
+
+\newcommand{\GiangVienHD}{ThS. Lê Thị Thuỳ Trang}
+
+\newcommand{\DiaDiem}{HÀ NỘI}
+\newcommand{\Nam}{2026}
+
+% Logo trường. Có thể thay bằng file khác trong thư mục images/.
+\newcommand{\LogoTruong}{images/logo-dai-nam.png}
+
+% =========================
+% 9. LỆNH CHƯƠNG KHÔNG ĐÁNH SỐ
+% Dùng cho: Lời cam đoan, Lời cảm ơn, Mở đầu, Kết luận...
+% =========================
+\newcommand{\UnnumberedChapter}[1]{
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+}
+
+% Ghi nguồn ngay dưới bảng, hình hoặc sơ đồ khi sử dụng dữ liệu bên ngoài.
+\newcommand{\Nguon}[1]{%
+    \par\smallskip
+    {\centering\itshape Nguồn: #1\par}
+}
+
+% Với môi trường sodo của gói float, caption luôn được dồn xuống cuối.
+% Gộp nguồn vào caption để bảo đảm thứ tự hiển thị: tên sơ đồ, rồi đến nguồn.
+\newcommand{\SodoCaption}[2]{%
+    \caption[#1]{#1\\[3pt]\textit{Nguồn: #2}}%
+}
+
+% =========================
+% 10. KHUNG TRANG BÌA
+% =========================
+\newcommand{\DrawCoverBorder}{
+\AddToShipoutPictureBG*{
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=1pt]
+        ([xshift=1.2cm,yshift=-1.2cm]current page.north west)
+        rectangle
+        ([xshift=-1.2cm,yshift=1.2cm]current page.south east);
+\end{tikzpicture}
+}
+}
+
+% Phụ lục và hình báo cáo môn Học máy.
+\renewcommand{\appendixname}{Phụ lục}
+\newcommand{\hinh}[3]{\begin{figure}[htbp]\centering\includegraphics[width=#2\textwidth]{figures/#1}\caption{#3}\end{figure}}

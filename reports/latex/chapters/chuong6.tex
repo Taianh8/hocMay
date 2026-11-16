@@ -1,0 +1,27 @@
+\chapter{Tổng kết và hướng phát triển}
+\section{Tổng kết kết quả}
+Nhóm đã xây dựng một pipeline có kiểm tra split, tiền xử lý thống nhất, trích xuất pixel/HOG/HSV, PCA fit trong phạm vi train và các cấu hình K-NN/cây quyết định. Kết quả validation tốt nhất trong bảng hợp nhất là biến thể E6 dùng 32 bin với macro F1 0,2151; E6 16 bin đạt 0,2127.
+
+Tuy nhiên, CV năm fold cho E6 đạt $0,1932\pm0,0195$, còn biến thể 32 bin đạt $0,1907\pm0,0170$, với hiệu số theo fold đổi dấu. Vì vậy nhóm không xem chênh lệch nhỏ là bằng chứng ổn định.
+
+Đối chứng E3/E7 cho thấy việc thêm histogram HSV vào cùng họ cây quyết định cải thiện validation từ 0,0230 lên 0,0891, nhưng cây vẫn thấp hơn K-NN trên biểu diễn HOG+HSV. Kết quả này ủng hộ việc nghiên cứu đặc trưng trước khi quy kết hoàn toàn cho thuật toán. Phân tích lỗi cũng cho thấy hiệu năng giữa các lớp rất không đều; các cặp nhầm nổi bật liên quan đến màu, biên, hình dạng và nền, nhưng các liên hệ trực quan chưa phải bằng chứng nhân quả.
+
+\section{Ý nghĩa của test cuối}
+Test cuối đã được chạy đúng một lần cho E1 và E6 trên 6.149 ảnh, với mô hình fit trên train+validation. E6 đạt Accuracy 0,2602 và macro F1 0,2349; E1 đạt tương ứng 0,1345 và 0,1103. Khi bỏ hai ảnh trùng đã được kiểm toán, Accuracy chỉ còn 0,2600 với E6 và 0,1342 với E1. Độ nhạy nhỏ này không xóa được vấn đề holdout đã bị quan sát, nhưng cho biết hai ảnh cụ thể không quyết định kết luận tổng thể.
+
+Các điểm test không được so thẳng với validation: số ảnh/lớp của test khác, mô hình test được fit trên gấp đôi số ảnh phát triển, và E6 là một cấu hình đã được chọn sau nhiều thử nghiệm. Ngoài ra, ứng viên đứng đầu theo bảng đầy đủ là biến thể 32 bin nhưng không có điểm test. Báo cáo vì vậy gọi đúng tên artifact: E6 là mô hình đã test, còn biến thể 32 bin là ứng viên validation chưa được test.
+
+\section{Hạn chế}
+\begin{itemize}
+\item Mỗi lớp chỉ có 10 ảnh train và 10 ảnh validation; 102 lớp khiến ước lượng per-class có phương sai lớn.
+\item Đặc trưng cổ điển phụ thuộc resize vuông, biên HOG và histogram màu; chúng có thể giữ nền, lá hoặc ánh sáng thay vì chỉ hình thái hoa.
+\item Các đối chứng hiện có chưa tách riêng ảnh hưởng của nền, từng kênh màu hoặc hình dạng. Chưa có holdout độc lập sau khi test đã được quan sát.
+\item Một số ảnh trùng giữa split đã được phát hiện; việc loại hai ảnh trong phân tích độ nhạy không thay thế một cuộc kiểm toán trùng đầy đủ theo nhóm ảnh.
+\end{itemize}
+
+\section{Khuyến nghị cụ thể}
+Thứ nhất, nhóm nên tạo một holdout độc lập mới từ nguồn dữ liệu được kiểm tra trùng, khóa danh sách ứng viên và tiêu chí chọn trước khi chạy. Holdout này chỉ được mở một lần cho báo cáo cuối; không dùng để điều chỉnh tham số. Thứ hai, tăng số ảnh mỗi lớp hoặc bổ sung phép tăng cường có kiểm soát, đồng thời báo cáo khoảng bất định và phân bố per-class thay vì chỉ một macro F1.
+
+Thứ ba, nên thực hiện các đối chứng đã định trước: tách nền hoặc mask vùng hoa, ablation HOG/HSV theo từng khối, giữ nguyên một độ phân giải khi so sánh bin màu, và so sánh cây với ensemble hoặc mô hình có regularization. Mỗi đối chứng cần ghi rõ giả thuyết, biến thay đổi, seed và tiêu chí dừng; không suy ra trước điểm số.
+
+Cuối cùng, nếu mục tiêu là nhận dạng thực tế, nhóm có thể khảo sát đặc trưng học sâu hoặc học chuyển giao sau khi đã xây dựng baseline sạch. Khi đó cần giữ E1/E6 làm mốc, tách phần cải thiện do biểu diễn khỏi phần cải thiện do mô hình, và kiểm tra lại trên holdout độc lập. Với phạm vi hiện tại, đóng góp đáng tin cậy nhất là một quy trình có thể tái lập, phát hiện được sai lệch chọn mô hình và trình bày trung thực giới hạn của kết quả.

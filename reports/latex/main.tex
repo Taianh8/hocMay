@@ -1,0 +1,36 @@
+% !TeX program = xelatex
+% Dựa trên Template_BCTT_DATN; các chương và thông tin nhận diện đã thay cho môn Học máy.
+\documentclass[12pt,a4paper,oneside]{extreport}
+\input{settings}
+\begin{document}
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+\input{cover}
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\input{frontmatter/tom_tat}
+\input{frontmatter/danh_muc_viet_tat}
+\clearpage
+\CombinedLists
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{chapters/chuong1}
+\include{chapters/chuong2}
+\include{chapters/chuong3}
+\include{chapters/chuong4}
+\include{chapters/chuong5}
+\include{chapters/chuong6}
+\clearpage
+\input{backmatter/cong_bo_ai}
+\clearpage
+\input{backmatter/tai_lieu_tham_khao}
+\clearpage
+\input{backmatter/phu_luc}
+\clearpage
+\input{backmatter/phu_luc_chi_tiet}
+\end{document}

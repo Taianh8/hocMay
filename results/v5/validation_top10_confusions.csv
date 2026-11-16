@@ -1,0 +1,11 @@
+class_id,predicted_class_id,count,true_name_en,predicted_name_en,support
+24,11,4,red ginger,snapdragon,10
+94,32,4,foxglove,garden phlox,10
+9,29,3,monkshood,artichoke,10
+18,30,3,peruvian lily,sweet william,10
+32,45,3,garden phlox,bolero deep blue,10
+45,55,3,bolero deep blue,pelargonium,10
+65,50,3,californian poppy,common dandelion,10
+1,96,2,pink primrose,camellia,10
+5,47,2,english marigold,marigold,10
+9,19,2,monkshood,balloon flower,10
