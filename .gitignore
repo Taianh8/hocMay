@@ -27,3 +27,19 @@ reports/latex/*.synctex.gz
 # Manifest được tạo cho model cục bộ, không thay manifest lịch sử.
 configs/e6_manifest_moi.json
 !**/.gitkeep
+
+# Bằng chứng thực nghiệm nhỏ; model, cache và ma trận nhị phân vẫn bị bỏ qua.
+!results/
+results/*
+!results/v5/
+results/v5/*
+!results/v5/*.json
+!results/v5/*.csv
+!results/final_test/
+results/final_test/*
+!results/final_test/*.json
+!results/final_test/*.csv
+!results/v4/
+results/v4/*
+!results/v4/dataset_audit.json
+!results/v4/duplicate_candidates.csv

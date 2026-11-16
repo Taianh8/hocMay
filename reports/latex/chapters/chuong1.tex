@@ -14,6 +14,9 @@ Tệp nhãn chính thức đánh số lớp từ 1 đến 102. Trong mã nguồn
 
 Hình \ref{fig:phanbo} trình bày số lượng ảnh của từng lớp trên toàn bộ bộ dữ liệu. Nhóm sử dụng hình này để hiểu cấu trúc dữ liệu, không dùng biểu đồ để thay đổi split chính thức hoặc lựa chọn mẫu test.
 \begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{figures/phan_bo.png}\caption{Phân bố số ảnh theo mã lớp chính thức.}\label{fig:phanbo}\end{figure}
+
+Hình \ref{fig:anhmaueda} minh họa một số ảnh mẫu từ các lớp tiêu biểu trong tập huấn luyện. Qua quan sát trực quan, có thể nhận thấy sự đa dạng lớn về hình thái cánh hoa, góc chụp, mức độ phức tạp của nền lá và điều kiện chiếu sáng giữa các loài khác nhau.
+\begin{figure}[htbp]\centering\includegraphics[width=0.92\textwidth]{figures/anh_mau_eda.png}\caption{Ảnh mẫu từ một số lớp hoa tiêu biểu trong tập huấn luyện.}\label{fig:anhmaueda}\end{figure}
 \section{Đặc điểm của bài toán phân loại nhiều lớp}
 Trong bài toán này, mỗi ảnh chỉ nhận một nhãn chính thức. Tuy nhiên, việc quan sát ảnh thực tế cho thấy màu nền, lá, thân và các vật thể xung quanh cũng có thể chiếm một phần lớn diện tích ảnh. Nếu mô hình sử dụng toàn bộ ảnh, những vùng này đều góp mặt trong vector đặc trưng. Do đó, dự đoán không chỉ phụ thuộc vào phần cánh hoa mà còn có thể chịu ảnh hưởng của bố cục và màu nền.
 

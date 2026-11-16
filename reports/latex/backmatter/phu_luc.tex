@@ -3,7 +3,22 @@
 \renewcommand{\cftchappresnum}{PHỤ LỤC~}
 \sloppy
 \chapter{Cấu hình và tái lập}
-Cấu hình gốc nằm trong \texttt{configs/experiments.yaml}, \texttt{configs/experiments\_v2.yaml}, \texttt{configs/experiments\_v3.yaml} và \texttt{configs/e6\_manifest\_v1.json}. Dữ liệu chính thức, model pickle và hình sinh ra không nằm đầy đủ trong Git; kiểm tra README trước khi chạy. Lệnh \texttt{python -m pytest -q} kiểm tra tích hợp; \texttt{python -m scripts.check\_v4\_audit} xác minh dữ liệu và các cặp ứng viên đã lưu. Không chạy lại test trong quá trình tái lập tài liệu.
+Cấu hình thí nghiệm được lưu trữ đầy đủ trong thư mục \texttt{configs/}:
+\begin{itemize}
+    \item \texttt{experiments.yaml}: Cấu hình baseline V1 (E1–E3).
+    \item \texttt{experiments\_v2.yaml}: Cấu hình không gian đặc trưng và mô hình V2 (E4–E6).
+    \item \texttt{experiments\_v3.yaml}: Cấu hình kiểm định chéo và phân tích độ ổn định V3.
+    \item \texttt{experiments\_v5.yaml}: Cấu hình cây quyết định E7 và thí nghiệm đối chứng kiểm tra giả thuyết phân tích lỗi.
+    \item \texttt{e6\_manifest\_v2.json}: Manifest lịch sử của lần test E6 16 bin và E1; mã chọn ban đầu bỏ qua biến thể 32 bin và manifest được tạo sau dự đoán. Xem \texttt{docs/kiem\_toan\_quy\_trinh.md}.
+\end{itemize}
 
-
-Để tạo lại đường học trong bản sao làm việc có đủ dữ liệu và cache V2, chạy \texttt{python -m scripts.duong\_hoc}. Script dùng năm fold V3, các tập con lồng nhau với 2, 4, 6 và 8 ảnh/lớp, fit riêng PCA cho từng tập con và không dự đoán validation chính thức hoặc test. Kết quả, ID mẫu, dự đoán và checksum được lưu trong \texttt{results/duong\_hoc/}; hai hình được lưu trong \texttt{reports/latex/figures/}. Lệnh có thể ghi đè các tệp đường học đã sinh, vì vậy cần sao lưu kết quả cũ trước khi chạy lại.
+Để tái lập các kết quả trong báo cáo:
+\begin{enumerate}
+    \item Chuẩn bị môi trường và dữ liệu theo hướng dẫn trong \texttt{README.md}.
+    \item Chạy toàn bộ kiểm thử tự động: \texttt{python -m pytest -q}.
+    \item Tái lập pipeline V5 trong bản sao cách ly (không ghi đè kết quả hiện có): \texttt{python -m src.pipeline\_v5}.
+    \item Tạo lại đường học: \texttt{python -m scripts.duong\_hoc}.
+    \item Sinh các hình vẽ và ma trận phân tích lỗi: \texttt{python -m scripts.tao\_hinh\_phan\_tich\_loi}.
+    \item Khởi chạy giao diện demo: \texttt{streamlit run app.py}.
+\end{enumerate}
+Không chạy lại đánh giá test đã thực hiện. Các artifact sinh ra được lưu tách biệt theo từng phiên bản trong \texttt{results/v2/}, \texttt{results/v3/}, \texttt{results/v4/}, \texttt{results/v5/} và \texttt{results/final\_test/}.

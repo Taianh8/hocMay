@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "purpose": "Kiểm toán sau khi test đã chạy; không phải bằng chứng khóa trước test",
+  "validation_candidate": "E6_bins32",
+  "model_evaluated_on_test": [
+    "E1",
+    "E6_16_bin"
+  ],
+  "selection_discrepancy": true,
+  "test_repeat_allowed": false,
+  "sha256_recorded_posthoc": {
+    "configs/experiments_v5.yaml": "e6d2138a5cbcda354981bfd6e31773a66eb42a898a7488d616d884ee89f5136d",
+    "configs/e6_manifest_v2.json": "dbd2852618eaa0494c2040979d402a741a68259aa99a9bb69e11aa9146e367eb",
+    "results/v5/unified_comparison.json": "bcefa7893c54afea27a577de64bc025f15098f83032dbf4e3cfff810a7e5aee7",
+    "results/v5/unified_comparison_v2.json": "f4353e84f6595c9eeddea4c7d11ae4d0989bb8acb761e96781f432577b6d999c",
+    "results/final_test/metrics.json": "05d51263b0220feedb93fee7490d99e0bd761f058973ed99953049c1e8e44085",
+    "results/final_test/E1_test_predictions.csv": "dbc41a955d63dcc73746457c2a55e9b08c8d8fc4c9127ebb4372f53b96696308",
+    "results/final_test/E6_test_predictions.csv": "3653544a7aa660bf73f4f7f213607796a5de85575c2fdf57d7f9c3f105457299",
+    "results/final_test/models/E1_retrained.pkl": "435fe175360bfd525837bfa7ea163e9bdd0f05a354e3251952cbebfc9a1a71e0",
+    "results/final_test/models/E6_retrained.pkl": "96706bb023978c428223533b954344155e1423f4c7627f3c9174b5683764b5b0"
+  },
+  "trust": "Hash ghi sau sự kiện, không xác thực nguồn hoặc chứng minh thời điểm đóng băng."
+}

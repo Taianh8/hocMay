@@ -81,6 +81,19 @@ def image_features(data: bytes, manifest: dict) -> np.ndarray:
         raise ValueError(f'Không thể giải mã ảnh: {exc}') from exc
 
 
+def predict_top_k(data: bytes, manifest: dict, payload: dict, k: int = 3) -> tuple[list[dict], np.ndarray]:
+    """Xếp tối đa k lớp theo phiếu K-NN có trọng số, không hiệu chuẩn xác suất."""
+    if not isinstance(k, int) or k < 1:
+        raise ValueError('k phải là số nguyên dương')
+    vector = image_features(data, manifest).reshape(1, -1)
+    projected = payload['pca'].transform(vector)[:, :manifest['pca']['components']]
+    model = payload['model']
+    weights = np.asarray(model.predict_proba(projected))[0]
+    indices = np.argsort(-weights, kind='stable')
+    selected = [int(i) for i in indices if weights[i] > 0][:k]
+    return [{'class_id': int(model.classes_[i]) + 1, 'vote_share': float(weights[i])} for i in selected], projected
+
+
 def predict_with_features(data: bytes, manifest: dict, payload: dict) -> tuple[int, np.ndarray]:
     """Dự đoán mã lớp và trả vector PCA để tìm ảnh train tham khảo."""
     vector = image_features(data, manifest).reshape(1, -1)

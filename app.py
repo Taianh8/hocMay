@@ -7,7 +7,7 @@ import streamlit as st
 from PIL import Image
 
 from src.flower_catalog import display_name, load_catalog, load_reference_index, reference_images
-from src.inference import MAX_BYTES, MAX_PIXELS, default_manifest_path, load_frozen_model, predict_with_features
+from src.inference import MAX_BYTES, MAX_PIXELS, default_manifest_path, load_frozen_model, predict_top_k, predict_with_features
 
 st.set_page_config(page_title='Vườn Hoa — Nhận diện hoa', page_icon='🌼', layout='wide', initial_sidebar_state='collapsed')
 
@@ -99,13 +99,31 @@ with right:
         try:
             with st.spinner('Đang quan sát bức ảnh...'):
                 manifest, payload = get_model()
-                class_id, projected = predict_with_features(data, manifest, payload)
+                top_classes, projected = predict_top_k(data, manifest, payload, k=3)
+                class_id = top_classes[0]['class_id']
                 item = get_catalog()[class_id]
             name = escape(display_name(item)); original = escape(item['name_en'])
             subtitle = f'<div class="result-latin">Tên gốc trong bộ dữ liệu: {original}</div>' if item.get('name_vi') else '<div class="result-latin">Tên gốc theo bộ dữ liệu (tiếng Anh)</div>'
-            st.markdown(f'<div class="result-card"><div class="result-label">NHÓM HOA ĐƯỢC GỢI Ý</div><div class="result-name">{name}</div>{subtitle}<span class="result-id">Mã lớp Oxford · {class_id:02d}</span></div>', unsafe_allow_html=True)
-            accuracy = float(manifest['selection']['validation_accuracy']) * 100
-            st.markdown(f'<div class="notice"><strong>Hãy xem đây là một gợi ý.</strong> Trong lần đánh giá validation của dự án, mô hình đoán đúng {accuracy:.1f}% ảnh. Dự đoán cho ảnh mới vẫn có thể sai; chưa có kết quả đánh giá test E6.</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="result-card"><div class="result-label">NHÓM HOA ĐƯỢC GỢI Ý (HÀNG ĐẦU)</div><div class="result-name">{name}</div>{subtitle}<span class="result-id">Mã lớp Oxford · {class_id:02d}</span></div>', unsafe_allow_html=True)
+
+            top3_html = '<div style="background:#f0f6ee;border:1px solid #d5e5d1;border-radius:14px;padding:12px 16px;margin:12px 0;"><div style="font-size:11px;font-weight:700;color:#54735b;text-transform:uppercase;margin-bottom:8px;">Các lớp nhận phiếu từ K-NN</div>'
+            for rank, c_info in enumerate(top_classes, start=1):
+                c_item = get_catalog()[c_info['class_id']]
+                c_name = escape(display_name(c_item))
+                c_orig = escape(c_item['name_en'])
+                top3_html += f'<div style="font-size:13px;padding:4px 0;"><strong>#{rank}</strong> {c_name} <span style="color:#788b78">({c_orig}) · Lớp {c_info["class_id"]:02d}</span> — {c_info["vote_share"]*100:.1f}% phiếu có trọng số</div>'
+            top3_html += '<div style="font-size:11px;color:#788b78;margin-top:6px;">Tỉ lệ phiếu có trọng số, không phải xác suất đã hiệu chuẩn. Chỉ hiển thị những lớp có phiếu.</div></div>'
+            st.markdown(top3_html, unsafe_allow_html=True)
+            val_acc = float(manifest['selection']['validation_accuracy']) * 100
+            st.markdown(f'<div class="notice"><strong>Hãy xem đây là một gợi ý.</strong> Model đang dùng được fit trên train; Accuracy validation của model này là {val_acc:.1f}%. Lần đánh giá test E6 đã dùng model fit lại trên train+validation và không phải cùng model đang hiển thị.</div>', unsafe_allow_html=True)
+            from pathlib import Path
+            import json
+            test_file = Path(__file__).resolve().parent / 'results/final_test/metrics.json'
+            if test_file.is_file():
+                with st.expander('Lần đánh giá test đã ghi nhận'):
+                    saved = json.loads(test_file.read_text())
+                    measured = saved['E6_final_model']['full_test']['accuracy'] * 100
+                    st.write(f'E6 16 bin sau khi fit lại trên train+validation đạt Accuracy {measured:.2f}% trên test. Đây là model khác với model train-only đang dùng trong giao diện; biến thể E6_bins32 dẫn đầu validation chưa được đánh giá test.')
             with Image.open(BytesIO(data)) as image:
                 image.thumbnail((96, 96)); rgb = np.asarray(image.convert('RGB')).mean(axis=(0, 1)).astype(int)
             st.markdown(f'<div class="small-copy"><strong>Quan sát ảnh:</strong> màu trung bình của toàn ảnh <span style="display:inline-block;width:13px;height:13px;border-radius:50%;background:rgb({rgb[0]},{rgb[1]},{rgb[2]});border:1px solid #becbb9;vertical-align:middle"></span> có tính cả nền và lá, không phải màu riêng của hoa.</div>', unsafe_allow_html=True)

@@ -1,0 +1,11 @@
+class_id,name_en,precision,recall,f1,support
+4,sweet pea,0.0,0.0,0.0,10
+18,peruvian lily,0.0,0.0,0.0,10
+23,fritillary,0.0,0.0,0.0,10
+24,red ginger,0.0,0.0,0.0,10
+29,artichoke,0.0,0.0,0.0,10
+34,mexican aster,0.0,0.0,0.0,10
+39,siam tulip,0.0,0.0,0.0,10
+40,lenten rose,0.0,0.0,0.0,10
+41,barbeton daisy,0.0,0.0,0.0,10
+42,daffodil,0.0,0.0,0.0,10

@@ -1,0 +1,410 @@
+{
+  "1": {
+    "name_en": "pink primrose",
+    "name_vi": "Hoa anh th\u1ea3o h\u1ed3ng"
+  },
+  "2": {
+    "name_en": "hard-leaved pocket orchid",
+    "name_vi": "Lan h\u00e0i l\u00e1 c\u1ee9ng"
+  },
+  "3": {
+    "name_en": "canterbury bells",
+    "name_vi": "Hoa chu\u00f4ng Canterbury"
+  },
+  "4": {
+    "name_en": "sweet pea",
+    "name_vi": "Hoa \u0111\u1eadu th\u01a1m"
+  },
+  "5": {
+    "name_en": "english marigold",
+    "name_vi": null
+  },
+  "6": {
+    "name_en": "tiger lily",
+    "name_vi": "Hoa ly h\u1ed5"
+  },
+  "7": {
+    "name_en": "moon orchid",
+    "name_vi": "Lan h\u1ed3 \u0111i\u1ec7p"
+  },
+  "8": {
+    "name_en": "bird of paradise",
+    "name_vi": "Hoa thi\u00ean \u0111i\u1ec3u"
+  },
+  "9": {
+    "name_en": "monkshood",
+    "name_vi": "Hoa \u00f4 \u0111\u1ea7u"
+  },
+  "10": {
+    "name_en": "globe thistle",
+    "name_vi": null
+  },
+  "11": {
+    "name_en": "snapdragon",
+    "name_vi": "Hoa m\u00f5m s\u00f3i"
+  },
+  "12": {
+    "name_en": "colt's foot",
+    "name_vi": null
+  },
+  "13": {
+    "name_en": "king protea",
+    "name_vi": null
+  },
+  "14": {
+    "name_en": "spear thistle",
+    "name_vi": null
+  },
+  "15": {
+    "name_en": "yellow iris",
+    "name_vi": "Hoa di\u00ean v\u0129 v\u00e0ng"
+  },
+  "16": {
+    "name_en": "globe-flower",
+    "name_vi": null
+  },
+  "17": {
+    "name_en": "purple coneflower",
+    "name_vi": "C\u00fac c\u00e1nh t\u00edm"
+  },
+  "18": {
+    "name_en": "peruvian lily",
+    "name_vi": "Hoa loa k\u00e8n Peru"
+  },
+  "19": {
+    "name_en": "balloon flower",
+    "name_vi": "Hoa c\u00e1t c\u00e1nh"
+  },
+  "20": {
+    "name_en": "giant white arum lily",
+    "name_vi": null
+  },
+  "21": {
+    "name_en": "fire lily",
+    "name_vi": null
+  },
+  "22": {
+    "name_en": "pincushion flower",
+    "name_vi": null
+  },
+  "23": {
+    "name_en": "fritillary",
+    "name_vi": null
+  },
+  "24": {
+    "name_en": "red ginger",
+    "name_vi": "Hoa g\u1eebng \u0111\u1ecf"
+  },
+  "25": {
+    "name_en": "grape hyacinth",
+    "name_vi": "Hoa d\u1ea1 lan h\u01b0\u01a1ng nho"
+  },
+  "26": {
+    "name_en": "corn poppy",
+    "name_vi": "Hoa anh t\u00fac \u0111\u1ecf"
+  },
+  "27": {
+    "name_en": "prince of wales feathers",
+    "name_vi": null
+  },
+  "28": {
+    "name_en": "stemless gentian",
+    "name_vi": null
+  },
+  "29": {
+    "name_en": "artichoke",
+    "name_vi": null
+  },
+  "30": {
+    "name_en": "sweet william",
+    "name_vi": null
+  },
+  "31": {
+    "name_en": "carnation",
+    "name_vi": "Hoa c\u1ea9m ch\u01b0\u1edbng"
+  },
+  "32": {
+    "name_en": "garden phlox",
+    "name_vi": null
+  },
+  "33": {
+    "name_en": "love in the mist",
+    "name_vi": null
+  },
+  "34": {
+    "name_en": "mexican aster",
+    "name_vi": "Hoa c\u00e1nh b\u01b0\u1edbm Mexico"
+  },
+  "35": {
+    "name_en": "alpine sea holly",
+    "name_vi": null
+  },
+  "36": {
+    "name_en": "ruby-lipped cattleya",
+    "name_vi": null
+  },
+  "37": {
+    "name_en": "cape flower",
+    "name_vi": null
+  },
+  "38": {
+    "name_en": "great masterwort",
+    "name_vi": null
+  },
+  "39": {
+    "name_en": "siam tulip",
+    "name_vi": "Hoa ngh\u1ec7 c\u1ea3nh"
+  },
+  "40": {
+    "name_en": "lenten rose",
+    "name_vi": null
+  },
+  "41": {
+    "name_en": "barbeton daisy",
+    "name_vi": null
+  },
+  "42": {
+    "name_en": "daffodil",
+    "name_vi": "Hoa th\u1ee7y ti\u00ean v\u00e0ng"
+  },
+  "43": {
+    "name_en": "sword lily",
+    "name_vi": "Hoa lay \u01a1n"
+  },
+  "44": {
+    "name_en": "poinsettia",
+    "name_vi": "Hoa tr\u1ea1ng nguy\u00ean"
+  },
+  "45": {
+    "name_en": "bolero deep blue",
+    "name_vi": null
+  },
+  "46": {
+    "name_en": "wallflower",
+    "name_vi": null
+  },
+  "47": {
+    "name_en": "marigold",
+    "name_vi": null
+  },
+  "48": {
+    "name_en": "buttercup",
+    "name_vi": "Hoa mao l\u01b0\u01a1ng"
+  },
+  "49": {
+    "name_en": "oxeye daisy",
+    "name_vi": null
+  },
+  "50": {
+    "name_en": "common dandelion",
+    "name_vi": "B\u1ed3 c\u00f4ng anh"
+  },
+  "51": {
+    "name_en": "petunia",
+    "name_vi": "Hoa d\u1ea1 y\u1ebfn th\u1ea3o"
+  },
+  "52": {
+    "name_en": "wild pansy",
+    "name_vi": null
+  },
+  "53": {
+    "name_en": "primula",
+    "name_vi": null
+  },
+  "54": {
+    "name_en": "sunflower",
+    "name_vi": "Hoa h\u01b0\u1edbng d\u01b0\u01a1ng"
+  },
+  "55": {
+    "name_en": "pelargonium",
+    "name_vi": null
+  },
+  "56": {
+    "name_en": "bishop of llandaff",
+    "name_vi": null
+  },
+  "57": {
+    "name_en": "gaura",
+    "name_vi": null
+  },
+  "58": {
+    "name_en": "geranium",
+    "name_vi": null
+  },
+  "59": {
+    "name_en": "orange dahlia",
+    "name_vi": null
+  },
+  "60": {
+    "name_en": "pink-yellow dahlia?",
+    "name_vi": "Th\u01b0\u1ee3c d\u01b0\u1ee3c cam"
+  },
+  "61": {
+    "name_en": "cautleya spicata",
+    "name_vi": null
+  },
+  "62": {
+    "name_en": "japanese anemone",
+    "name_vi": "Cautleya spicata"
+  },
+  "63": {
+    "name_en": "black-eyed susan",
+    "name_vi": "H\u1ea3i qu\u1ef3 Nh\u1eadt B\u1ea3n"
+  },
+  "64": {
+    "name_en": "silverbush",
+    "name_vi": "C\u00fac m\u1eaft \u0111en"
+  },
+  "65": {
+    "name_en": "californian poppy",
+    "name_vi": null
+  },
+  "66": {
+    "name_en": "osteospermum",
+    "name_vi": "Anh t\u00fac California"
+  },
+  "67": {
+    "name_en": "spring crocus",
+    "name_vi": null
+  },
+  "68": {
+    "name_en": "bearded iris",
+    "name_vi": "Hoa ngh\u1ec7 t\u00e2y m\u00f9a xu\u00e2n"
+  },
+  "69": {
+    "name_en": "windflower",
+    "name_vi": "Hoa di\u00ean v\u0129 r\u00e2u"
+  },
+  "70": {
+    "name_en": "tree poppy",
+    "name_vi": null
+  },
+  "71": {
+    "name_en": "gazania",
+    "name_vi": null
+  },
+  "72": {
+    "name_en": "azalea",
+    "name_vi": null
+  },
+  "73": {
+    "name_en": "water lily",
+    "name_vi": "Hoa \u0111\u1ed7 quy\u00ean"
+  },
+  "74": {
+    "name_en": "rose",
+    "name_vi": "Hoa s\u00fang"
+  },
+  "75": {
+    "name_en": "thorn apple",
+    "name_vi": "Hoa h\u1ed3ng"
+  },
+  "76": {
+    "name_en": "morning glory",
+    "name_vi": "C\u00e0 \u0111\u1ed9c d\u01b0\u1ee3c"
+  },
+  "77": {
+    "name_en": "passion flower",
+    "name_vi": "Hoa l\u1ea1c ti\u00ean"
+  },
+  "78": {
+    "name_en": "lotus",
+    "name_vi": "Hoa sen"
+  },
+  "79": {
+    "name_en": "toad lily",
+    "name_vi": null
+  },
+  "80": {
+    "name_en": "anthurium",
+    "name_vi": "Hoa h\u1ed3ng m\u00f4n"
+  },
+  "81": {
+    "name_en": "frangipani",
+    "name_vi": "Hoa \u0111\u1ea1i"
+  },
+  "82": {
+    "name_en": "clematis",
+    "name_vi": "Hoa \u00f4ng l\u00e3o"
+  },
+  "83": {
+    "name_en": "hibiscus",
+    "name_vi": "Hoa d\u00e2m b\u1ee5t"
+  },
+  "84": {
+    "name_en": "columbine",
+    "name_vi": null
+  },
+  "85": {
+    "name_en": "desert-rose",
+    "name_vi": null
+  },
+  "86": {
+    "name_en": "tree mallow",
+    "name_vi": "Hoa c\u1ea9m qu\u1ef3 th\u00e2n g\u1ed7"
+  },
+  "87": {
+    "name_en": "magnolia",
+    "name_vi": "Hoa m\u1ed9c lan"
+  },
+  "88": {
+    "name_en": "cyclamen",
+    "name_vi": "Hoa anh th\u1ea3o Cyclamen"
+  },
+  "89": {
+    "name_en": "watercress",
+    "name_vi": null
+  },
+  "90": {
+    "name_en": "canna lily",
+    "name_vi": "Hoa dong ri\u1ec1ng"
+  },
+  "91": {
+    "name_en": "hippeastrum",
+    "name_vi": "Hoa hu\u1ec7 t\u00e2y Hippeastrum"
+  },
+  "92": {
+    "name_en": "bee balm",
+    "name_vi": "Hoa b\u1ea1c h\u00e0 ong"
+  },
+  "93": {
+    "name_en": "ball moss",
+    "name_vi": null
+  },
+  "94": {
+    "name_en": "foxglove",
+    "name_vi": "Hoa \u0111\u1ecba ho\u00e0ng"
+  },
+  "95": {
+    "name_en": "bougainvillea",
+    "name_vi": "Hoa gi\u1ea5y"
+  },
+  "96": {
+    "name_en": "camellia",
+    "name_vi": "Hoa tr\u00e0"
+  },
+  "97": {
+    "name_en": "mallow",
+    "name_vi": null
+  },
+  "98": {
+    "name_en": "mexican petunia",
+    "name_vi": "D\u1ea1 y\u1ebfn th\u1ea3o Mexico"
+  },
+  "99": {
+    "name_en": "bromelia",
+    "name_vi": null
+  },
+  "100": {
+    "name_en": "blanket flower",
+    "name_vi": "Hoa ch\u0103n"
+  },
+  "101": {
+    "name_en": "trumpet creeper",
+    "name_vi": "Hoa k\u00e8n leo"
+  },
+  "102": {
+    "name_en": "blackberry lily",
+    "name_vi": "Hoa r\u1ebb qu\u1ea1t"
+  }
+}

@@ -1,0 +1,35 @@
+# Cấu hình thực nghiệm bổ sung V5: E7 (Cây quyết định công bằng) và Thí nghiệm đối chứng (Error analysis ablation)
+seed: 42
+pca_components: 128
+pca_iterated_power: 3
+
+# E7: DecisionTreeClassifier trên h8_hsv (không PCA) và h8_hsv + PCA (128 chiều)
+# Lưới tham số: criterion ∈ {gini, entropy}, max_depth ∈ {10, 20, None}, min_samples_leaf ∈ {1, 5}
+decision_tree:
+  random_state: 42
+  criterion: [gini, entropy]
+  max_depth: [10, 20, null]
+  min_samples_leaf: [1, 5]
+
+# Thí nghiệm đối chứng (Ablation) kiểm chứng giả thuyết phân tích lỗi so với E6:
+# E6 chuẩn: image_size=64, histogram_bins=16, hog=h8, color=hsv, pca=128, knn(3, cosine, distance)
+controlled_experiments:
+  E6_size128:
+    image_size: 128
+    histogram_bins: 16
+    hog: {orientations: 9, pixels_per_cell: 8, cells_per_block: 2}
+    color: hsv
+    pca_components: 128
+    knn: {n_neighbors: 3, metric: cosine, weights: distance}
+  E6_bins32:
+    image_size: 64
+    histogram_bins: 32
+    hog: {orientations: 9, pixels_per_cell: 8, cells_per_block: 2}
+    color: hsv
+    pca_components: 128
+    knn: {n_neighbors: 3, metric: cosine, weights: distance}
+
+# Tùy chọn 1.3: Mô hình pre-trained + KNN
+pretrained_extension:
+  enabled: false
+  reason: "Môi trường không có torch/torchvision và requirements đã lock cố định theo requirements-v4-lock.txt; không cài đặt để tránh phá vỡ môi trường."

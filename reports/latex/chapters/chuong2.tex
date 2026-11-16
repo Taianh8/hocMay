@@ -1,6 +1,9 @@
 \chapter{Thiết kế giải pháp và quy trình học máy}
 \section{Quy trình tổng quát}
-Nhóm em triển khai theo các bước: đọc ảnh và nhãn; kiểm tra metadata và split; tiền xử lý ảnh; trích xuất đặc trưng; huấn luyện các cấu hình trên train; so sánh bằng validation; cuối cùng lưu cấu hình, chỉ số và hình phân tích. Việc tổ chức theo các bước giúp nhóm có thể kiểm tra một phần riêng mà không cần viết lại toàn bộ quy trình.
+Nhóm em triển khai theo các bước: đọc ảnh và nhãn; kiểm tra metadata và split; tiền xử lý ảnh; trích xuất đặc trưng; huấn luyện các cấu hình trên train; so sánh bằng validation; cuối cùng lưu cấu hình, chỉ số và hình phân tích. Toàn bộ pipeline được xây dựng dựa trên các thư viện mã nguồn mở chuẩn mực gồm scikit-learn \cite{sklearn} và scikit-image \cite{skimage}. Việc tổ chức theo các bước giúp nhóm có thể kiểm tra một phần riêng mà không cần viết lại toàn bộ quy trình.
+
+Hình \ref{fig:pipelinesodo} minh họa toàn bộ quy trình từ dữ liệu thô đến đánh giá và phân tích lỗi. Sơ đồ làm nổi bật ranh giới chống rò rỉ dữ liệu (leak-free boundary): trong giai đoạn chọn cấu hình, PCA chỉ được fit trên train hoặc fold train. Ở lần test đã thực hiện, PCA được fit lại trên train+validation sau lựa chọn; test không tham gia fit.
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\textwidth]{figures/pipeline_sodo.png}\caption{Sơ đồ luồng xử lý tổng thể và ranh giới chống rò rỉ dữ liệu.}\label{fig:pipelinesodo}\end{figure}
 
 Các ID ảnh trong metadata được dùng để ghép ảnh, nhãn và split. Nhóm kiểm tra các ID không bị lặp giữa train, validation và test. Với các đặc trưng tính riêng trên từng ảnh, việc trích xuất không học thống kê từ các ảnh khác. Riêng PCA phải được fit chỉ từ các vector train; trong kiểm định chéo, PCA được fit lại trong phần train của từng fold.
 \section{Tiền xử lý ảnh}
