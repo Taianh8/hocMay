@@ -1,9 +1,5 @@
-# Hướng dẫn đóng góp
+# Đóng góp
 
-Làm việc trên nhánh riêng, dùng Python 3.11 và môi trường `.venv` từ `requirements-v4-lock.txt`. Lock đã kiểm chứng trên macOS arm64; nền tảng khác có thể cần wheel khác. Không đưa dữ liệu gốc, cache, model pickle hoặc nhị phân lớn vào Git. Bảng CSV/JSON kết quả nhỏ có thể được theo dõi sau khi rà soát. Giữ nguyên split chính thức, mã thí nghiệm E1–E6, kết quả và nguồn gốc thực nghiệm.
+Dùng Python 3.11 và `requirements-v4-lock.txt`; giữ split Oxford, không đưa ảnh, cache hoặc pickle vào Git. Mọi scaler/PCA phải fit trên train hoặc fold train; chỉ chọn cấu hình bằng validation. Test đã được thực hiện cho E1 và E6 16 bin; **không chạy lại**. Đọc [kiểm toán quy trình](docs/kiem_toan_quy_trinh.md) trước khi diễn giải kết quả.
 
-Mọi phép biến đổi có học tham số phải được fit trong fold huấn luyện. Chọn cấu hình bằng validation; không dùng test để chọn hay điều chỉnh. Notebook 05 và `python -m src.pipeline all` chạy lại đánh giá test V1, không dùng cho QA thường quy. `python -m src.pipeline_v2` ghi lại artifact V2; dùng bản sao cách ly khi cần tái lập. Không chạy test E6 nếu chưa được chủ dự án cho phép riêng.
-
-Trước khi bàn giao, chạy lại 11 notebook theo README, tạo manifest mới nếu cần kiểm thử model, rồi chạy `python -m pytest -q` và `python scripts/verify_v4_notebooks.py`. Lệnh `python -m scripts.check_v4_audit` chỉ dùng sau khi đã tạo lại kiểm toán V4. Kiểm thử V4 cần dữ liệu, cache và model E6 tin cậy. Nêu rõ lệnh, kết quả đã quan sát và giới hạn; ghi nhận hỗ trợ AI trong `AI_USAGE.md`.
-
-Pickle có thể thực thi mã. Chỉ nạp model và manifest tin cậy; hash chỉ phát hiện thay đổi ngoài ý muốn, không xác thực hai file bị thay thế cùng lúc. Thay đổi model hoặc preprocessing cần manifest phiên bản mới được rà soát, không ghi đè bản đã đóng băng.
+Chạy `python -m pytest -q` và báo rõ các bước đã kiểm tra. Output CSV/JSON nhỏ trong `results/v5`, `results/final_test`, `results/v4` là bằng chứng; notebook đã thực thi trong `results/notebooks` là log lịch sử, không phải mã nguồn. Chỉ nạp pickle từ nguồn tin cậy. Ghi hỗ trợ AI trong `AI_USAGE.md`; không tự gán phần việc cho thành viên.

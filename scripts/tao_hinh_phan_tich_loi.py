@@ -76,9 +76,9 @@ def create_top_confusion_heatmap():
     
     fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     fig.tight_layout()
-    fig.savefig(FIG_DIR / 'ma_tran_e6.png', dpi=180)
+    fig.savefig(FIG_DIR / 'ma_tran_e6_top15_v5.png', dpi=180)
     plt.close(fig)
-    print("Đã tạo reports/latex/figures/ma_tran_e6.png (heatmap rút gọn)")
+    print("Đã tạo reports/latex/figures/ma_tran_e6_top15_v5.png (heatmap rút gọn)")
 
 
 def create_confusion_side_by_side_grid():

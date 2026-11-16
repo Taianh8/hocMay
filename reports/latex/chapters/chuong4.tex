@@ -1,4 +1,5 @@
 \chapter{Thử nghiệm và kết quả}
+\sloppy
 \section{Mục đích và cách tiến hành}
 Nhóm em chia quá trình thử nghiệm thành các giai đoạn chặt chẽ:
 \begin{enumerate}
@@ -6,17 +7,18 @@ Nhóm em chia quá trình thử nghiệm thành các giai đoạn chặt chẽ:
     \item \textbf{Giai đoạn V2:} Bổ sung đặc trưng màu sắc HSV (E4), giảm chiều pixel bằng PCA (E5) và kết hợp toàn diện HOG + HSV + PCA + K-NN (E6).
     \item \textbf{Giai đoạn V3:} Kiểm định chéo (5-fold CV) trên tập train và khảo sát đường học (learning curves) để kiểm tra tính ổn định.
     \item \textbf{Giai đoạn V5 (Bổ sung):} Đánh giá cây quyết định công bằng hơn (E7) trên cùng đặc trưng HOG + HSV của E6; thực hiện thí nghiệm đối chứng (ablation) thay đổi độ phân giải ảnh (image\_size $64 \to 128$) và số bin màu ($16 \to 32$) để kiểm chứng giả thuyết phân tích lỗi.
-    \item \textbf{Đánh giá test cuối:} Đóng băng mô hình cuối E6 và baseline E1 trong manifest V2, huấn luyện lại trên tập train + validation (2.040 ảnh), và đánh giá đúng một lần trên toàn bộ tập test chính thức (6.149 ảnh).
+    \item \textbf{Đánh giá test cuối:} Một tiến trình đã đánh giá E6 16 bin và baseline E1 sau khi fit lại trên train + validation (2.040 ảnh) trên test chính thức. Cấu hình E6 16 bin không phải ứng viên có F1 validation cao nhất khi tính cả biến thể đối chứng; xem kiểm toán bên dưới.
 \end{enumerate}
 
-Tất cả các quyết định lựa chọn mô hình được thực hiện hoàn toàn dựa trên F1 trung bình vĩ mô (Macro F1) trên tập validation và kiểm định chéo trên train, tuyệt đối không sử dụng tập test để chọn cấu hình.
+Bảng validation không sử dụng dự đoán test. Theo quy tắc chọn Macro F1 validation rồi Accuracy trên toàn bộ E1–E7 và biến thể, E6\_bins32 đứng đầu với 0,2151; lần test đã thực hiện trên E6 16 bin nên không phải test của ứng viên đứng đầu. Không chạy lại test sau khi phát hiện sai lệch.
 
 \section{Bảng so sánh tổng hợp các thí nghiệm (E1–E7 và biến thể)}
-Bảng \ref{tab:unified} tổng hợp kết quả của tất cả các cấu hình đại diện từ E1 đến E7 cùng các biến thể đối chứng, được trích xuất trực tiếp từ các artifact \texttt{results/v2/metrics/comparison.json}, \texttt{results/v3/metrics/cv\_summary.json} và \texttt{results/v5/unified\_comparison.json}. Mốc ngẫu nhiên (random guess) đối với bài toán 102 lớp là $1/102 \approx 0,0098$ (0,98\%).
+Bảng \ref{tab:unified} tổng hợp kết quả của tất cả các cấu hình đại diện từ E1 đến E7 cùng các biến thể đối chứng, được trích xuất trực tiếp từ các artifact \path{results/v2/metrics/comparison.json}, \path{results/v3/metrics/cv_summary.json} và \path{results/v5/unified_comparison.json}. Mốc ngẫu nhiên (random guess) đối với bài toán 102 lớp là $1/102 \approx 0,0098$ (0,98\%).
 
 \begin{table}[htbp]
 \centering
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lllrrrr}\toprule
 ID & Đặc trưng & Mô hình & Val Acc & Val F1 & CV Macro F1 & Fit (s)\\\midrule
 E1 & Pixel 64×64 (12.288d) & 1-NN Euclidean & 0,1088 & 0,0914 & 0,0877 $\pm$ 0,0118 & 0,003\\
@@ -24,12 +26,13 @@ E2 & HOG h8 (1.764d) & 1-NN Euclidean & 0,0608 & 0,0584 & -- & 0,001\\
 E3 & HOG h8 (1.764d) & Cây quyết định & 0,0245 & 0,0230 & -- & 14,714\\
 E4 & HOG + HSV (1.812d) & 5-NN Euclidean & 0,2186 & 0,2003 & 0,1852 $\pm$ 0,0148 & 0,001\\
 E5 & Pixel + PCA (64d) & 3-NN Cosine & 0,1500 & 0,1334 & -- & 0,186\\
-E6 & HOG + HSV + PCA (128d) & 3-NN Cosine & \textbf{0,2343} & \textbf{0,2127} & \textbf{0,1932 $\pm$ 0,0195} & 0,025\\
+E6 & HOG + HSV + PCA (128d) & 3-NN Cosine & 0,2343 & 0,2127 & 0,1932 $\pm$ 0,0195 & 0,025\\
 E7 & HOG + HSV (1.812d) & Cây QĐ (depth 20) & 0,0922 & 0,0891 & 0,0695 $\pm$ 0,0100 & 5,158\\\midrule
 \multicolumn{7}{l}{\textit{Biến thể đối chứng kiểm tra giả thuyết phân tích lỗi:}}\\
 E6\_size128 & Size 128, HOG+HSV+PCA & 3-NN Cosine & 0,2255 & 0,2034 & 0,1953 $\pm$ 0,0159 & 0,103\\
-E6\_bins32 & Bins 32, HOG+HSV+PCA & 3-NN Cosine & 0,2343 & 0,2151 & 0,1907 $\pm$ 0,0170 & 0,031\\\bottomrule
-\end{tabular}
+E6\_bins32 & Bins 32, HOG+HSV+PCA & 3-NN Cosine & 0,2343 & \textbf{0,2151} & 0,1907 $\pm$ 0,0170 & 0,031\\\bottomrule
+\end{tabular}%
+}
 \caption{Bảng so sánh tổng hợp các thí nghiệm trên validation và kiểm định chéo train.}\label{tab:unified}
 \end{table}
 
@@ -40,12 +43,12 @@ E6\_bins32 & Bins 32, HOG+HSV+PCA & 3-NN Cosine & 0,2343 & 0,2151 & 0,1907 $\pm$
 \begin{itemize}
     \item Cấu hình tốt nhất đạt được với tiêu chí Gini, độ sâu tối đa 20, nút lá tối thiểu 1 trên đặc trưng không PCA: Accuracy validation đạt 0,0922 và Macro F1 đạt 0,0891 (thời gian fit 5,16s). Kiểm định chéo 5 fold trên train cho Macro F1 đạt $0,0695 \pm 0,0100$.
     \item Khi kết hợp PCA (128 chiều), cây quyết định đạt F1 cao nhất là 0,0773 (kém hơn không PCA).
-    \item \textit{Nhận xét: } E7 vượt trội hoàn toàn so với E3 (F1 tăng gần gấp 4 lần, từ 0,0230 lên 0,0891), chứng minh rằng việc bổ sung thông tin màu sắc mang lại lợi ích lớn cho cây quyết định. Tuy nhiên, E7 vẫn kém xa các mô hình K-NN tương ứng (E4 đạt 0,2003 và E6 đạt 0,2127). Nguyên nhân cốt lõi là cây quyết định phân tách không gian bằng các siêu phẳng song song với trục tọa độ (axis-aligned splits). Với 102 lớp và chỉ 10 mẫu huấn luyện mỗi lớp, mỗi lần rẽ nhánh làm số mẫu tại các nút con giảm nhanh chóng, dẫn đến cây bị phân mảnh dữ liệu nghiêm trọng và khó nắm bắt quan hệ khoảng cách tương đối giữa các vector đặc trưng liên tục.
+    \item \textit{Nhận xét: } E7 vượt trội hoàn toàn so với E3 (F1 tăng gần gấp 4 lần, từ 0,0230 lên 0,0891), cho thấy E7 cao hơn E3 trong các cấu hình đã thử, nhưng cả đặc trưng và lưới tham số đều thay đổi nên không thể quy toàn bộ chênh lệch cho màu. Tuy nhiên, E7 vẫn kém xa các mô hình K-NN tương ứng (E4 đạt 0,2003 và E6 đạt 0,2127). Số mẫu ít và không gian đặc trưng lớn là các yếu tố cần xem xét; chưa có thí nghiệm cô lập nguyên nhân.
 \end{itemize}
 
 \textbf{Thí nghiệm đối chứng (Ablation study):}
 \begin{itemize}
-    \item \textit{Thay đổi kích thước ảnh ($64 \to 128$ pixel): } Số chiều đặc trưng tăng từ 1.812 lên 8.148, thời gian trích xuất và huấn luyện tăng gấp 4 lần. Tuy nhiên, Macro F1 validation không tăng mà giảm nhẹ từ 0,2127 xuống 0,2034; Macro F1 trên CV đạt 0,1953 (chênh lệch trong khoảng phương sai so với 0,1932 của E6). Điều này bác bỏ giả thuyết cho rằng việc hạ kích thước ảnh xuống 64×64 là nguyên nhân chính gây mất mát thông tin phân loại ở các mô hình cổ điển.
+    \item \textit{Thay đổi kích thước ảnh ($64 \to 128$ pixel): } Số chiều đặc trưng tăng từ 1.812 lên 8.148, chi phí tính toán thay đổi; xem thời gian fit trong bảng. Tuy nhiên, Macro F1 validation không tăng mà giảm nhẹ từ 0,2127 xuống 0,2034; Macro F1 trên CV đạt 0,1953 (chênh lệch trong khoảng phương sai so với 0,1932 của E6). Kết quả không cho thấy cải thiện validation trong đối chứng này, nhưng chưa đủ để bác bỏ mọi tác động của độ phân giải.
     \item \textit{Thay đổi số bin màu ($16 \to 32$ bin): } Macro F1 validation nhích nhẹ từ 0,2127 lên 0,2151, nhưng Macro F1 trên CV 5 fold lại giảm nhẹ từ 0,1932 xuống 0,1907. Việc tăng số bin màu làm tăng số chiều nhưng không tạo ra sự cải thiện nhất quán trên cả hai tập đánh giá.
 \end{itemize}
 
@@ -57,46 +60,49 @@ E6\_bins32 & Bins 32, HOG+HSV+PCA & 3-NN Cosine & 0,2343 & 0,2151 & 0,1907 $\pm$
 \textbf{Đường học (Learning curves): } Hình \ref{fig:duonghoc} thể hiện đường học của E1, E4 và E6 qua 60 lần fit thực tế (3 mô hình × 4 mức dữ liệu: 204, 408, 612, 816 ảnh × 5 fold).
 \begin{figure}[htbp]\centering\includegraphics[width=0.95\textwidth]{figures/duong_hoc.png}\caption{Đường học E1, E4 và E6 trên train chính thức. Vùng mờ là độ lệch chuẩn giữa năm fold.}\label{fig:duonghoc}\end{figure}
 
-Ở cả ba mô hình, điểm train luôn đạt tuyệt đối 1,0 do thuật toán K-NN có xu hướng lấy chính mẫu được truy vấn làm láng giềng gần nhất (khoảng cách bằng 0). Đường holdout tăng đều khi số lượng mẫu tăng, chứng tỏ mô hình học thêm được thông tin hữu ích từ dữ liệu bổ sung.
+Ở cả ba mô hình, điểm train luôn đạt tuyệt đối 1,0 do thuật toán K-NN có xu hướng lấy chính mẫu được truy vấn làm láng giềng gần nhất (khoảng cách bằng 0). Đường holdout tăng theo số lượng mẫu trong phép thử này; điều đó không chứng minh riêng nguyên nhân của mức tăng.
 
 \section{Kết quả đánh giá trên tập test cuối}
-Theo quy trình đánh giá nghiêm ngặt, mô hình cuối E6 và baseline E1 được đóng băng tại \texttt{configs/e6\_manifest\_v2.json}. Cả hai mô hình được huấn luyện lại trên toàn bộ tập train + validation (2.040 ảnh, tương ứng 20 ảnh/lớp). Mọi phép biến đổi tham số (PCA) chỉ fit trên 2.040 ảnh này, sau đó transform sang tập test. Dự đoán được thực hiện \textbf{đúng một lần duy nhất} trên toàn bộ 6.149 ảnh test chính thức.
+Một lần đánh giá E6 16 bin cùng baseline E1 được ghi tại \path{configs/e6_manifest_v2.json}. Cả hai mô hình được fit lại trên train + validation (2.040 ảnh, 20 ảnh/lớp); PCA fit trên 2.040 ảnh này rồi transform test. Mã thực hiện một lệnh dự đoán cho mỗi model trên 6.149 ảnh test. Manifest được tạo sau dự đoán và không ghi hash model, do đó không chứng minh được việc khóa model trước test hoặc số lần thực thi độc lập.
 
 \begin{table}[htbp]
 \centering
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrrrr}\toprule
 Mô hình & Accuracy & Macro Prec & Macro Rec & Macro F1 & Weighted F1\\\midrule
-Ngẫu nhiên (1/102) & 0,0098 & 0,0098 & 0,0098 & 0,0098 & 0,0098\\
+Ngẫu nhiên đều (1/102)* & 0,0098 & -- & -- & -- & --\\
 Baseline E1 (Pixels, 1-NN) & 0,1345 & 0,1835 & 0,1419 & 0,1103 & 0,1159\\
-\textbf{Mô hình cuối E6 (HOG+HSV+PCA)} & \textbf{0,2602} & \textbf{0,2435} & \textbf{0,2753} & \textbf{0,2349} & \textbf{0,2508}\\\midrule
+\textbf{E6 16 bin đã đánh giá} & \textbf{0,2602} & \textbf{0,2435} & \textbf{0,2753} & \textbf{0,2349} & \textbf{0,2508}\\\midrule
 \multicolumn{6}{l}{\textit{Kiểm toán độ nhạy (loại 2 ảnh test trùng byte: 7309 và 8067, còn 6.147 ảnh):}}\\
-E1 (Test sạch) & 0,1342 & 0,1831 & 0,1415 & 0,1101 & 0,1156\\
-E6 (Test sạch) & 0,2599 & 0,2432 & 0,2749 & 0,2347 & 0,2506\\\bottomrule
-\end{tabular}
-\caption{Kết quả đánh giá chính thức trên tập test và phân tích độ nhạy.}\label{tab:test}
+E1 (test trừ 2 ảnh) & 0,1342 & 0,1831 & 0,1415 & 0,1101 & 0,1156\\
+E6 (test trừ 2 ảnh) & 0,2600 & 0,2432 & 0,2749 & 0,2347 & 0,2506\\\bottomrule
+\end{tabular}%
+}
+\caption{Kết quả test đã lưu của E1 và E6 16 bin, cùng phân tích độ nhạy. *Mốc 1/102 là Accuracy kỳ vọng của dự đoán đều; không giả định các chỉ số khác bằng mốc này.}\label{tab:test}
 \end{table}
 
 \textbf{Phân tích kết quả test: }
 \begin{enumerate}
-    \item Mô hình E6 đạt Accuracy \textbf{26,02\%} và Macro F1 \textbf{0,2349} trên 6.149 ảnh test, vượt trội mốc ngẫu nhiên hơn 26 lần và cao hơn gấp 2,1 lần so với Baseline E1 (Accuracy 13,45\%, Macro F1 0,1103). Việc tăng dữ liệu huấn luyện từ 1.020 ảnh (chỉ train) lên 2.040 ảnh (train + val) đã giúp E6 nâng F1 từ 0,2127 trên validation lên 0,2349 trên test.
-    \item \textbf{Ảnh hưởng của rò rỉ dữ liệu (Kiểm toán độ nhạy): } Kiểm toán V4 phát hiện ảnh test 7309 trùng byte với ảnh train 7307 (lớp 94), và ảnh test 8067 trùng byte với ảnh val 8077 (lớp 31). Khi đánh giá test, cả E1 và E6 đều dự đoán đúng 100\% hai ảnh này. Khi loại bỏ hai ảnh trùng này khỏi tập test (còn 6.147 ảnh), Accuracy của E6 giảm từ 26,02\% xuống 25,99\%, và Macro F1 giảm từ 0,2349 xuống 0,2347. Thí nghiệm này chứng minh bằng số liệu thực nghiệm rằng rò rỉ dữ liệu tạo ra sự thổi phồng cục bộ cho các mẫu bị trùng lặp, khẳng định tầm quan trọng của việc kiểm toán toàn vẹn dữ liệu.
-    \item \textbf{Lý giải mức điểm khiêm tốn của phương pháp truyền thống: } Mặc dù E6 là cấu hình tốt nhất trong đề tài, độ chính xác 26,02\% phản ánh rõ những giới hạn cố hữu của học máy cổ điển trên bài toán thị giác máy tính:
+    \item Mô hình E6 đạt Accuracy \textbf{26,02\%} và Macro F1 \textbf{0,2349} trên 6.149 ảnh test, vượt trội mốc ngẫu nhiên hơn 26 lần và cao hơn gấp 2,1 lần so với Baseline E1 (Accuracy 13,45\%, Macro F1 0,1103). Hai điểm được tính trên các tập khác nhau và model fit trên lượng dữ liệu khác nhau; không thể quy sự chênh lệch cho việc tăng dữ liệu.
+    \item \textbf{Ảnh hưởng của rò rỉ dữ liệu (Kiểm toán độ nhạy): } Kiểm toán V4 phát hiện ảnh test 7309 trùng byte với ảnh train 7307 (lớp 94), và ảnh test 8067 trùng byte với ảnh val 8077 (lớp 31). Khi đánh giá test, cả E1 và E6 đều dự đoán đúng 100\% hai ảnh này. Khi loại bỏ hai ảnh trùng này khỏi tập test (còn 6.147 ảnh), Accuracy của E6 giảm từ 26,02\% xuống 25,99\%, và Macro F1 giảm từ 0,2349 xuống 0,2347. Hai ảnh trùng đều được dự đoán đúng; kết quả cho thấy độ nhạy khi loại đúng hai ảnh này, không xác định được ảnh hưởng của các cặp gần trùng khác.
+    \item \textbf{Lý giải mức điểm khiêm tốn của phương pháp truyền thống: } Accuracy 26,02\% là kết quả của cấu hình E6 16 bin đã được đánh giá; một số yếu tố có thể được nghiên cứu thêm:
     \begin{itemize}
         \item \textit{Dữ liệu huấn luyện thưa thớt: } Mỗi lớp chỉ có 10–20 mẫu huấn luyện. K-NN phải tìm láng giềng trong tập mẫu hữu hạn này, khiến mô hình rất dễ nhầm khi ảnh test có góc chụp, tư thế hay độ nở của hoa khác lạ.
         \item \textit{Đặc trưng thủ công toàn cục: } HOG và histogram màu mô tả phân bố cạnh và màu trên toàn ảnh mà không tách biệt được đối tượng hoa khỏi nền lá, đất hoặc cành cây.
-        \item \textit{Lời nguyền số chiều: } Dù đã nén về 128 chiều PCA, không gian đặc trưng vẫn quá rộng so với mật độ mẫu, làm khoảng cách cosine giữa các mẫu bị san phẳng và giảm tính phân biệt.
+        \item \textit{Lời nguyền số chiều: } Dù đã nén về 128 chiều PCA, không gian đặc trưng vẫn quá rộng so với mật độ mẫu, có thể ảnh hưởng đến tính phân biệt của khoảng cách; giả thuyết này chưa được đo riêng.
     \end{itemize}
 \end{enumerate}
 
 \section{Phân tích lỗi trên ma trận nhầm lẫn rút gọn}
 Hình \ref{fig:cm} trình bày ma trận nhầm lẫn rút gọn của E6 trên tập validation, tập trung vào top 15 lớp có số lượng nhầm lẫn nhiều nhất.
-\begin{figure}[htbp]\centering\includegraphics[width=0.82\textwidth]{figures/ma_tran_e6.png}\caption{Ma trận nhầm lẫn rút gọn của E6 trên validation (Top 15 lớp bị nhầm nhiều nhất).}\label{fig:cm}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.82\textwidth]{figures/ma_tran_e6_top15_v5.png}\caption{Ma trận nhầm lẫn rút gọn của E6 trên validation (Top 15 lớp bị nhầm nhiều nhất).}\label{fig:cm}\end{figure}
 
 Bảng \ref{tab:confpairs} liệt kê top 10 cặp lớp bị nhầm nhiều nhất trên validation, và Bảng \ref{tab:perclass} thống kê top 10 lớp có F1 cao nhất và thấp nhất.
 
 \begin{table}[htbp]
 \centering
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{rllr}\toprule
 STT & Lớp thực tế & Lớp dự đoán bị nhầm & Số lần nhầm (trên 10 ảnh)\\\midrule
 1 & Lớp 24 (red ginger) & Lớp 11 (snapdragon) & 4\\
@@ -109,13 +115,15 @@ STT & Lớp thực tế & Lớp dự đoán bị nhầm & Số lần nhầm (tr�
 8 & Lớp 1 (pink primrose) & Lớp 96 (camellia) & 2\\
 9 & Lớp 5 (english marigold) & Lớp 47 (marigold) & 2\\
 10 & Lớp 9 (monkshood) & Lớp 19 (balloon flower) & 2\\\bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Top 10 cặp lớp bị nhầm lẫn nhiều nhất của E6 trên validation.}\label{tab:confpairs}
 \end{table}
 
 \begin{table}[htbp]
 \centering
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{llr|llr}\toprule
 \multicolumn{3}{c|}{\textbf{Top 10 lớp F1 cao nhất (Validation)}} & \multicolumn{3}{c}{\textbf{Top 10 lớp F1 thấp nhất (Validation)}}\\\midrule
 Mã lớp & Tên loài & F1 & Mã lớp & Tên loài & F1\\\midrule
@@ -129,9 +137,12 @@ Lớp 71 & Gazania & 0,6087 & Lớp 39 & Siam tulip & 0,0000\\
 Lớp 56 & Bishop of llandaff & 0,5926 & Lớp 40 & Lenten rose & 0,0000\\
 Lớp 63 & Black-eyed susan & 0,5556 & Lớp 41 & Barbeton daisy & 0,0000\\
 Lớp 15 & Yellow iris & 0,5263 & Lớp 42 & Daffodil & 0,0000\\\bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Top 10 lớp có F1 cao nhất và thấp nhất của E6 trên validation (mỗi lớp có 10 ảnh).}\label{tab:perclass}
 \end{table}
 
 Hình \ref{fig:vidunham} đối chiếu trực quan 4 trường hợp nhầm lẫn tiêu biểu đặt cạnh mẫu huấn luyện lớp thực tế và lớp bị nhầm.
 \begin{figure}[htbp]\centering\includegraphics[width=0.95\textwidth]{figures/vi_du_nham.png}\caption{Đối chiếu ảnh sai trên validation với mẫu train lớp thực tế và lớp bị nhầm.}\label{fig:vidunham}\end{figure}
+
+\fussy
