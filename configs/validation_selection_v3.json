@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "purpose": "kiểm toán lựa chọn validation, không phải manifest model test",
+  "selection_rule": "validation macro F1, tie-break accuracy; all E1–E7 and control variants",
+  "selected_validation_candidate": {
+    "experiment": "E6_bins32",
+    "variant": "E6_bins32",
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "pca_components": 128,
+    "val_accuracy": 0.23431372549019608,
+    "val_macro_f1": 0.21511805056276034,
+    "cv_macro_f1_mean": 0.19071739807033924,
+    "cv_macro_f1_std": 0.017019914169887365,
+    "fit_seconds": 0.03148579099797644
+  },
+  "test_already_performed_on": "E6",
+  "selected_candidate_has_test_result": false,
+  "source_sha256": "bcefa7893c54afea27a577de64bc025f15098f83032dbf4e3cfff810a7e5aee7",
+  "v5_config": "configs/experiments_v5.yaml",
+  "v5_config_sha256": "e6d2138a5cbcda354981bfd6e31773a66eb42a898a7488d616d884ee89f5136d"
+}

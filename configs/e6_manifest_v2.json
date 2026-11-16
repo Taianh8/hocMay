@@ -1,0 +1,138 @@
+{
+  "manifest_version": 2,
+  "experiment": "E6",
+  "baseline": "E1",
+  "selection": {
+    "rule": "validation macro F1, then accuracy",
+    "validation_macro_f1": 0.21266311022542148,
+    "validation_accuracy": 0.23431372549019608,
+    "cv_macro_f1_mean": 0.19316738816738818,
+    "cv_macro_f1_std": 0.019501900887704513
+  },
+  "final_test": {
+    "evaluation_status": "completed",
+    "training_set": "train + validation (2040 samples)",
+    "test_set": "official test (6149 samples)",
+    "E6_metrics": {
+      "accuracy": 0.2602049113677021,
+      "macro_precision": 0.2435035258724409,
+      "macro_recall": 0.27526886248457216,
+      "macro_f1": 0.23494597181319443,
+      "weighted_precision": 0.3046490453314942,
+      "weighted_recall": 0.2602049113677021,
+      "weighted_f1": 0.2508270178388114,
+      "samples": 6149,
+      "pca_fit_seconds": 0.052505458996165544,
+      "pca_test_transform_seconds": 0.015489833996980451,
+      "knn_fit_seconds": 0.000588916998822242,
+      "knn_predict_seconds": 0.10876395899686031,
+      "total_fit_seconds": 0.053094375994987786
+    },
+    "E6_clean_sensitivity": {
+      "accuracy": 0.25996421018382954,
+      "macro_precision": 0.24324095203720272,
+      "macro_recall": 0.27493836640818153,
+      "macro_f1": 0.23466595022210296,
+      "weighted_precision": 0.30439264832137897,
+      "weighted_recall": 0.25996421018382954,
+      "weighted_f1": 0.25058665052746965,
+      "samples": 6147
+    },
+    "E1_metrics": {
+      "accuracy": 0.134493413563181,
+      "macro_precision": 0.18350853216885724,
+      "macro_recall": 0.14187692054504963,
+      "macro_f1": 0.11033815227603036,
+      "weighted_precision": 0.21984677630531746,
+      "weighted_recall": 0.134493413563181,
+      "weighted_f1": 0.11587790554000692,
+      "samples": 6149,
+      "fit_seconds": 0.03934891600511037,
+      "predict_seconds": 2.5663073750038166
+    },
+    "E1_clean_sensitivity": {
+      "accuracy": 0.13421181063933627,
+      "macro_precision": 0.18314034000019488,
+      "macro_recall": 0.1415133479101157,
+      "macro_f1": 0.11010485554356715,
+      "weighted_precision": 0.2191693231676642,
+      "weighted_recall": 0.13421181063933627,
+      "weighted_f1": 0.11558252617428885,
+      "samples": 6147
+    }
+  },
+  "dataset": {
+    "name": "Oxford 102 Flowers",
+    "images": 8189,
+    "classes": 102,
+    "splits": {
+      "train": 1020,
+      "validation": 1020,
+      "test": 6149
+    },
+    "mapping": "official class ID = internal predicted index + 1"
+  },
+  "preprocessing": {
+    "mode": "RGB",
+    "size": [
+      64,
+      64
+    ],
+    "resampling": "Pillow bilinear",
+    "normalization": "float32 / 255",
+    "exif_transpose": false
+  },
+  "features": {
+    "variant": "h8_hsv",
+    "orientations": 9,
+    "pixels_per_cell": 8,
+    "cells_per_block": 2,
+    "block_norm": "L2-Hys",
+    "histogram_bins_per_channel": 16,
+    "block_normalization": "each block L2 normalized; concatenated equal weight",
+    "input_dimensions": 1812
+  },
+  "pca": {
+    "components": 128,
+    "svd_solver": "randomized",
+    "iterated_power": 3,
+    "random_seed": 42,
+    "training_samples": 2040
+  },
+  "knn": {
+    "n_neighbors": 3,
+    "metric": "cosine",
+    "weights": "distance",
+    "n_jobs": 1,
+    "training_samples": 2040
+  },
+  "python": "3.11.15",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "scikit-image": "0.26.0",
+    "Pillow": "11.3.0"
+  },
+  "complete_dependency_lock": "requirements-v4-lock.txt",
+  "sha256": {
+    "configs/experiments.yaml": "a4bb0f8a5ad4aa4262c83bd0c3734994ca80122d9fadb057a5bb3deffe21fbb1",
+    "configs/experiments_v2.yaml": "152bf41c062950e696517346cff66f87ab1cec4a7ce150ffecbc9350c4944018",
+    "configs/experiments_v3.yaml": "66d8dfc7b81f1b0bbfb25d37514e0a3337713cedf4765d5761b088c9d9d343c0",
+    "configs/experiments_v5.yaml": "e6d2138a5cbcda354981bfd6e31773a66eb42a898a7488d616d884ee89f5136d",
+    "src/preprocessing.py": "851b4f518c5d68b61897941765e700112d085fd049fc3a849264da4880c0bd10",
+    "src/features_v2.py": "38cbcb7ebfca7dd6704fd5eaa223a8f6d2dfb699e595a75ae4e697003b5dc29b",
+    "src/data_loader.py": "48223ef73e4b051942e67e2f5153f96beead23311a39cf51e6f071e631925505",
+    "src/flower_catalog.py": "714f3470e520225ff2828a03e56a6fb31bc940d235415c6287207bd5e364294b",
+    "results/v5/unified_comparison.json": "bcefa7893c54afea27a577de64bc025f15098f83032dbf4e3cfff810a7e5aee7",
+    "results/final_test/metrics.json": "05d51263b0220feedb93fee7490d99e0bd761f058973ed99953049c1e8e44085",
+    "results/final_test/E6_test_predictions.csv": "3653544a7aa660bf73f4f7f213607796a5de85575c2fdf57d7f9c3f105457299",
+    "results/final_test/E6_per_class.csv": "04fe26ccf26d850f2c2e15c190e92eb023c77d66ea568fad219efa50c66059c3",
+    "results/final_test/E6_confusion_pairs.csv": "63ab153baa7139146522fb5b39bfc6d4171d05325caa0234566fc7133f567df3",
+    "data/raw/imagelabels.mat": "4903e94206bac23bf772aadf06451916df56b58fc483a62db32a97b82656651d",
+    "data/raw/setid.mat": "46b8678f91fd95d3c8f4feab80d271a6c834a1dd896fe29fd3e6ad9ce5c8dccd",
+    "requirements-v4-lock.txt": "2f7324af2ddea607063ccf3a9fc1422ec8f500e06c45fb81a203b178f75a008d"
+  },
+  "model_artifact": "results/final_test/models/E6_retrained.pkl",
+  "trust": "Local trusted pickle only; hashes verify reproducibility and provenance."
+}

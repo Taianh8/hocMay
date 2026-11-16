@@ -37,19 +37,19 @@ def data():
 def eda(df):
     """Save dataset distributions and representative images."""
     print(df.groupby('split').size()); print('Image modes:', df['mode'].value_counts().to_dict()); print(df[['width','height']].describe())
-    fig, ax = plt.subplots(figsize=(16, 4)); df.groupby('class_id').size().plot.bar(ax=ax, width=1); ax.set(xlabel='Official class ID', ylabel='Images', title='Class distribution'); ax.tick_params(axis='x', labelsize=5); fig.tight_layout(); fig.savefig(FIG/'class_distribution.png', dpi=150); plt.close(fig)
-    fig, ax = plt.subplots(1, 2, figsize=(10, 4)); ax[0].scatter(df.width, df.height, s=2, alpha=.2); ax[0].set(xlabel='Width', ylabel='Height'); (df.width / df.height).hist(ax=ax[1], bins=40); ax[1].set(xlabel='Aspect ratio', ylabel='Count'); fig.tight_layout(); fig.savefig(FIG/'dimensions.png', dpi=150); plt.close(fig)
+    fig, ax = plt.subplots(figsize=(16, 4)); df.groupby('class_id').size().plot.bar(ax=ax, width=1); ax.set(xlabel='Mã lớp chính thức', ylabel='Số ảnh', title='Phân bố số ảnh theo lớp'); ax.tick_params(axis='x', labelsize=5); fig.tight_layout(); fig.savefig(FIG/'class_distribution.png', dpi=150); plt.close(fig)
+    fig, ax = plt.subplots(1, 2, figsize=(10, 4)); ax[0].scatter(df.width, df.height, s=2, alpha=.2); ax[0].set(xlabel='Chiều rộng (pixel)', ylabel='Chiều cao (pixel)'); (df.width / df.height).hist(ax=ax[1], bins=40); ax[1].set(xlabel='Tỉ lệ rộng/cao', ylabel='Số ảnh'); fig.tight_layout(); fig.savefig(FIG/'dimensions.png', dpi=150); plt.close(fig)
     sample = df.groupby('class_id').head(1).head(12); fig, axes = plt.subplots(3, 4, figsize=(10, 8))
     for ax, row in zip(axes.flat, sample.itertuples()):
         with Image.open(row.path) as im: ax.imshow(im.convert('RGB'))
-        ax.set_title(f'Class {row.class_id}'); ax.axis('off')
+        ax.set_title(f'Lớp {row.class_id}'); ax.axis('off')
     fig.tight_layout(); fig.savefig(FIG/'samples.png', dpi=150); plt.close(fig)
 
 def preview(df, cfg):
     """Save an original and its deterministic preprocessing result."""
     row = df.iloc[0]; fig, ax = plt.subplots(1, 2, figsize=(8, 4))
     with Image.open(row.path) as im: ax[0].imshow(im.convert('RGB'))
-    ax[1].imshow(preprocess(Path(row.path), cfg['image_size'])); ax[0].set_title('Original'); ax[1].set_title('RGB, resized and normalized')
+    ax[1].imshow(preprocess(Path(row.path), cfg['image_size'])); ax[0].set_title('Ảnh gốc'); ax[1].set_title('RGB sau resize và chuẩn hóa')
     for a in ax: a.axis('off')
     fig.tight_layout(); fig.savefig(FIG/'preprocessing.png', dpi=150); plt.close(fig)
 

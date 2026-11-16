@@ -1,13 +1,11 @@
-# AI usage
+# Công bố sử dụng AI
 
-The V1 scaffold, code, notebooks, documentation and tests were generated with OpenAI Codex from the project task specification. The assistant audited the existing repository and reported environmental limitations. No experimental outcomes were invented. A human contributor must review the implementation, run it with the official dataset, inspect outputs, and document any subsequent AI assistance before using results in coursework.
+Trong quá trình thực hiện, OpenAI Codex đã hỗ trợ nhóm ở các phần sau:
 
-The V1 verification and release work was also assisted by OpenAI Codex. It installed a project-local environment, checked dataset hashes, ran experiments and notebooks, added weighted metrics and a targeted test, and updated the handoff using observed results. The human team remains responsible for reviewing and interpreting the outputs.
+- gợi ý và chỉnh sửa mã cho pipeline tiền xử lý, trích xuất đặc trưng, đánh giá, giao diện và các kiểm tra bất biến;
+- hỗ trợ thiết kế và đọc các bảng thí nghiệm E1--E7, kiểm định chéo, đối chứng E3/E7 và các biến thể độ phân giải/bin màu;
+- kiểm toán dữ liệu, split, ảnh trùng, manifest, checksum và sự nhất quán giữa dự đoán CSV với các chỉ số đã lưu;
+- soạn thảo, biên tập và sắp xếp báo cáo LaTeX, README, hướng dẫn đóng góp, bàn giao và kiểm toán quy trình;
+- thực hiện các lệnh thí nghiệm theo cấu hình đã có, tạo artifact và tính lại chỉ số từ artifact; không tự tạo điểm số hoặc thay thế artifact bằng giá trị suy đoán.
 
-V2 feature engineering, validation search, tests, notebook verification, and documentation were assisted by OpenAI Codex. Reported results came from actual execution; no V2 test-set results were generated. The team should review feature choices, experiments, and interpretations before submission.
-
-V3 train-only robustness analysis, checks, notebook, and documentation were assisted by OpenAI Codex. Observations were made from the saved validation examples; proposed explanations are explicitly labeled hypotheses. No new test evaluation was run. The team should review the protocol and findings before academic submission.
-
-V4 audit code, frozen-model inference, demo, tests and draft documentation were assisted by OpenAI Codex. The dataset duplicate findings and model behavior were checked against local artifacts; the six perceptual candidates are not asserted to be byte-identical. The LaTeX report is a draft requiring team authorship and review. No new test evaluation was run in V4. The team is responsible for verifying results and disclosing AI use under its course rules.
-
-Final repository cleanup and the consolidated handoff were assisted by OpenAI Codex. The cleanup preserves historical results and AI/contributor attribution; the team should review the uncommitted changes and confirm academic disclosures before submission.
+Nhóm đã đối chiếu nội dung báo cáo với các file trong `results/v5` và `results/final_test`, kiểm tra các công thức/tổng hợp bằng dữ liệu đã lưu, đọc lại mã nguồn và ghi rõ những điểm không thể kết luận. Đặc biệt, nhóm giữ nguyên sự kiện test E1/E6 đã chạy, không gán kết quả đó cho E6_bins32 và không chạy lại test để che lấp sai lệch lựa chọn. Nhóm chịu trách nhiệm cuối cùng về mã, số liệu, diễn giải, việc rà soát thủ công và tuân thủ quy định học phần.

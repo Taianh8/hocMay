@@ -1,0 +1,12 @@
+# Bàn giao V2 — tối ưu đặc trưng chỉ bằng validation
+
+**Cập nhật:** Các output thực nghiệm và cache đã được xóa theo yêu cầu. Tài liệu này ghi lại kết quả lịch sử; chạy lại theo README để tạo output mới.
+Cấu hình V1, kết quả test V1 và artifact gốc được giữ. Lần tìm kiếm V1 mới tái lập từng ứng viên validation với sai số không quá 1e-12, gồm Macro F1 tốt nhất E1/E2/E3 là 0,0914/0,0584/0,0230. V2 thử 56 cấu hình giới hạn: E4 HOG + histogram RGB/HSV, E5 pixel + PCA, E6 HOG + histogram + PCA. PCA chỉ fit train; mọi tham số và model được chọn bằng validation. V2 không dự đoán test. Cấu hình, số chiều, Accuracy và thời gian nằm ở `configs/experiments_v2.yaml` và README.
+
+Macro F1 validation tốt nhất: E4 0,2003, E5 0,1334, E6 0,2127. Chọn E6: HOG ô 8, histogram HSV, PCA 128, k=3, cosine, trọng số khoảng cách; tăng tuyệt đối 0,1212 so với E1 validation. Các biến thể HSV tốt nhất cao hơn RGB tương ứng, nhưng tìm kiếm riêng và validation nhỏ không chứng minh khả năng tổng quát hóa hay tác động nhân quả của từng lựa chọn. E6 hơn E4 khoảng 0,0124 Macro F1; không mặc định khác biệt này giữ trên dữ liệu mới. Validation chỉ có 10 ảnh/lớp và được dùng với 56 cấu hình nên có nguy cơ lạc quan. E1 V1 từng được đánh giá test; output đã xóa và không phải bằng chứng test E6.
+
+Đầu ra: `results/v2/metrics/comparison.json`, `validation_search.json`, `baseline_reproduction.json`, dự đoán và ma trận validation theo thí nghiệm; hình tại `results/v2/figures/`; model tốt nhất mỗi nhóm tại `results/v2/models/`. Cache, hình và model lớn không trong Git; một số CSV/JSON nhỏ có thể được theo dõi sau cleanup. `python -m scripts.check_v2_artifacts` đối chiếu dự đoán, chỉ số, ma trận và nguồn gốc. Chỉ dùng pickle từ nguồn tin cậy. Notebook V1 từng được kiểm tra trong thư mục cách ly; các notebook gốc có cell ID ổn định.
+
+Thời gian được tách thành trích xuất, PCA fit/transform train, transform validation và K-NN fit/dự đoán; PCA dùng chung giữa các ứng viên. Không có thời gian trích xuất V1 để so tổng chi phí. Lần đo trước cần 7,82 giây để trích xuất bốn biến thể V2 trên 2.040 ảnh; thời gian phụ thuộc máy. PCA randomized fit 128 thành phần chỉ trên train; ứng viên 64 chiều dùng 64 thành phần đầu, không fit riêng PCA 64.
+
+Ưu tiên V3 lúc bàn giao: xem lỗi validation có căn cứ, định trước thí nghiệm và tránh điều chỉnh theo test; kiểm tra độ ổn định trên train; cân nhắc resize giữ tỉ lệ hoặc đặc trưng màu nếu lỗi hỗ trợ. Chú ý ít ảnh train mỗi lớp, test mất cân bằng, tính di động và nguy cơ overfit validation.

@@ -1,0 +1,2529 @@
+true_class_id,true_name_en,pred_class_id,pred_name_en,count
+81,frangipani,12,colt's foot,28
+89,watercress,5,english marigold,21
+77,passion flower,10,globe thistle,19
+44,poinsettia,72,azalea,18
+89,watercress,26,corn poppy,18
+46,wallflower,5,english marigold,17
+72,azalea,30,sweet william,15
+50,common dandelion,12,colt's foot,14
+46,wallflower,47,marigold,13
+95,bougainvillea,30,sweet william,13
+73,water lily,35,alpine sea holly,11
+46,wallflower,53,primula,11
+94,foxglove,32,garden phlox,11
+77,passion flower,79,toad lily,11
+83,hibiscus,41,barbeton daisy,11
+77,passion flower,84,columbine,11
+41,barbeton daisy,44,poinsettia,10
+95,bougainvillea,94,foxglove,10
+73,water lily,21,fire lily,10
+48,buttercup,50,common dandelion,10
+77,passion flower,92,bee balm,10
+89,watercress,47,marigold,10
+51,petunia,30,sweet william,9
+88,cyclamen,30,sweet william,9
+42,daffodil,12,colt's foot,9
+77,passion flower,29,artichoke,9
+94,foxglove,30,sweet william,9
+77,passion flower,38,great masterwort,9
+51,petunia,83,hibiscus,9
+74,rose,46,wallflower,8
+88,cyclamen,72,azalea,8
+73,water lily,24,red ginger,8
+77,passion flower,33,love in the mist,8
+89,watercress,101,trumpet creeper,8
+85,desert-rose,30,sweet william,8
+75,thorn apple,70,tree poppy,8
+98,mexican petunia,22,pincushion flower,8
+75,thorn apple,8,bird of paradise,8
+89,watercress,46,wallflower,7
+77,passion flower,8,bird of paradise,7
+96,camellia,44,poinsettia,7
+77,passion flower,3,canterbury bells,7
+23,fritillary,55,pelargonium,7
+94,foxglove,66,osteospermum,7
+51,petunia,66,osteospermum,7
+36,ruby-lipped cattleya,22,pincushion flower,7
+8,bird of paradise,21,fire lily,7
+28,stemless gentian,25,grape hyacinth,7
+73,water lily,33,love in the mist,7
+75,thorn apple,7,moon orchid,7
+11,snapdragon,30,sweet william,7
+46,wallflower,100,blanket flower,7
+51,petunia,11,snapdragon,6
+74,rose,30,sweet william,6
+76,morning glory,28,stemless gentian,6
+95,bougainvillea,31,carnation,6
+23,fritillary,92,bee balm,6
+5,english marigold,47,marigold,6
+78,lotus,24,red ginger,6
+88,cyclamen,44,poinsettia,6
+94,foxglove,3,canterbury bells,6
+5,english marigold,71,gazania,6
+82,clematis,22,pincushion flower,6
+71,gazania,12,colt's foot,6
+90,canna lily,6,tiger lily,6
+43,sword lily,11,snapdragon,6
+60,pink-yellow dahlia?,58,geranium,6
+44,poinsettia,30,sweet william,6
+43,sword lily,30,sweet william,6
+46,wallflower,50,common dandelion,6
+77,passion flower,22,pincushion flower,6
+91,hippeastrum,70,tree poppy,6
+36,ruby-lipped cattleya,2,hard-leaved pocket orchid,6
+51,petunia,50,common dandelion,6
+78,lotus,98,mexican petunia,6
+73,water lily,41,barbeton daisy,6
+81,frangipani,50,common dandelion,6
+88,cyclamen,32,garden phlox,6
+17,purple coneflower,92,bee balm,6
+72,azalea,44,poinsettia,6
+98,mexican petunia,19,balloon flower,5
+12,colt's foot,28,stemless gentian,5
+77,passion flower,51,petunia,5
+41,barbeton daisy,50,common dandelion,5
+88,cyclamen,31,carnation,5
+57,gaura,33,love in the mist,5
+77,passion flower,12,colt's foot,5
+51,petunia,57,gaura,5
+96,camellia,30,sweet william,5
+80,anthurium,101,trumpet creeper,5
+89,watercress,90,canna lily,5
+90,canna lily,46,wallflower,5
+90,canna lily,47,marigold,5
+43,sword lily,91,hippeastrum,5
+90,canna lily,71,gazania,5
+81,frangipani,84,columbine,5
+81,frangipani,28,stemless gentian,5
+46,wallflower,27,prince of wales feathers,5
+81,frangipani,15,yellow iris,5
+89,watercress,53,primula,5
+89,watercress,50,common dandelion,5
+43,sword lily,12,colt's foot,5
+41,barbeton daisy,72,azalea,5
+80,anthurium,85,desert-rose,5
+80,anthurium,72,azalea,5
+51,petunia,7,moon orchid,5
+51,petunia,32,garden phlox,5
+51,petunia,45,bolero deep blue,5
+51,petunia,65,californian poppy,5
+94,foxglove,83,hibiscus,5
+53,primula,12,colt's foot,5
+83,hibiscus,26,corn poppy,5
+88,cyclamen,70,tree poppy,5
+53,primula,46,wallflower,5
+75,thorn apple,67,spring crocus,5
+95,bougainvillea,88,cyclamen,5
+74,rose,47,marigold,5
+74,rose,101,trumpet creeper,5
+73,water lily,50,common dandelion,5
+73,water lily,18,peruvian lily,5
+86,tree mallow,34,mexican aster,5
+69,windflower,70,tree poppy,5
+73,water lily,51,petunia,5
+86,tree mallow,30,sweet william,5
+75,thorn apple,2,hard-leaved pocket orchid,5
+74,rose,96,camellia,5
+73,water lily,78,lotus,5
+90,canna lily,54,sunflower,4
+30,sweet william,93,ball moss,4
+74,rose,37,cape flower,4
+89,watercress,15,yellow iris,4
+54,sunflower,50,common dandelion,4
+53,primula,100,blanket flower,4
+80,anthurium,13,king protea,4
+43,sword lily,94,foxglove,4
+77,passion flower,76,morning glory,4
+80,anthurium,26,corn poppy,4
+77,passion flower,98,mexican petunia,4
+82,clematis,76,morning glory,4
+55,pelargonium,14,spear thistle,4
+88,cyclamen,85,desert-rose,4
+55,pelargonium,29,artichoke,4
+55,pelargonium,33,love in the mist,4
+83,hibiscus,47,marigold,4
+53,primula,72,azalea,4
+89,watercress,27,prince of wales feathers,4
+74,rose,85,desert-rose,4
+77,passion flower,55,pelargonium,4
+43,sword lily,90,canna lily,4
+73,water lily,87,magnolia,4
+70,tree poppy,69,windflower,4
+84,columbine,33,love in the mist,4
+77,passion flower,28,stemless gentian,4
+80,anthurium,44,poinsettia,4
+28,stemless gentian,33,love in the mist,4
+81,frangipani,69,windflower,4
+82,clematis,77,passion flower,4
+41,barbeton daisy,83,hibiscus,4
+78,lotus,3,canterbury bells,4
+29,artichoke,14,spear thistle,4
+44,poinsettia,31,carnation,4
+51,petunia,72,azalea,4
+72,azalea,51,petunia,4
+52,wild pansy,8,bird of paradise,4
+17,purple coneflower,94,foxglove,4
+83,hibiscus,11,snapdragon,4
+94,foxglove,92,bee balm,4
+72,azalea,32,garden phlox,4
+51,petunia,76,morning glory,4
+94,foxglove,72,azalea,4
+51,petunia,95,bougainvillea,4
+51,petunia,94,foxglove,4
+75,thorn apple,49,oxeye daisy,4
+51,petunia,86,tree mallow,4
+94,foxglove,75,thorn apple,4
+94,foxglove,55,pelargonium,4
+78,lotus,73,water lily,4
+42,daffodil,50,common dandelion,4
+36,ruby-lipped cattleya,4,sweet pea,4
+81,frangipani,67,spring crocus,4
+38,great masterwort,10,globe thistle,4
+29,artichoke,22,pincushion flower,4
+30,sweet william,45,bolero deep blue,4
+43,sword lily,101,trumpet creeper,4
+53,primula,30,sweet william,4
+14,spear thistle,92,bee balm,4
+78,lotus,62,japanese anemone,4
+94,foxglove,29,artichoke,4
+95,bougainvillea,50,common dandelion,4
+94,foxglove,34,mexican aster,4
+88,cyclamen,83,hibiscus,4
+73,water lily,77,passion flower,4
+52,wild pansy,55,pelargonium,4
+96,camellia,85,desert-rose,4
+55,pelargonium,98,mexican petunia,4
+32,garden phlox,30,sweet william,4
+1,pink primrose,62,japanese anemone,4
+82,clematis,25,grape hyacinth,4
+76,morning glory,3,canterbury bells,4
+83,hibiscus,86,tree mallow,4
+73,water lily,76,morning glory,4
+88,cyclamen,11,snapdragon,4
+76,morning glory,9,monkshood,4
+76,morning glory,66,osteospermum,4
+92,bee balm,24,red ginger,4
+76,morning glory,51,petunia,4
+81,frangipani,49,oxeye daisy,4
+81,frangipani,16,globe-flower,4
+76,morning glory,25,grape hyacinth,4
+82,clematis,32,garden phlox,4
+89,watercress,48,buttercup,4
+65,californian poppy,16,globe-flower,4
+65,californian poppy,63,black-eyed susan,4
+25,grape hyacinth,9,monkshood,4
+82,clematis,38,great masterwort,4
+74,rose,16,globe-flower,4
+74,rose,12,colt's foot,4
+9,monkshood,19,balloon flower,4
+80,anthurium,96,camellia,4
+65,californian poppy,55,pelargonium,4
+70,tree poppy,7,moon orchid,4
+74,rose,6,tiger lily,4
+28,stemless gentian,10,globe thistle,4
+43,sword lily,44,poinsettia,4
+81,frangipani,42,daffodil,4
+74,rose,98,mexican petunia,4
+11,snapdragon,44,poinsettia,4
+73,water lily,61,cautleya spicata,4
+46,wallflower,15,yellow iris,4
+46,wallflower,6,tiger lily,4
+8,bird of paradise,28,stemless gentian,4
+77,passion flower,21,fire lily,4
+20,giant white arum lily,70,tree poppy,4
+83,hibiscus,72,azalea,4
+75,thorn apple,62,japanese anemone,4
+40,lenten rose,28,stemless gentian,4
+26,corn poppy,101,trumpet creeper,3
+94,foxglove,38,great masterwort,3
+22,pincushion flower,29,artichoke,3
+94,foxglove,37,cape flower,3
+18,peruvian lily,30,sweet william,3
+89,watercress,63,black-eyed susan,3
+100,blanket flower,27,prince of wales feathers,3
+4,sweet pea,30,sweet william,3
+78,lotus,92,bee balm,3
+4,sweet pea,29,artichoke,3
+29,artichoke,28,stemless gentian,3
+51,petunia,60,pink-yellow dahlia?,3
+51,petunia,58,geranium,3
+4,sweet pea,43,sword lily,3
+81,frangipani,23,fritillary,3
+89,watercress,71,gazania,3
+81,frangipani,20,giant white arum lily,3
+82,clematis,98,mexican petunia,3
+22,pincushion flower,19,balloon flower,3
+101,trumpet creeper,95,bougainvillea,3
+73,water lily,57,gaura,3
+18,peruvian lily,41,barbeton daisy,3
+72,azalea,66,osteospermum,3
+89,watercress,56,bishop of llandaff,3
+74,rose,11,snapdragon,3
+94,foxglove,68,bearded iris,3
+17,purple coneflower,85,desert-rose,3
+78,lotus,100,blanket flower,3
+78,lotus,102,blackberry lily,3
+18,peruvian lily,13,king protea,3
+73,water lily,56,bishop of llandaff,3
+28,stemless gentian,29,artichoke,3
+37,cape flower,33,love in the mist,3
+51,petunia,49,oxeye daisy,3
+19,balloon flower,25,grape hyacinth,3
+80,anthurium,100,blanket flower,3
+37,cape flower,79,toad lily,3
+50,common dandelion,16,globe-flower,3
+50,common dandelion,15,yellow iris,3
+20,giant white arum lily,75,thorn apple,3
+81,frangipani,75,thorn apple,3
+48,buttercup,12,colt's foot,3
+50,common dandelion,5,english marigold,3
+93,ball moss,33,love in the mist,3
+19,balloon flower,62,japanese anemone,3
+49,oxeye daisy,87,magnolia,3
+80,anthurium,41,barbeton daisy,3
+74,rose,31,carnation,3
+43,sword lily,3,canterbury bells,3
+49,oxeye daisy,70,tree poppy,3
+23,fritillary,14,spear thistle,3
+81,frangipani,62,japanese anemone,3
+43,sword lily,6,tiger lily,3
+101,trumpet creeper,6,tiger lily,3
+48,buttercup,65,californian poppy,3
+73,water lily,13,king protea,3
+81,frangipani,79,toad lily,3
+81,frangipani,51,petunia,3
+51,petunia,44,poinsettia,3
+37,cape flower,35,alpine sea holly,3
+29,artichoke,25,grape hyacinth,3
+46,wallflower,71,gazania,3
+82,clematis,94,foxglove,3
+51,petunia,35,alpine sea holly,3
+51,petunia,34,mexican aster,3
+72,azalea,94,foxglove,3
+48,buttercup,100,blanket flower,3
+92,bee balm,6,tiger lily,3
+73,water lily,38,great masterwort,3
+82,clematis,92,bee balm,3
+51,petunia,22,pincushion flower,3
+46,wallflower,101,trumpet creeper,3
+47,marigold,12,colt's foot,3
+81,frangipani,7,moon orchid,3
+51,petunia,16,globe-flower,3
+94,foxglove,4,sweet pea,3
+73,water lily,4,sweet pea,3
+26,corn poppy,97,mallow,3
+86,tree mallow,1,pink primrose,3
+51,petunia,3,canterbury bells,3
+80,anthurium,11,snapdragon,3
+94,foxglove,76,morning glory,3
+51,petunia,92,bee balm,3
+4,sweet pea,92,bee balm,3
+73,water lily,92,bee balm,3
+41,barbeton daisy,6,tiger lily,3
+41,barbeton daisy,11,snapdragon,3
+31,carnation,95,bougainvillea,3
+82,clematis,19,balloon flower,3
+11,snapdragon,13,king protea,3
+87,magnolia,12,colt's foot,3
+84,columbine,25,grape hyacinth,3
+77,passion flower,14,spear thistle,3
+82,clematis,4,sweet pea,3
+70,tree poppy,49,oxeye daisy,3
+82,clematis,3,canterbury bells,3
+88,cyclamen,35,alpine sea holly,3
+83,hibiscus,58,geranium,3
+96,camellia,83,hibiscus,3
+76,morning glory,84,columbine,3
+77,passion flower,27,prince of wales feathers,3
+96,camellia,82,clematis,3
+74,rose,92,bee balm,3
+82,clematis,1,pink primrose,3
+77,passion flower,35,alpine sea holly,3
+77,passion flower,39,siam tulip,3
+73,water lily,86,tree mallow,3
+37,cape flower,23,fritillary,3
+11,snapdragon,100,blanket flower,3
+83,hibiscus,50,common dandelion,3
+77,passion flower,57,gaura,3
+82,clematis,49,oxeye daisy,3
+51,petunia,85,desert-rose,3
+83,hibiscus,85,desert-rose,3
+97,mallow,46,wallflower,3
+84,columbine,44,poinsettia,3
+32,garden phlox,96,camellia,3
+75,thorn apple,64,silverbush,3
+90,canna lily,5,english marigold,3
+75,thorn apple,73,water lily,3
+102,blackberry lily,92,bee balm,3
+84,columbine,8,bird of paradise,3
+33,love in the mist,14,spear thistle,3
+43,sword lily,65,californian poppy,3
+40,lenten rose,35,alpine sea holly,3
+90,canna lily,12,colt's foot,3
+75,thorn apple,22,pincushion flower,3
+87,magnolia,71,gazania,3
+98,mexican petunia,10,globe thistle,3
+67,spring crocus,45,bolero deep blue,3
+76,morning glory,19,balloon flower,3
+62,japanese anemone,84,columbine,3
+76,morning glory,22,pincushion flower,3
+8,bird of paradise,79,toad lily,3
+97,mallow,101,trumpet creeper,3
+65,californian poppy,58,geranium,3
+65,californian poppy,50,common dandelion,3
+97,mallow,90,canna lily,3
+88,cyclamen,3,canterbury bells,3
+83,hibiscus,91,hippeastrum,3
+83,hibiscus,90,canna lily,3
+64,silverbush,75,thorn apple,3
+88,cyclamen,7,moon orchid,3
+82,clematis,29,artichoke,3
+63,black-eyed susan,5,english marigold,3
+23,fritillary,85,desert-rose,3
+77,passion flower,61,cautleya spicata,3
+55,pelargonium,35,alpine sea holly,3
+5,english marigold,50,common dandelion,3
+74,rose,75,thorn apple,3
+83,hibiscus,44,poinsettia,3
+15,yellow iris,46,wallflower,3
+15,yellow iris,50,common dandelion,3
+88,cyclamen,82,clematis,3
+52,wild pansy,67,spring crocus,3
+41,barbeton daisy,100,blanket flower,3
+83,hibiscus,13,king protea,3
+91,hippeastrum,37,cape flower,3
+81,frangipani,90,canna lily,3
+74,rose,72,azalea,3
+52,wild pansy,50,common dandelion,3
+95,bougainvillea,26,corn poppy,3
+29,artichoke,77,passion flower,3
+78,lotus,70,tree poppy,3
+16,globe-flower,48,buttercup,3
+88,cyclamen,87,magnolia,3
+23,fritillary,38,great masterwort,3
+78,lotus,83,hibiscus,3
+78,lotus,84,columbine,3
+52,wild pansy,9,monkshood,3
+95,bougainvillea,1,pink primrose,3
+88,cyclamen,94,foxglove,3
+51,petunia,98,mexican petunia,3
+51,petunia,96,camellia,3
+17,purple coneflower,30,sweet william,3
+17,purple coneflower,32,garden phlox,3
+41,barbeton daisy,91,hippeastrum,3
+53,primula,3,canterbury bells,3
+83,hibiscus,30,sweet william,3
+96,camellia,11,snapdragon,3
+71,gazania,54,sunflower,3
+84,columbine,67,spring crocus,3
+53,primula,94,foxglove,3
+71,gazania,27,prince of wales feathers,3
+88,cyclamen,62,japanese anemone,3
+99,bromelia,50,common dandelion,3
+23,fritillary,79,toad lily,3
+78,lotus,8,bird of paradise,3
+54,sunflower,12,colt's foot,3
+30,sweet william,94,foxglove,3
+71,gazania,5,english marigold,3
+86,tree mallow,66,osteospermum,3
+77,passion flower,75,thorn apple,3
+77,passion flower,70,tree poppy,3
+81,frangipani,95,bougainvillea,3
+73,water lily,70,tree poppy,3
+95,bougainvillea,86,tree mallow,3
+90,canna lily,67,spring crocus,3
+53,primula,47,marigold,3
+14,spear thistle,33,love in the mist,3
+71,gazania,46,wallflower,3
+95,bougainvillea,72,azalea,3
+89,watercress,100,blanket flower,3
+35,alpine sea holly,10,globe thistle,3
+73,water lily,81,frangipani,3
+37,cape flower,32,garden phlox,2
+37,cape flower,29,artichoke,2
+82,clematis,50,common dandelion,2
+82,clematis,34,mexican aster,2
+43,sword lily,37,cape flower,2
+43,sword lily,41,barbeton daisy,2
+82,clematis,35,alpine sea holly,2
+82,clematis,45,bolero deep blue,2
+82,clematis,51,petunia,2
+85,desert-rose,29,artichoke,2
+82,clematis,53,primula,2
+40,lenten rose,29,artichoke,2
+43,sword lily,26,corn poppy,2
+39,siam tulip,75,thorn apple,2
+38,great masterwort,92,bee balm,2
+39,siam tulip,13,king protea,2
+84,columbine,37,cape flower,2
+84,columbine,35,alpine sea holly,2
+41,barbeton daisy,43,sword lily,2
+39,siam tulip,32,garden phlox,2
+41,barbeton daisy,42,daffodil,2
+83,hibiscus,51,petunia,2
+41,barbeton daisy,27,prince of wales feathers,2
+41,barbeton daisy,26,corn poppy,2
+83,hibiscus,67,spring crocus,2
+83,hibiscus,69,windflower,2
+41,barbeton daisy,12,colt's foot,2
+82,clematis,55,pelargonium,2
+41,barbeton daisy,5,english marigold,2
+40,lenten rose,91,hippeastrum,2
+40,lenten rose,67,spring crocus,2
+83,hibiscus,96,camellia,2
+40,lenten rose,56,bishop of llandaff,2
+84,columbine,20,giant white arum lily,2
+83,hibiscus,102,blackberry lily,2
+84,columbine,15,yellow iris,2
+40,lenten rose,33,love in the mist,2
+84,columbine,10,globe thistle,2
+84,columbine,14,spear thistle,2
+40,lenten rose,23,fritillary,2
+83,hibiscus,43,sword lily,2
+38,great masterwort,70,tree poppy,2
+41,barbeton daisy,71,gazania,2
+84,columbine,69,windflower,2
+82,clematis,69,windflower,2
+85,desert-rose,18,peruvian lily,2
+37,cape flower,39,siam tulip,2
+43,sword lily,13,king protea,2
+85,desert-rose,4,sweet pea,2
+43,sword lily,10,globe thistle,2
+84,columbine,101,trumpet creeper,2
+43,sword lily,7,moon orchid,2
+43,sword lily,5,english marigold,2
+37,cape flower,66,osteospermum,2
+42,daffodil,102,blackberry lily,2
+42,daffodil,51,petunia,2
+38,great masterwort,12,colt's foot,2
+83,hibiscus,4,sweet pea,2
+42,daffodil,28,stemless gentian,2
+83,hibiscus,6,tiger lily,2
+42,daffodil,16,globe-flower,2
+83,hibiscus,12,colt's foot,2
+38,great masterwort,14,spear thistle,2
+38,great masterwort,33,love in the mist,2
+41,barbeton daisy,99,bromelia,2
+83,hibiscus,22,pincushion flower,2
+41,barbeton daisy,86,tree mallow,2
+84,columbine,82,clematis,2
+83,hibiscus,28,stemless gentian,2
+1,pink primrose,3,canterbury bells,2
+51,petunia,53,primula,2
+43,sword lily,57,gaura,2
+55,pelargonium,60,pink-yellow dahlia?,2
+62,japanese anemone,55,pelargonium,2
+76,morning glory,67,spring crocus,2
+76,morning glory,52,wild pansy,2
+64,silverbush,73,water lily,2
+76,morning glory,33,love in the mist,2
+65,californian poppy,5,english marigold,2
+65,californian poppy,12,colt's foot,2
+65,californian poppy,47,marigold,2
+76,morning glory,32,garden phlox,2
+65,californian poppy,60,pink-yellow dahlia?,2
+76,morning glory,7,moon orchid,2
+67,spring crocus,51,petunia,2
+67,spring crocus,57,gaura,2
+68,bearded iris,6,tiger lily,2
+75,thorn apple,83,hibiscus,2
+68,bearded iris,10,globe thistle,2
+68,bearded iris,12,colt's foot,2
+75,thorn apple,79,toad lily,2
+75,thorn apple,38,great masterwort,2
+76,morning glory,86,tree mallow,2
+62,japanese anemone,32,garden phlox,2
+76,morning glory,92,bee balm,2
+57,gaura,94,foxglove,2
+77,passion flower,56,bishop of llandaff,2
+77,passion flower,52,wild pansy,2
+77,passion flower,49,oxeye daisy,2
+57,gaura,14,spear thistle,2
+57,gaura,48,buttercup,2
+77,passion flower,24,red ginger,2
+57,gaura,62,japanese anemone,2
+57,gaura,65,californian poppy,2
+77,passion flower,17,purple coneflower,2
+76,morning glory,95,bougainvillea,2
+77,passion flower,13,king protea,2
+77,passion flower,11,snapdragon,2
+59,orange dahlia,60,pink-yellow dahlia?,2
+77,passion flower,6,tiger lily,2
+76,morning glory,101,trumpet creeper,2
+61,cautleya spicata,60,pink-yellow dahlia?,2
+62,japanese anemone,1,pink primrose,2
+76,morning glory,98,mexican petunia,2
+75,thorn apple,35,alpine sea holly,2
+69,windflower,12,colt's foot,2
+69,windflower,20,giant white arum lily,2
+74,rose,27,prince of wales feathers,2
+72,azalea,88,cyclamen,2
+72,azalea,93,ball moss,2
+73,water lily,3,canterbury bells,2
+74,rose,38,great masterwort,2
+73,water lily,8,bird of paradise,2
+74,rose,32,garden phlox,2
+73,water lily,12,colt's foot,2
+73,water lily,14,spear thistle,2
+73,water lily,22,pincushion flower,2
+74,rose,56,bishop of llandaff,2
+74,rose,26,corn poppy,2
+73,water lily,30,sweet william,2
+73,water lily,42,daffodil,2
+74,rose,2,hard-leaved pocket orchid,2
+73,water lily,80,anthurium,2
+73,water lily,99,bromelia,2
+73,water lily,93,ball moss,2
+73,water lily,94,foxglove,2
+72,azalea,86,tree mallow,2
+74,rose,67,spring crocus,2
+69,windflower,27,prince of wales feathers,2
+70,tree poppy,92,bee balm,2
+75,thorn apple,21,fire lily,2
+75,thorn apple,14,spear thistle,2
+75,thorn apple,10,globe thistle,2
+69,windflower,73,water lily,2
+70,tree poppy,62,japanese anemone,2
+74,rose,88,cyclamen,2
+74,rose,87,magnolia,2
+74,rose,86,tree mallow,2
+70,tree poppy,94,foxglove,2
+74,rose,70,tree poppy,2
+74,rose,83,hibiscus,2
+70,tree poppy,96,camellia,2
+74,rose,80,anthurium,2
+74,rose,78,lotus,2
+71,gazania,41,barbeton daisy,2
+71,gazania,50,common dandelion,2
+71,gazania,53,primula,2
+74,rose,73,water lily,2
+55,pelargonium,92,bee balm,2
+77,passion flower,62,japanese anemone,2
+43,sword lily,58,geranium,2
+77,passion flower,67,spring crocus,2
+47,marigold,46,wallflower,2
+47,marigold,53,primula,2
+47,marigold,81,frangipani,2
+80,anthurium,91,hippeastrum,2
+80,anthurium,90,canna lily,2
+48,buttercup,16,globe-flower,2
+48,buttercup,47,marigold,2
+80,anthurium,83,hibiscus,2
+48,buttercup,90,canna lily,2
+80,anthurium,58,geranium,2
+80,anthurium,51,petunia,2
+80,anthurium,46,wallflower,2
+49,oxeye daisy,69,windflower,2
+80,anthurium,43,sword lily,2
+50,common dandelion,6,tiger lily,2
+80,anthurium,31,carnation,2
+80,anthurium,30,sweet william,2
+50,common dandelion,46,wallflower,2
+51,petunia,12,colt's foot,2
+47,marigold,41,barbeton daisy,2
+46,wallflower,97,mallow,2
+46,wallflower,67,spring crocus,2
+44,poinsettia,56,bishop of llandaff,2
+82,clematis,30,sweet william,2
+43,sword lily,68,bearded iris,2
+43,sword lily,80,anthurium,2
+43,sword lily,86,tree mallow,2
+43,sword lily,92,bee balm,2
+81,frangipani,92,bee balm,2
+44,poinsettia,41,barbeton daisy,2
+44,poinsettia,43,sword lily,2
+81,frangipani,65,californian poppy,2
+46,wallflower,65,californian poppy,2
+45,bolero deep blue,19,balloon flower,2
+45,bolero deep blue,29,artichoke,2
+45,bolero deep blue,83,hibiscus,2
+46,wallflower,8,bird of paradise,2
+46,wallflower,14,spear thistle,2
+81,frangipani,33,love in the mist,2
+81,frangipani,29,artichoke,2
+81,frangipani,18,peruvian lily,2
+79,toad lily,92,bee balm,2
+79,toad lily,77,passion flower,2
+51,petunia,27,prince of wales feathers,2
+78,lotus,16,globe-flower,2
+78,lotus,43,sword lily,2
+52,wild pansy,98,mexican petunia,2
+78,lotus,39,siam tulip,2
+78,lotus,33,love in the mist,2
+53,primula,21,fire lily,2
+78,lotus,28,stemless gentian,2
+78,lotus,27,prince of wales feathers,2
+53,primula,42,daffodil,2
+78,lotus,11,snapdragon,2
+78,lotus,50,common dandelion,2
+77,passion flower,102,blackberry lily,2
+77,passion flower,101,trumpet creeper,2
+53,primula,89,watercress,2
+77,passion flower,87,magnolia,2
+54,sunflower,5,english marigold,2
+54,sunflower,13,king protea,2
+54,sunflower,42,daffodil,2
+54,sunflower,46,wallflower,2
+52,wild pansy,77,passion flower,2
+52,wild pansy,62,japanese anemone,2
+51,petunia,31,carnation,2
+51,petunia,88,cyclamen,2
+51,petunia,37,cape flower,2
+79,toad lily,14,spear thistle,2
+79,toad lily,8,bird of paradise,2
+36,ruby-lipped cattleya,88,cyclamen,2
+51,petunia,59,orange dahlia,2
+51,petunia,64,silverbush,2
+51,petunia,67,spring crocus,2
+51,petunia,69,windflower,2
+78,lotus,88,cyclamen,2
+52,wild pansy,60,pink-yellow dahlia?,2
+51,petunia,101,trumpet creeper,2
+78,lotus,86,tree mallow,2
+78,lotus,79,toad lily,2
+78,lotus,75,thorn apple,2
+52,wild pansy,28,stemless gentian,2
+78,lotus,69,windflower,2
+52,wild pansy,51,petunia,2
+78,lotus,53,primula,2
+85,desert-rose,41,barbeton daisy,2
+84,columbine,28,stemless gentian,2
+73,water lily,96,camellia,2
+8,bird of paradise,90,canna lily,2
+22,pincushion flower,3,canterbury bells,2
+22,pincushion flower,10,globe thistle,2
+91,hippeastrum,84,columbine,2
+22,pincushion flower,25,grape hyacinth,2
+22,pincushion flower,26,corn poppy,2
+22,pincushion flower,37,cape flower,2
+91,hippeastrum,68,bearded iris,2
+8,bird of paradise,81,frangipani,2
+23,fritillary,4,sweet pea,2
+91,hippeastrum,44,poinsettia,2
+91,hippeastrum,43,sword lily,2
+22,pincushion flower,57,gaura,2
+98,mexican petunia,1,pink primrose,2
+98,mexican petunia,2,hard-leaved pocket orchid,2
+22,pincushion flower,82,clematis,2
+22,pincushion flower,92,bee balm,2
+9,monkshood,25,grape hyacinth,2
+91,hippeastrum,94,foxglove,2
+97,mallow,91,hippeastrum,2
+21,fire lily,79,toad lily,2
+20,giant white arum lily,23,fritillary,2
+20,giant white arum lily,31,carnation,2
+92,bee balm,79,toad lily,2
+10,globe thistle,55,pelargonium,2
+97,mallow,47,marigold,2
+92,bee balm,52,wild pansy,2
+92,bee balm,46,wallflower,2
+97,mallow,68,bearded iris,2
+10,globe thistle,25,grape hyacinth,2
+92,bee balm,29,artichoke,2
+21,fire lily,5,english marigold,2
+92,bee balm,21,fire lily,2
+10,globe thistle,19,balloon flower,2
+97,mallow,83,hibiscus,2
+92,bee balm,4,sweet pea,2
+98,mexican petunia,3,canterbury bells,2
+91,hippeastrum,3,canterbury bells,2
+89,watercress,11,snapdragon,2
+98,mexican petunia,93,ball moss,2
+89,watercress,97,mallow,2
+7,moon orchid,36,ruby-lipped cattleya,2
+26,corn poppy,27,prince of wales feathers,2
+26,corn poppy,43,sword lily,2
+98,mexican petunia,77,passion flower,2
+89,watercress,54,sunflower,2
+28,stemless gentian,3,canterbury bells,2
+89,watercress,43,sword lily,2
+8,bird of paradise,54,sunflower,2
+99,bromelia,6,tiger lily,2
+89,watercress,41,barbeton daisy,2
+99,bromelia,11,snapdragon,2
+89,watercress,24,red ginger,2
+89,watercress,16,globe-flower,2
+99,bromelia,13,king protea,2
+99,bromelia,26,corn poppy,2
+25,grape hyacinth,10,globe thistle,2
+90,canna lily,16,globe-flower,2
+7,moon orchid,84,columbine,2
+24,red ginger,85,desert-rose,2
+23,fritillary,16,globe-flower,2
+8,bird of paradise,50,common dandelion,2
+95,bougainvillea,90,canna lily,2
+98,mexican petunia,25,grape hyacinth,2
+23,fritillary,37,cape flower,2
+8,bird of paradise,35,alpine sea holly,2
+8,bird of paradise,33,love in the mist,2
+23,fritillary,46,wallflower,2
+23,fritillary,51,petunia,2
+98,mexican petunia,35,alpine sea holly,2
+8,bird of paradise,16,globe-flower,2
+24,red ginger,11,snapdragon,2
+98,mexican petunia,55,pelargonium,2
+98,mexican petunia,57,gaura,2
+90,canna lily,27,prince of wales feathers,2
+97,mallow,27,prince of wales feathers,2
+97,mallow,26,corn poppy,2
+11,snapdragon,4,sweet pea,2
+16,globe-flower,84,columbine,2
+95,bougainvillea,32,garden phlox,2
+13,king protea,4,sweet pea,2
+95,bougainvillea,24,red ginger,2
+16,globe-flower,50,common dandelion,2
+95,bougainvillea,17,purple coneflower,2
+12,colt's foot,71,gazania,2
+95,bougainvillea,12,colt's foot,2
+96,camellia,38,great masterwort,2
+93,ball moss,3,canterbury bells,2
+95,bougainvillea,4,sweet pea,2
+95,bougainvillea,3,canterbury bells,2
+17,purple coneflower,4,sweet pea,2
+96,camellia,43,sword lily,2
+17,purple coneflower,34,mexican aster,2
+17,purple coneflower,37,cape flower,2
+94,foxglove,87,magnolia,2
+96,camellia,23,fritillary,2
+15,yellow iris,89,watercress,2
+13,king protea,21,fire lily,2
+13,king protea,23,fritillary,2
+14,spear thistle,24,red ginger,2
+95,bougainvillea,85,desert-rose,2
+95,bougainvillea,91,hippeastrum,2
+95,bougainvillea,82,clematis,2
+95,bougainvillea,77,passion flower,2
+13,king protea,74,rose,2
+14,spear thistle,94,foxglove,2
+13,king protea,62,japanese anemone,2
+13,king protea,59,orange dahlia,2
+15,yellow iris,16,globe-flower,2
+15,yellow iris,42,daffodil,2
+96,camellia,6,tiger lily,2
+13,king protea,30,sweet william,2
+95,bougainvillea,46,wallflower,2
+95,bougainvillea,45,bolero deep blue,2
+94,foxglove,86,tree mallow,2
+17,purple coneflower,44,poinsettia,2
+12,colt's foot,5,english marigold,2
+11,snapdragon,78,lotus,2
+94,foxglove,14,spear thistle,2
+94,foxglove,13,king protea,2
+11,snapdragon,73,water lily,2
+94,foxglove,12,colt's foot,2
+94,foxglove,11,snapdragon,2
+11,snapdragon,51,petunia,2
+96,camellia,98,mexican petunia,2
+96,camellia,100,blanket flower,2
+19,balloon flower,22,pincushion flower,2
+11,snapdragon,24,red ginger,2
+93,ball moss,39,siam tulip,2
+11,snapdragon,15,yellow iris,2
+97,mallow,10,globe thistle,2
+19,balloon flower,98,mexican petunia,2
+93,ball moss,11,snapdragon,2
+96,camellia,81,frangipani,2
+94,foxglove,17,purple coneflower,2
+11,snapdragon,96,camellia,2
+94,foxglove,22,pincushion flower,2
+94,foxglove,57,gaura,2
+11,snapdragon,95,bougainvillea,2
+94,foxglove,50,common dandelion,2
+18,peruvian lily,12,colt's foot,2
+96,camellia,72,azalea,2
+11,snapdragon,92,bee balm,2
+94,foxglove,39,siam tulip,2
+11,snapdragon,87,magnolia,2
+18,peruvian lily,44,poinsettia,2
+11,snapdragon,84,columbine,2
+18,peruvian lily,49,oxeye daisy,2
+94,foxglove,28,stemless gentian,2
+94,foxglove,24,red ginger,2
+96,camellia,75,thorn apple,2
+94,foxglove,23,fritillary,2
+89,watercress,12,colt's foot,2
+90,canna lily,101,trumpet creeper,2
+4,sweet pea,62,japanese anemone,2
+88,cyclamen,39,siam tulip,2
+31,carnation,94,foxglove,2
+102,blackberry lily,21,fire lily,2
+87,magnolia,28,stemless gentian,2
+88,cyclamen,34,mexican aster,2
+30,sweet william,44,poinsettia,2
+88,cyclamen,29,artichoke,2
+101,trumpet creeper,74,rose,2
+102,blackberry lily,25,grape hyacinth,2
+101,trumpet creeper,72,azalea,2
+88,cyclamen,4,sweet pea,2
+86,tree mallow,82,clematis,2
+88,cyclamen,79,toad lily,2
+36,ruby-lipped cattleya,14,spear thistle,2
+3,canterbury bells,35,alpine sea holly,2
+31,carnation,30,sweet william,2
+4,sweet pea,23,fritillary,2
+100,blanket flower,26,corn poppy,2
+88,cyclamen,28,stemless gentian,2
+34,mexican aster,95,bougainvillea,2
+88,cyclamen,26,corn poppy,2
+101,trumpet creeper,91,hippeastrum,2
+101,trumpet creeper,26,corn poppy,2
+33,love in the mist,79,toad lily,2
+33,love in the mist,84,columbine,2
+101,trumpet creeper,96,camellia,2
+2,hard-leaved pocket orchid,31,carnation,2
+87,magnolia,21,fire lily,2
+4,sweet pea,38,great masterwort,2
+101,trumpet creeper,99,bromelia,2
+88,cyclamen,20,giant white arum lily,2
+88,cyclamen,18,peruvian lily,2
+5,english marigold,41,barbeton daisy,2
+34,mexican aster,94,foxglove,2
+88,cyclamen,57,gaura,2
+89,watercress,6,tiger lily,2
+100,blanket flower,3,canterbury bells,2
+31,carnation,83,hibiscus,2
+99,bromelia,44,poinsettia,2
+36,ruby-lipped cattleya,45,bolero deep blue,2
+85,desert-rose,86,tree mallow,2
+33,love in the mist,51,petunia,2
+100,blanket flower,21,fire lily,2
+29,artichoke,55,pelargonium,2
+100,blanket flower,90,canna lily,2
+87,magnolia,61,cautleya spicata,2
+6,tiger lily,25,grape hyacinth,2
+33,love in the mist,35,alpine sea holly,2
+99,bromelia,35,alpine sea holly,2
+85,desert-rose,78,lotus,2
+6,tiger lily,41,barbeton daisy,2
+88,cyclamen,37,cape flower,2
+102,blackberry lily,100,blanket flower,2
+99,bromelia,71,gazania,2
+87,magnolia,3,canterbury bells,2
+85,desert-rose,91,hippeastrum,2
+88,cyclamen,84,columbine,2
+99,bromelia,70,tree poppy,2
+36,ruby-lipped cattleya,21,fire lily,2
+85,desert-rose,93,ball moss,2
+85,desert-rose,92,bee balm,2
+36,ruby-lipped cattleya,34,mexican aster,2
+29,artichoke,91,hippeastrum,2
+100,blanket flower,50,common dandelion,2
+2,hard-leaved pocket orchid,94,foxglove,2
+32,garden phlox,94,foxglove,2
+100,blanket flower,101,trumpet creeper,2
+88,cyclamen,86,tree mallow,2
+101,trumpet creeper,57,gaura,1
+101,trumpet creeper,43,sword lily,1
+74,rose,23,fritillary,1
+77,passion flower,30,sweet william,1
+101,trumpet creeper,56,bishop of llandaff,1
+101,trumpet creeper,41,barbeton daisy,1
+74,rose,22,pincushion flower,1
+101,trumpet creeper,44,poinsettia,1
+99,bromelia,31,carnation,1
+101,trumpet creeper,40,lenten rose,1
+74,rose,28,stemless gentian,1
+77,passion flower,2,hard-leaved pocket orchid,1
+77,passion flower,5,english marigold,1
+100,blanket flower,97,mallow,1
+77,passion flower,7,moon orchid,1
+97,mallow,5,english marigold,1
+97,mallow,4,sweet pea,1
+77,passion flower,9,monkshood,1
+97,mallow,2,hard-leaved pocket orchid,1
+101,trumpet creeper,11,snapdragon,1
+97,mallow,1,pink primrose,1
+96,camellia,101,trumpet creeper,1
+101,trumpet creeper,13,king protea,1
+77,passion flower,15,yellow iris,1
+77,passion flower,16,globe-flower,1
+96,camellia,97,mallow,1
+77,passion flower,18,peruvian lily,1
+96,camellia,95,bougainvillea,1
+77,passion flower,20,giant white arum lily,1
+96,camellia,90,canna lily,1
+96,camellia,88,cyclamen,1
+77,passion flower,23,fritillary,1
+96,camellia,87,magnolia,1
+96,camellia,86,tree mallow,1
+77,passion flower,25,grape hyacinth,1
+101,trumpet creeper,24,red ginger,1
+96,camellia,94,foxglove,1
+74,rose,14,spear thistle,1
+96,camellia,73,water lily,1
+96,camellia,12,colt's foot,1
+96,camellia,32,garden phlox,1
+77,passion flower,74,rose,1
+96,camellia,31,carnation,1
+102,blackberry lily,24,red ginger,1
+77,passion flower,78,lotus,1
+96,camellia,24,red ginger,1
+77,passion flower,81,frangipani,1
+102,blackberry lily,27,prince of wales feathers,1
+102,blackberry lily,34,mexican aster,1
+73,water lily,102,blackberry lily,1
+73,water lily,100,blanket flower,1
+77,passion flower,82,clematis,1
+96,camellia,18,peruvian lily,1
+102,blackberry lily,46,wallflower,1
+102,blackberry lily,50,common dandelion,1
+74,rose,21,fire lily,1
+96,camellia,4,sweet pea,1
+102,blackberry lily,52,wild pansy,1
+95,bougainvillea,102,blackberry lily,1
+77,passion flower,94,foxglove,1
+95,bougainvillea,101,trumpet creeper,1
+77,passion flower,97,mallow,1
+95,bougainvillea,100,blanket flower,1
+95,bougainvillea,98,mexican petunia,1
+73,water lily,98,mexican petunia,1
+95,bougainvillea,97,mallow,1
+95,bougainvillea,92,bee balm,1
+102,blackberry lily,68,bearded iris,1
+78,lotus,7,moon orchid,1
+102,blackberry lily,79,toad lily,1
+102,blackberry lily,18,peruvian lily,1
+102,blackberry lily,16,globe-flower,1
+96,camellia,34,mexican aster,1
+77,passion flower,66,osteospermum,1
+74,rose,20,giant white arum lily,1
+77,passion flower,37,cape flower,1
+101,trumpet creeper,58,geranium,1
+74,rose,18,peruvian lily,1
+77,passion flower,40,lenten rose,1
+77,passion flower,42,daffodil,1
+77,passion flower,44,poinsettia,1
+77,passion flower,45,bolero deep blue,1
+101,trumpet creeper,61,cautleya spicata,1
+77,passion flower,50,common dandelion,1
+76,morning glory,102,blackberry lily,1
+96,camellia,70,tree poppy,1
+77,passion flower,53,primula,1
+96,camellia,69,windflower,1
+96,camellia,65,californian poppy,1
+96,camellia,56,bishop of llandaff,1
+101,trumpet creeper,80,anthurium,1
+101,trumpet creeper,85,desert-rose,1
+101,trumpet creeper,90,canna lily,1
+96,camellia,50,common dandelion,1
+96,camellia,46,wallflower,1
+96,camellia,45,bolero deep blue,1
+77,passion flower,65,californian poppy,1
+74,rose,7,moon orchid,1
+96,camellia,41,barbeton daisy,1
+102,blackberry lily,12,colt's foot,1
+74,rose,5,english marigold,1
+74,rose,4,sweet pea,1
+96,camellia,37,cape flower,1
+77,passion flower,1,pink primrose,1
+97,mallow,45,bolero deep blue,1
+97,mallow,11,snapdragon,1
+75,thorn apple,59,orange dahlia,1
+99,bromelia,87,magnolia,1
+75,thorn apple,28,stemless gentian,1
+98,mexican petunia,56,bishop of llandaff,1
+75,thorn apple,31,carnation,1
+75,thorn apple,33,love in the mist,1
+75,thorn apple,34,mexican aster,1
+98,mexican petunia,52,wild pansy,1
+98,mexican petunia,51,petunia,1
+74,rose,76,morning glory,1
+75,thorn apple,39,siam tulip,1
+99,bromelia,88,cyclamen,1
+75,thorn apple,51,petunia,1
+75,thorn apple,55,pelargonium,1
+75,thorn apple,56,bishop of llandaff,1
+98,mexican petunia,32,garden phlox,1
+99,bromelia,83,hibiscus,1
+98,mexican petunia,29,artichoke,1
+75,thorn apple,69,windflower,1
+99,bromelia,91,hippeastrum,1
+99,bromelia,92,bee balm,1
+74,rose,68,bearded iris,1
+99,bromelia,95,bougainvillea,1
+74,rose,65,californian poppy,1
+75,thorn apple,74,rose,1
+98,mexican petunia,26,corn poppy,1
+75,thorn apple,81,frangipani,1
+74,rose,61,cautleya spicata,1
+98,mexican petunia,24,red ginger,1
+98,mexican petunia,23,fritillary,1
+74,rose,60,pink-yellow dahlia?,1
+99,bromelia,84,columbine,1
+74,rose,77,passion flower,1
+74,rose,59,orange dahlia,1
+74,rose,100,blanket flower,1
+74,rose,84,columbine,1
+99,bromelia,27,prince of wales feathers,1
+99,bromelia,18,peruvian lily,1
+99,bromelia,38,great masterwort,1
+74,rose,90,canna lily,1
+74,rose,91,hippeastrum,1
+99,bromelia,8,bird of paradise,1
+74,rose,82,clematis,1
+74,rose,81,frangipani,1
+99,bromelia,39,siam tulip,1
+74,rose,93,ball moss,1
+98,mexican petunia,94,foxglove,1
+74,rose,99,bromelia,1
+99,bromelia,56,bishop of llandaff,1
+99,bromelia,58,geranium,1
+98,mexican petunia,60,pink-yellow dahlia?,1
+98,mexican petunia,82,clematis,1
+75,thorn apple,1,pink primrose,1
+98,mexican petunia,76,morning glory,1
+75,thorn apple,3,canterbury bells,1
+75,thorn apple,4,sweet pea,1
+98,mexican petunia,72,azalea,1
+98,mexican petunia,67,spring crocus,1
+98,mexican petunia,66,osteospermum,1
+98,mexican petunia,65,californian poppy,1
+98,mexican petunia,63,black-eyed susan,1
+75,thorn apple,18,peruvian lily,1
+75,thorn apple,19,balloon flower,1
+75,thorn apple,20,giant white arum lily,1
+99,bromelia,72,azalea,1
+75,thorn apple,84,columbine,1
+75,thorn apple,92,bee balm,1
+100,blanket flower,92,bee balm,1
+97,mallow,52,wild pansy,1
+76,morning glory,35,alpine sea holly,1
+76,morning glory,38,great masterwort,1
+76,morning glory,42,daffodil,1
+76,morning glory,45,bolero deep blue,1
+76,morning glory,47,marigold,1
+76,morning glory,50,common dandelion,1
+97,mallow,72,azalea,1
+100,blanket flower,37,cape flower,1
+74,rose,43,sword lily,1
+76,morning glory,55,pelargonium,1
+97,mallow,53,primula,1
+74,rose,42,daffodil,1
+76,morning glory,64,silverbush,1
+76,morning glory,65,californian poppy,1
+74,rose,41,barbeton daisy,1
+97,mallow,76,morning glory,1
+76,morning glory,70,tree poppy,1
+76,morning glory,81,frangipani,1
+74,rose,40,lenten rose,1
+100,blanket flower,46,wallflower,1
+97,mallow,37,cape flower,1
+97,mallow,31,carnation,1
+76,morning glory,87,magnolia,1
+97,mallow,30,sweet william,1
+76,morning glory,93,ball moss,1
+76,morning glory,94,foxglove,1
+100,blanket flower,57,gaura,1
+100,blanket flower,83,hibiscus,1
+97,mallow,15,yellow iris,1
+74,rose,35,alpine sea holly,1
+74,rose,44,poinsettia,1
+97,mallow,80,anthurium,1
+99,bromelia,97,mallow,1
+76,morning glory,23,fritillary,1
+99,bromelia,100,blanket flower,1
+75,thorn apple,94,foxglove,1
+98,mexican petunia,16,globe-flower,1
+75,thorn apple,95,bougainvillea,1
+74,rose,58,geranium,1
+98,mexican petunia,9,monkshood,1
+75,thorn apple,102,blackberry lily,1
+98,mexican petunia,4,sweet pea,1
+74,rose,57,gaura,1
+76,morning glory,8,bird of paradise,1
+76,morning glory,11,snapdragon,1
+76,morning glory,16,globe-flower,1
+100,blanket flower,12,colt's foot,1
+97,mallow,102,blackberry lily,1
+74,rose,55,pelargonium,1
+100,blanket flower,30,sweet william,1
+74,rose,54,sunflower,1
+74,rose,53,primula,1
+97,mallow,99,bromelia,1
+97,mallow,95,bougainvillea,1
+74,rose,50,common dandelion,1
+76,morning glory,29,artichoke,1
+97,mallow,94,foxglove,1
+97,mallow,92,bee balm,1
+100,blanket flower,24,red ginger,1
+76,morning glory,30,sweet william,1
+74,rose,45,bolero deep blue,1
+97,mallow,88,cyclamen,1
+97,mallow,85,desert-rose,1
+97,mallow,84,columbine,1
+78,lotus,9,monkshood,1
+85,desert-rose,46,wallflower,1
+78,lotus,13,king protea,1
+88,cyclamen,90,canna lily,1
+83,hibiscus,8,bird of paradise,1
+88,cyclamen,93,ball moss,1
+83,hibiscus,5,english marigold,1
+88,cyclamen,100,blanket flower,1
+83,hibiscus,3,canterbury bells,1
+83,hibiscus,2,hard-leaved pocket orchid,1
+88,cyclamen,101,trumpet creeper,1
+88,cyclamen,102,blackberry lily,1
+82,clematis,95,bougainvillea,1
+82,clematis,84,columbine,1
+82,clematis,79,toad lily,1
+82,clematis,78,lotus,1
+89,watercress,14,spear thistle,1
+89,watercress,28,stemless gentian,1
+89,watercress,31,carnation,1
+89,watercress,35,alpine sea holly,1
+89,watercress,40,lenten rose,1
+88,cyclamen,91,hippeastrum,1
+88,cyclamen,89,watercress,1
+89,watercress,44,poinsettia,1
+88,cyclamen,80,anthurium,1
+83,hibiscus,46,wallflower,1
+88,cyclamen,55,pelargonium,1
+88,cyclamen,61,cautleya spicata,1
+83,hibiscus,34,mexican aster,1
+83,hibiscus,33,love in the mist,1
+88,cyclamen,65,californian poppy,1
+88,cyclamen,66,osteospermum,1
+83,hibiscus,31,carnation,1
+88,cyclamen,67,spring crocus,1
+88,cyclamen,68,bearded iris,1
+88,cyclamen,69,windflower,1
+88,cyclamen,77,passion flower,1
+83,hibiscus,25,grape hyacinth,1
+83,hibiscus,23,fritillary,1
+88,cyclamen,78,lotus,1
+83,hibiscus,21,fire lily,1
+83,hibiscus,15,yellow iris,1
+89,watercress,42,daffodil,1
+82,clematis,75,thorn apple,1
+90,canna lily,74,rose,1
+90,canna lily,33,love in the mist,1
+82,clematis,11,snapdragon,1
+90,canna lily,37,cape flower,1
+82,clematis,9,monkshood,1
+82,clematis,5,english marigold,1
+90,canna lily,39,siam tulip,1
+90,canna lily,40,lenten rose,1
+90,canna lily,41,barbeton daisy,1
+90,canna lily,48,buttercup,1
+90,canna lily,50,common dandelion,1
+90,canna lily,53,primula,1
+81,frangipani,102,blackberry lily,1
+90,canna lily,63,black-eyed susan,1
+81,frangipani,98,mexican petunia,1
+81,frangipani,96,camellia,1
+90,canna lily,65,californian poppy,1
+90,canna lily,69,windflower,1
+81,frangipani,94,foxglove,1
+82,clematis,12,colt's foot,1
+90,canna lily,25,grape hyacinth,1
+82,clematis,72,azalea,1
+90,canna lily,17,purple coneflower,1
+82,clematis,70,tree poppy,1
+82,clematis,66,osteospermum,1
+89,watercress,58,geranium,1
+89,watercress,65,californian poppy,1
+89,watercress,66,osteospermum,1
+89,watercress,67,spring crocus,1
+89,watercress,72,azalea,1
+89,watercress,74,rose,1
+89,watercress,83,hibiscus,1
+89,watercress,84,columbine,1
+89,watercress,91,hippeastrum,1
+82,clematis,36,ruby-lipped cattleya,1
+89,watercress,99,bromelia,1
+82,clematis,33,love in the mist,1
+89,watercress,102,blackberry lily,1
+90,canna lily,8,bird of paradise,1
+90,canna lily,11,snapdragon,1
+88,cyclamen,46,wallflower,1
+88,cyclamen,45,bolero deep blue,1
+88,cyclamen,42,daffodil,1
+84,columbine,85,desert-rose,1
+86,tree mallow,49,oxeye daisy,1
+84,columbine,80,anthurium,1
+84,columbine,79,toad lily,1
+84,columbine,73,water lily,1
+86,tree mallow,51,petunia,1
+84,columbine,68,bearded iris,1
+84,columbine,56,bishop of llandaff,1
+84,columbine,53,primula,1
+86,tree mallow,72,azalea,1
+84,columbine,43,sword lily,1
+84,columbine,42,daffodil,1
+86,tree mallow,83,hibiscus,1
+84,columbine,40,lenten rose,1
+84,columbine,38,great masterwort,1
+86,tree mallow,85,desert-rose,1
+86,tree mallow,91,hippeastrum,1
+87,magnolia,6,tiger lily,1
+86,tree mallow,44,poinsettia,1
+84,columbine,91,hippeastrum,1
+88,cyclamen,41,barbeton daisy,1
+84,columbine,92,bee balm,1
+85,desert-rose,44,poinsettia,1
+85,desert-rose,42,daffodil,1
+85,desert-rose,36,ruby-lipped cattleya,1
+85,desert-rose,83,hibiscus,1
+85,desert-rose,89,watercress,1
+85,desert-rose,28,stemless gentian,1
+85,desert-rose,96,camellia,1
+85,desert-rose,1,pink primrose,1
+85,desert-rose,98,mexican petunia,1
+84,columbine,100,blanket flower,1
+85,desert-rose,101,trumpet creeper,1
+84,columbine,99,bromelia,1
+84,columbine,97,mallow,1
+86,tree mallow,5,english marigold,1
+84,columbine,93,ball moss,1
+86,tree mallow,11,snapdragon,1
+86,tree mallow,41,barbeton daisy,1
+84,columbine,30,sweet william,1
+73,water lily,97,mallow,1
+84,columbine,27,prince of wales feathers,1
+87,magnolia,11,snapdragon,1
+83,hibiscus,89,watercress,1
+88,cyclamen,8,bird of paradise,1
+83,hibiscus,87,magnolia,1
+83,hibiscus,84,columbine,1
+88,cyclamen,21,fire lily,1
+83,hibiscus,77,passion flower,1
+88,cyclamen,27,prince of wales feathers,1
+83,hibiscus,76,morning glory,1
+83,hibiscus,68,bearded iris,1
+83,hibiscus,65,californian poppy,1
+88,cyclamen,33,love in the mist,1
+83,hibiscus,63,black-eyed susan,1
+83,hibiscus,62,japanese anemone,1
+83,hibiscus,57,gaura,1
+83,hibiscus,56,bishop of llandaff,1
+83,hibiscus,52,wild pansy,1
+88,cyclamen,38,great masterwort,1
+88,cyclamen,6,tiger lily,1
+87,magnolia,97,mallow,1
+83,hibiscus,92,bee balm,1
+84,columbine,12,colt's foot,1
+84,columbine,24,red ginger,1
+84,columbine,23,fritillary,1
+84,columbine,21,fire lily,1
+84,columbine,17,purple coneflower,1
+84,columbine,16,globe-flower,1
+87,magnolia,34,mexican aster,1
+84,columbine,13,king protea,1
+87,magnolia,35,alpine sea holly,1
+87,magnolia,94,foxglove,1
+87,magnolia,37,cape flower,1
+84,columbine,4,sweet pea,1
+87,magnolia,56,bishop of llandaff,1
+84,columbine,2,hard-leaved pocket orchid,1
+87,magnolia,67,spring crocus,1
+83,hibiscus,101,trumpet creeper,1
+83,hibiscus,100,blanket flower,1
+81,frangipani,88,cyclamen,1
+81,frangipani,87,magnolia,1
+78,lotus,15,yellow iris,1
+79,toad lily,17,purple coneflower,1
+79,toad lily,10,globe thistle,1
+94,foxglove,33,love in the mist,1
+94,foxglove,35,alpine sea holly,1
+79,toad lily,1,pink primrose,1
+94,foxglove,40,lenten rose,1
+94,foxglove,41,barbeton daisy,1
+94,foxglove,42,daffodil,1
+94,foxglove,43,sword lily,1
+94,foxglove,45,bolero deep blue,1
+94,foxglove,47,marigold,1
+94,foxglove,51,petunia,1
+94,foxglove,60,pink-yellow dahlia?,1
+94,foxglove,61,cautleya spicata,1
+94,foxglove,69,windflower,1
+94,foxglove,70,tree poppy,1
+94,foxglove,74,rose,1
+78,lotus,90,canna lily,1
+79,toad lily,15,yellow iris,1
+79,toad lily,21,fire lily,1
+85,desert-rose,72,azalea,1
+94,foxglove,15,yellow iris,1
+93,ball moss,84,columbine,1
+93,ball moss,86,tree mallow,1
+80,anthurium,8,bird of paradise,1
+93,ball moss,87,magnolia,1
+80,anthurium,6,tiger lily,1
+93,ball moss,94,foxglove,1
+80,anthurium,4,sweet pea,1
+93,ball moss,95,bougainvillea,1
+94,foxglove,1,pink primrose,1
+79,toad lily,101,trumpet creeper,1
+94,foxglove,7,moon orchid,1
+94,foxglove,8,bird of paradise,1
+79,toad lily,84,columbine,1
+94,foxglove,10,globe thistle,1
+79,toad lily,67,spring crocus,1
+79,toad lily,62,japanese anemone,1
+79,toad lily,38,great masterwort,1
+94,foxglove,81,frangipani,1
+94,foxglove,88,cyclamen,1
+90,canna lily,76,morning glory,1
+95,bougainvillea,38,great masterwort,1
+78,lotus,49,oxeye daisy,1
+78,lotus,48,buttercup,1
+78,lotus,44,poinsettia,1
+78,lotus,42,daffodil,1
+95,bougainvillea,51,petunia,1
+95,bougainvillea,56,bishop of llandaff,1
+95,bougainvillea,64,silverbush,1
+95,bougainvillea,66,osteospermum,1
+78,lotus,31,carnation,1
+78,lotus,30,sweet william,1
+95,bougainvillea,67,spring crocus,1
+95,bougainvillea,71,gazania,1
+78,lotus,26,corn poppy,1
+78,lotus,25,grape hyacinth,1
+95,bougainvillea,79,toad lily,1
+78,lotus,17,purple coneflower,1
+95,bougainvillea,83,hibiscus,1
+95,bougainvillea,44,poinsettia,1
+95,bougainvillea,36,ruby-lipped cattleya,1
+94,foxglove,97,mallow,1
+78,lotus,51,petunia,1
+94,foxglove,98,mexican petunia,1
+78,lotus,87,magnolia,1
+94,foxglove,102,blackberry lily,1
+78,lotus,85,desert-rose,1
+95,bougainvillea,5,english marigold,1
+78,lotus,77,passion flower,1
+78,lotus,76,morning glory,1
+95,bougainvillea,15,yellow iris,1
+78,lotus,74,rose,1
+95,bougainvillea,19,balloon flower,1
+95,bougainvillea,20,giant white arum lily,1
+78,lotus,65,californian poppy,1
+78,lotus,61,cautleya spicata,1
+78,lotus,57,gaura,1
+78,lotus,54,sunflower,1
+95,bougainvillea,29,artichoke,1
+95,bougainvillea,34,mexican aster,1
+80,anthurium,20,giant white arum lily,1
+93,ball moss,74,rose,1
+80,anthurium,27,prince of wales feathers,1
+81,frangipani,46,wallflower,1
+91,hippeastrum,38,great masterwort,1
+81,frangipani,35,alpine sea holly,1
+91,hippeastrum,67,spring crocus,1
+91,hippeastrum,72,azalea,1
+91,hippeastrum,73,water lily,1
+81,frangipani,27,prince of wales feathers,1
+81,frangipani,21,fire lily,1
+91,hippeastrum,79,toad lily,1
+91,hippeastrum,85,desert-rose,1
+91,hippeastrum,87,magnolia,1
+91,hippeastrum,99,bromelia,1
+91,hippeastrum,101,trumpet creeper,1
+81,frangipani,14,spear thistle,1
+81,frangipani,13,king protea,1
+81,frangipani,11,snapdragon,1
+81,frangipani,10,globe thistle,1
+92,bee balm,11,snapdragon,1
+91,hippeastrum,31,carnation,1
+81,frangipani,47,marigold,1
+93,ball moss,69,windflower,1
+81,frangipani,48,buttercup,1
+90,canna lily,89,watercress,1
+90,canna lily,92,bee balm,1
+90,canna lily,100,blanket flower,1
+91,hippeastrum,1,pink primrose,1
+81,frangipani,78,lotus,1
+81,frangipani,76,morning glory,1
+81,frangipani,74,rose,1
+81,frangipani,70,tree poppy,1
+91,hippeastrum,6,tiger lily,1
+91,hippeastrum,7,moon orchid,1
+81,frangipani,64,silverbush,1
+81,frangipani,57,gaura,1
+81,frangipani,53,primula,1
+81,frangipani,52,wild pansy,1
+91,hippeastrum,19,balloon flower,1
+91,hippeastrum,28,stemless gentian,1
+91,hippeastrum,30,sweet william,1
+92,bee balm,14,spear thistle,1
+92,bee balm,15,yellow iris,1
+92,bee balm,26,corn poppy,1
+81,frangipani,3,canterbury bells,1
+80,anthurium,69,windflower,1
+80,anthurium,67,spring crocus,1
+80,anthurium,65,californian poppy,1
+80,anthurium,60,pink-yellow dahlia?,1
+92,bee balm,101,trumpet creeper,1
+80,anthurium,53,primula,1
+93,ball moss,20,giant white arum lily,1
+93,ball moss,21,fire lily,1
+93,ball moss,23,fritillary,1
+93,ball moss,29,artichoke,1
+80,anthurium,39,siam tulip,1
+93,ball moss,32,garden phlox,1
+93,ball moss,35,alpine sea holly,1
+93,ball moss,44,poinsettia,1
+93,ball moss,58,geranium,1
+93,ball moss,62,japanese anemone,1
+93,ball moss,66,osteospermum,1
+92,bee balm,99,bromelia,1
+92,bee balm,85,desert-rose,1
+80,anthurium,73,water lily,1
+92,bee balm,41,barbeton daisy,1
+92,bee balm,27,prince of wales feathers,1
+92,bee balm,28,stemless gentian,1
+81,frangipani,2,hard-leaved pocket orchid,1
+92,bee balm,30,sweet william,1
+92,bee balm,38,great masterwort,1
+92,bee balm,40,lenten rose,1
+80,anthurium,95,bougainvillea,1
+92,bee balm,56,bishop of llandaff,1
+80,anthurium,74,rose,1
+80,anthurium,88,cyclamen,1
+80,anthurium,87,magnolia,1
+80,anthurium,86,tree mallow,1
+92,bee balm,61,cautleya spicata,1
+92,bee balm,66,osteospermum,1
+80,anthurium,84,columbine,1
+92,bee balm,72,azalea,1
+94,foxglove,85,desert-rose,1
+62,japanese anemone,67,spring crocus,1
+73,water lily,90,canna lily,1
+20,giant white arum lily,102,blackberry lily,1
+23,fritillary,13,king protea,1
+23,fritillary,8,bird of paradise,1
+23,fritillary,6,tiger lily,1
+23,fritillary,1,pink primrose,1
+22,pincushion flower,94,foxglove,1
+22,pincushion flower,77,passion flower,1
+22,pincushion flower,68,bearded iris,1
+22,pincushion flower,66,osteospermum,1
+22,pincushion flower,62,japanese anemone,1
+22,pincushion flower,55,pelargonium,1
+22,pincushion flower,52,wild pansy,1
+22,pincushion flower,51,petunia,1
+22,pincushion flower,45,bolero deep blue,1
+22,pincushion flower,42,daffodil,1
+22,pincushion flower,35,alpine sea holly,1
+22,pincushion flower,30,sweet william,1
+22,pincushion flower,23,fritillary,1
+22,pincushion flower,17,purple coneflower,1
+22,pincushion flower,13,king protea,1
+21,fire lily,100,blanket flower,1
+21,fire lily,94,foxglove,1
+21,fire lily,80,anthurium,1
+21,fire lily,71,gazania,1
+21,fire lily,24,red ginger,1
+21,fire lily,23,fritillary,1
+21,fire lily,15,yellow iris,1
+21,fire lily,13,king protea,1
+21,fire lily,10,globe thistle,1
+21,fire lily,8,bird of paradise,1
+23,fritillary,17,purple coneflower,1
+23,fritillary,19,balloon flower,1
+23,fritillary,24,red ginger,1
+24,red ginger,18,peruvian lily,1
+25,grape hyacinth,45,bolero deep blue,1
+25,grape hyacinth,43,sword lily,1
+25,grape hyacinth,42,daffodil,1
+25,grape hyacinth,35,alpine sea holly,1
+25,grape hyacinth,13,king protea,1
+24,red ginger,96,camellia,1
+24,red ginger,93,ball moss,1
+24,red ginger,92,bee balm,1
+24,red ginger,59,orange dahlia,1
+24,red ginger,38,great masterwort,1
+24,red ginger,27,prince of wales feathers,1
+24,red ginger,23,fritillary,1
+24,red ginger,20,giant white arum lily,1
+24,red ginger,12,colt's foot,1
+23,fritillary,27,prince of wales feathers,1
+24,red ginger,5,english marigold,1
+23,fritillary,94,foxglove,1
+23,fritillary,90,canna lily,1
+23,fritillary,87,magnolia,1
+23,fritillary,84,columbine,1
+23,fritillary,68,bearded iris,1
+23,fritillary,67,spring crocus,1
+23,fritillary,64,silverbush,1
+23,fritillary,61,cautleya spicata,1
+23,fritillary,57,gaura,1
+23,fritillary,39,siam tulip,1
+23,fritillary,33,love in the mist,1
+23,fritillary,31,carnation,1
+21,fire lily,4,sweet pea,1
+20,giant white arum lily,100,blanket flower,1
+25,grape hyacinth,57,gaura,1
+20,giant white arum lily,87,magnolia,1
+18,peruvian lily,99,bromelia,1
+18,peruvian lily,96,camellia,1
+18,peruvian lily,92,bee balm,1
+18,peruvian lily,90,canna lily,1
+18,peruvian lily,88,cyclamen,1
+18,peruvian lily,87,magnolia,1
+18,peruvian lily,85,desert-rose,1
+18,peruvian lily,84,columbine,1
+18,peruvian lily,82,clematis,1
+18,peruvian lily,80,anthurium,1
+18,peruvian lily,78,lotus,1
+18,peruvian lily,72,azalea,1
+18,peruvian lily,71,gazania,1
+18,peruvian lily,70,tree poppy,1
+18,peruvian lily,68,bearded iris,1
+18,peruvian lily,63,black-eyed susan,1
+18,peruvian lily,58,geranium,1
+18,peruvian lily,57,gaura,1
+18,peruvian lily,56,bishop of llandaff,1
+18,peruvian lily,53,primula,1
+18,peruvian lily,40,lenten rose,1
+18,peruvian lily,39,siam tulip,1
+18,peruvian lily,38,great masterwort,1
+18,peruvian lily,35,alpine sea holly,1
+18,peruvian lily,33,love in the mist,1
+18,peruvian lily,31,carnation,1
+18,peruvian lily,29,artichoke,1
+18,peruvian lily,27,prince of wales feathers,1
+18,peruvian lily,26,corn poppy,1
+18,peruvian lily,101,trumpet creeper,1
+19,balloon flower,14,spear thistle,1
+19,balloon flower,26,corn poppy,1
+20,giant white arum lily,13,king protea,1
+20,giant white arum lily,86,tree mallow,1
+20,giant white arum lily,83,hibiscus,1
+20,giant white arum lily,81,frangipani,1
+20,giant white arum lily,76,morning glory,1
+20,giant white arum lily,68,bearded iris,1
+20,giant white arum lily,62,japanese anemone,1
+20,giant white arum lily,60,pink-yellow dahlia?,1
+20,giant white arum lily,50,common dandelion,1
+20,giant white arum lily,49,oxeye daisy,1
+20,giant white arum lily,47,marigold,1
+20,giant white arum lily,40,lenten rose,1
+20,giant white arum lily,36,ruby-lipped cattleya,1
+20,giant white arum lily,15,yellow iris,1
+20,giant white arum lily,10,globe thistle,1
+19,balloon flower,29,artichoke,1
+20,giant white arum lily,4,sweet pea,1
+20,giant white arum lily,2,hard-leaved pocket orchid,1
+19,balloon flower,93,ball moss,1
+19,balloon flower,92,bee balm,1
+19,balloon flower,87,magnolia,1
+19,balloon flower,84,columbine,1
+19,balloon flower,75,thorn apple,1
+19,balloon flower,56,bishop of llandaff,1
+19,balloon flower,51,petunia,1
+19,balloon flower,45,bolero deep blue,1
+19,balloon flower,37,cape flower,1
+19,balloon flower,33,love in the mist,1
+19,balloon flower,32,garden phlox,1
+25,grape hyacinth,47,marigold,1
+25,grape hyacinth,67,spring crocus,1
+18,peruvian lily,21,fire lily,1
+30,sweet william,86,tree mallow,1
+32,garden phlox,86,tree mallow,1
+32,garden phlox,72,azalea,1
+32,garden phlox,70,tree poppy,1
+32,garden phlox,67,spring crocus,1
+32,garden phlox,49,oxeye daisy,1
+32,garden phlox,45,bolero deep blue,1
+32,garden phlox,44,poinsettia,1
+32,garden phlox,38,great masterwort,1
+32,garden phlox,25,grape hyacinth,1
+32,garden phlox,22,pincushion flower,1
+31,carnation,101,trumpet creeper,1
+31,carnation,96,camellia,1
+31,carnation,90,canna lily,1
+31,carnation,89,watercress,1
+31,carnation,87,magnolia,1
+31,carnation,74,rose,1
+31,carnation,73,water lily,1
+31,carnation,63,black-eyed susan,1
+31,carnation,62,japanese anemone,1
+31,carnation,42,daffodil,1
+31,carnation,41,barbeton daisy,1
+31,carnation,40,lenten rose,1
+31,carnation,23,fritillary,1
+31,carnation,15,yellow iris,1
+31,carnation,12,colt's foot,1
+31,carnation,11,snapdragon,1
+31,carnation,8,bird of paradise,1
+31,carnation,1,pink primrose,1
+30,sweet william,92,bee balm,1
+32,garden phlox,88,cyclamen,1
+32,garden phlox,92,bee balm,1
+32,garden phlox,98,mexican petunia,1
+34,mexican aster,51,petunia,1
+36,ruby-lipped cattleya,12,colt's foot,1
+36,ruby-lipped cattleya,11,snapdragon,1
+36,ruby-lipped cattleya,10,globe thistle,1
+36,ruby-lipped cattleya,5,english marigold,1
+35,alpine sea holly,102,blackberry lily,1
+35,alpine sea holly,57,gaura,1
+35,alpine sea holly,55,pelargonium,1
+35,alpine sea holly,51,petunia,1
+35,alpine sea holly,33,love in the mist,1
+35,alpine sea holly,8,bird of paradise,1
+34,mexican aster,101,trumpet creeper,1
+34,mexican aster,88,cyclamen,1
+34,mexican aster,77,passion flower,1
+34,mexican aster,49,oxeye daisy,1
+33,love in the mist,8,bird of paradise,1
+34,mexican aster,37,cape flower,1
+34,mexican aster,31,carnation,1
+34,mexican aster,30,sweet william,1
+34,mexican aster,22,pincushion flower,1
+33,love in the mist,102,blackberry lily,1
+33,love in the mist,92,bee balm,1
+33,love in the mist,70,tree poppy,1
+33,love in the mist,67,spring crocus,1
+33,love in the mist,59,orange dahlia,1
+33,love in the mist,55,pelargonium,1
+33,love in the mist,48,buttercup,1
+33,love in the mist,15,yellow iris,1
+33,love in the mist,10,globe thistle,1
+30,sweet william,88,cyclamen,1
+30,sweet william,85,desert-rose,1
+25,grape hyacinth,69,windflower,1
+30,sweet william,69,windflower,1
+28,stemless gentian,67,spring crocus,1
+28,stemless gentian,55,pelargonium,1
+28,stemless gentian,53,primula,1
+28,stemless gentian,39,siam tulip,1
+28,stemless gentian,32,garden phlox,1
+28,stemless gentian,19,balloon flower,1
+28,stemless gentian,14,spear thistle,1
+28,stemless gentian,9,monkshood,1
+28,stemless gentian,7,moon orchid,1
+28,stemless gentian,6,tiger lily,1
+28,stemless gentian,4,sweet pea,1
+27,prince of wales feathers,102,blackberry lily,1
+27,prince of wales feathers,101,trumpet creeper,1
+27,prince of wales feathers,99,bromelia,1
+27,prince of wales feathers,89,watercress,1
+27,prince of wales feathers,50,common dandelion,1
+27,prince of wales feathers,46,wallflower,1
+27,prince of wales feathers,24,red ginger,1
+26,corn poppy,100,blanket flower,1
+26,corn poppy,96,camellia,1
+26,corn poppy,76,morning glory,1
+26,corn poppy,66,osteospermum,1
+26,corn poppy,30,sweet william,1
+26,corn poppy,24,red ginger,1
+26,corn poppy,15,yellow iris,1
+25,grape hyacinth,95,bougainvillea,1
+25,grape hyacinth,92,bee balm,1
+25,grape hyacinth,87,magnolia,1
+25,grape hyacinth,84,columbine,1
+28,stemless gentian,68,bearded iris,1
+28,stemless gentian,76,morning glory,1
+28,stemless gentian,89,watercress,1
+29,artichoke,79,toad lily,1
+30,sweet william,62,japanese anemone,1
+30,sweet william,57,gaura,1
+30,sweet william,56,bishop of llandaff,1
+30,sweet william,40,lenten rose,1
+30,sweet william,32,garden phlox,1
+30,sweet william,29,artichoke,1
+30,sweet william,3,canterbury bells,1
+29,artichoke,99,bromelia,1
+29,artichoke,98,mexican petunia,1
+29,artichoke,94,foxglove,1
+29,artichoke,92,bee balm,1
+29,artichoke,88,cyclamen,1
+29,artichoke,82,clematis,1
+29,artichoke,70,tree poppy,1
+28,stemless gentian,92,bee balm,1
+29,artichoke,68,bearded iris,1
+29,artichoke,67,spring crocus,1
+29,artichoke,64,silverbush,1
+29,artichoke,62,japanese anemone,1
+29,artichoke,57,gaura,1
+29,artichoke,45,bolero deep blue,1
+29,artichoke,38,great masterwort,1
+29,artichoke,37,cape flower,1
+29,artichoke,32,garden phlox,1
+29,artichoke,31,carnation,1
+29,artichoke,23,fritillary,1
+29,artichoke,12,colt's foot,1
+29,artichoke,4,sweet pea,1
+18,peruvian lily,25,grape hyacinth,1
+18,peruvian lily,16,globe-flower,1
+36,ruby-lipped cattleya,28,stemless gentian,1
+5,english marigold,73,water lily,1
+8,bird of paradise,12,colt's foot,1
+8,bird of paradise,10,globe thistle,1
+8,bird of paradise,2,hard-leaved pocket orchid,1
+7,moon orchid,70,tree poppy,1
+7,moon orchid,67,spring crocus,1
+7,moon orchid,51,petunia,1
+7,moon orchid,22,pincushion flower,1
+7,moon orchid,10,globe thistle,1
+7,moon orchid,4,sweet pea,1
+6,tiger lily,101,trumpet creeper,1
+6,tiger lily,100,blanket flower,1
+6,tiger lily,91,hippeastrum,1
+6,tiger lily,90,canna lily,1
+6,tiger lily,81,frangipani,1
+6,tiger lily,80,anthurium,1
+6,tiger lily,75,thorn apple,1
+6,tiger lily,69,windflower,1
+6,tiger lily,62,japanese anemone,1
+6,tiger lily,60,pink-yellow dahlia?,1
+6,tiger lily,59,orange dahlia,1
+6,tiger lily,58,geranium,1
+6,tiger lily,46,wallflower,1
+6,tiger lily,31,carnation,1
+6,tiger lily,28,stemless gentian,1
+6,tiger lily,24,red ginger,1
+6,tiger lily,14,spear thistle,1
+6,tiger lily,5,english marigold,1
+5,english marigold,101,trumpet creeper,1
+5,english marigold,89,watercress,1
+8,bird of paradise,14,spear thistle,1
+8,bird of paradise,15,yellow iris,1
+8,bird of paradise,23,fritillary,1
+8,bird of paradise,75,thorn apple,1
+10,globe thistle,4,sweet pea,1
+9,monkshood,92,bee balm,1
+9,monkshood,88,cyclamen,1
+9,monkshood,52,wild pansy,1
+9,monkshood,51,petunia,1
+9,monkshood,45,bolero deep blue,1
+9,monkshood,35,alpine sea holly,1
+9,monkshood,33,love in the mist,1
+9,monkshood,3,canterbury bells,1
+8,bird of paradise,102,blackberry lily,1
+8,bird of paradise,98,mexican petunia,1
+8,bird of paradise,96,camellia,1
+8,bird of paradise,93,ball moss,1
+8,bird of paradise,73,water lily,1
+8,bird of paradise,24,red ginger,1
+8,bird of paradise,67,spring crocus,1
+8,bird of paradise,65,californian poppy,1
+8,bird of paradise,64,silverbush,1
+8,bird of paradise,62,japanese anemone,1
+8,bird of paradise,61,cautleya spicata,1
+8,bird of paradise,59,orange dahlia,1
+8,bird of paradise,56,bishop of llandaff,1
+8,bird of paradise,47,marigold,1
+8,bird of paradise,46,wallflower,1
+8,bird of paradise,42,daffodil,1
+8,bird of paradise,39,siam tulip,1
+8,bird of paradise,36,ruby-lipped cattleya,1
+8,bird of paradise,27,prince of wales feathers,1
+5,english marigold,83,hibiscus,1
+5,english marigold,68,bearded iris,1
+10,globe thistle,28,stemless gentian,1
+5,english marigold,63,black-eyed susan,1
+2,hard-leaved pocket orchid,80,anthurium,1
+2,hard-leaved pocket orchid,70,tree poppy,1
+2,hard-leaved pocket orchid,67,spring crocus,1
+2,hard-leaved pocket orchid,64,silverbush,1
+2,hard-leaved pocket orchid,62,japanese anemone,1
+2,hard-leaved pocket orchid,60,pink-yellow dahlia?,1
+2,hard-leaved pocket orchid,57,gaura,1
+2,hard-leaved pocket orchid,53,primula,1
+2,hard-leaved pocket orchid,51,petunia,1
+2,hard-leaved pocket orchid,45,bolero deep blue,1
+2,hard-leaved pocket orchid,39,siam tulip,1
+2,hard-leaved pocket orchid,37,cape flower,1
+2,hard-leaved pocket orchid,32,garden phlox,1
+2,hard-leaved pocket orchid,30,sweet william,1
+2,hard-leaved pocket orchid,23,fritillary,1
+2,hard-leaved pocket orchid,13,king protea,1
+2,hard-leaved pocket orchid,12,colt's foot,1
+2,hard-leaved pocket orchid,7,moon orchid,1
+1,pink primrose,98,mexican petunia,1
+1,pink primrose,96,camellia,1
+1,pink primrose,86,tree mallow,1
+1,pink primrose,79,toad lily,1
+1,pink primrose,76,morning glory,1
+1,pink primrose,72,azalea,1
+1,pink primrose,70,tree poppy,1
+1,pink primrose,67,spring crocus,1
+1,pink primrose,51,petunia,1
+1,pink primrose,34,mexican aster,1
+1,pink primrose,30,sweet william,1
+2,hard-leaved pocket orchid,88,cyclamen,1
+2,hard-leaved pocket orchid,93,ball moss,1
+3,canterbury bells,10,globe thistle,1
+4,sweet pea,33,love in the mist,1
+5,english marigold,58,geranium,1
+5,english marigold,56,bishop of llandaff,1
+5,english marigold,46,wallflower,1
+5,english marigold,12,colt's foot,1
+5,english marigold,8,bird of paradise,1
+4,sweet pea,88,cyclamen,1
+4,sweet pea,87,magnolia,1
+4,sweet pea,77,passion flower,1
+4,sweet pea,72,azalea,1
+4,sweet pea,71,gazania,1
+4,sweet pea,70,tree poppy,1
+4,sweet pea,53,primula,1
+4,sweet pea,51,petunia,1
+4,sweet pea,32,garden phlox,1
+3,canterbury bells,14,spear thistle,1
+4,sweet pea,18,peruvian lily,1
+4,sweet pea,14,spear thistle,1
+4,sweet pea,11,snapdragon,1
+4,sweet pea,10,globe thistle,1
+4,sweet pea,9,monkshood,1
+4,sweet pea,6,tiger lily,1
+3,canterbury bells,91,hippeastrum,1
+3,canterbury bells,84,columbine,1
+3,canterbury bells,82,clematis,1
+3,canterbury bells,52,wild pansy,1
+3,canterbury bells,51,petunia,1
+3,canterbury bells,32,garden phlox,1
+3,canterbury bells,22,pincushion flower,1
+10,globe thistle,22,pincushion flower,1
+10,globe thistle,33,love in the mist,1
+18,peruvian lily,15,yellow iris,1
+14,spear thistle,11,snapdragon,1
+16,globe-flower,53,primula,1
+16,globe-flower,47,marigold,1
+16,globe-flower,43,sword lily,1
+16,globe-flower,33,love in the mist,1
+16,globe-flower,32,garden phlox,1
+16,globe-flower,14,spear thistle,1
+16,globe-flower,12,colt's foot,1
+15,yellow iris,102,blackberry lily,1
+15,yellow iris,101,trumpet creeper,1
+15,yellow iris,97,mallow,1
+15,yellow iris,88,cyclamen,1
+15,yellow iris,73,water lily,1
+15,yellow iris,65,californian poppy,1
+15,yellow iris,54,sunflower,1
+15,yellow iris,53,primula,1
+15,yellow iris,27,prince of wales feathers,1
+15,yellow iris,12,colt's foot,1
+15,yellow iris,8,bird of paradise,1
+15,yellow iris,5,english marigold,1
+14,spear thistle,102,blackberry lily,1
+14,spear thistle,68,bearded iris,1
+14,spear thistle,67,spring crocus,1
+14,spear thistle,61,cautleya spicata,1
+14,spear thistle,55,pelargonium,1
+14,spear thistle,43,sword lily,1
+14,spear thistle,40,lenten rose,1
+14,spear thistle,39,siam tulip,1
+14,spear thistle,31,carnation,1
+14,spear thistle,23,fritillary,1
+16,globe-flower,55,pelargonium,1
+16,globe-flower,81,frangipani,1
+16,globe-flower,96,camellia,1
+17,purple coneflower,66,osteospermum,1
+18,peruvian lily,11,snapdragon,1
+18,peruvian lily,9,monkshood,1
+18,peruvian lily,7,moon orchid,1
+18,peruvian lily,4,sweet pea,1
+18,peruvian lily,2,hard-leaved pocket orchid,1
+17,purple coneflower,101,trumpet creeper,1
+17,purple coneflower,100,blanket flower,1
+17,purple coneflower,98,mexican petunia,1
+17,purple coneflower,96,camellia,1
+17,purple coneflower,86,tree mallow,1
+17,purple coneflower,76,morning glory,1
+17,purple coneflower,72,azalea,1
+17,purple coneflower,69,windflower,1
+17,purple coneflower,62,japanese anemone,1
+16,globe-flower,102,blackberry lily,1
+17,purple coneflower,54,sunflower,1
+17,purple coneflower,53,primula,1
+17,purple coneflower,46,wallflower,1
+17,purple coneflower,42,daffodil,1
+17,purple coneflower,40,lenten rose,1
+17,purple coneflower,38,great masterwort,1
+17,purple coneflower,29,artichoke,1
+17,purple coneflower,28,stemless gentian,1
+17,purple coneflower,22,pincushion flower,1
+17,purple coneflower,20,giant white arum lily,1
+17,purple coneflower,18,peruvian lily,1
+17,purple coneflower,3,canterbury bells,1
+17,purple coneflower,1,pink primrose,1
+14,spear thistle,22,pincushion flower,1
+14,spear thistle,8,bird of paradise,1
+10,globe thistle,35,alpine sea holly,1
+13,king protea,101,trumpet creeper,1
+11,snapdragon,77,passion flower,1
+11,snapdragon,75,thorn apple,1
+11,snapdragon,70,tree poppy,1
+11,snapdragon,67,spring crocus,1
+11,snapdragon,64,silverbush,1
+11,snapdragon,61,cautleya spicata,1
+11,snapdragon,55,pelargonium,1
+11,snapdragon,53,primula,1
+11,snapdragon,49,oxeye daisy,1
+11,snapdragon,47,marigold,1
+11,snapdragon,46,wallflower,1
+11,snapdragon,41,barbeton daisy,1
+11,snapdragon,33,love in the mist,1
+11,snapdragon,31,carnation,1
+11,snapdragon,27,prince of wales feathers,1
+11,snapdragon,23,fritillary,1
+11,snapdragon,18,peruvian lily,1
+11,snapdragon,16,globe-flower,1
+11,snapdragon,10,globe thistle,1
+11,snapdragon,8,bird of paradise,1
+10,globe thistle,82,clematis,1
+10,globe thistle,77,passion flower,1
+10,globe thistle,69,windflower,1
+10,globe thistle,67,spring crocus,1
+10,globe thistle,62,japanese anemone,1
+10,globe thistle,57,gaura,1
+10,globe thistle,50,common dandelion,1
+10,globe thistle,45,bolero deep blue,1
+10,globe thistle,38,great masterwort,1
+11,snapdragon,79,toad lily,1
+11,snapdragon,85,desert-rose,1
+11,snapdragon,94,foxglove,1
+12,colt's foot,96,camellia,1
+13,king protea,95,bougainvillea,1
+13,king protea,83,hibiscus,1
+13,king protea,81,frangipani,1
+13,king protea,73,water lily,1
+13,king protea,69,windflower,1
+13,king protea,67,spring crocus,1
+13,king protea,60,pink-yellow dahlia?,1
+13,king protea,41,barbeton daisy,1
+13,king protea,37,cape flower,1
+13,king protea,29,artichoke,1
+13,king protea,24,red ginger,1
+13,king protea,14,spear thistle,1
+13,king protea,8,bird of paradise,1
+12,colt's foot,84,columbine,1
+11,snapdragon,98,mexican petunia,1
+12,colt's foot,81,frangipani,1
+12,colt's foot,62,japanese anemone,1
+12,colt's foot,59,orange dahlia,1
+12,colt's foot,53,primula,1
+12,colt's foot,50,common dandelion,1
+12,colt's foot,48,buttercup,1
+12,colt's foot,46,wallflower,1
+12,colt's foot,44,poinsettia,1
+12,colt's foot,33,love in the mist,1
+12,colt's foot,16,globe-flower,1
+12,colt's foot,7,moon orchid,1
+12,colt's foot,6,tiger lily,1
+12,colt's foot,2,hard-leaved pocket orchid,1
+36,ruby-lipped cattleya,17,purple coneflower,1
+36,ruby-lipped cattleya,32,garden phlox,1
+73,water lily,85,desert-rose,1
+56,bishop of llandaff,18,peruvian lily,1
+58,geranium,97,mallow,1
+58,geranium,84,columbine,1
+58,geranium,43,sword lily,1
+58,geranium,31,carnation,1
+58,geranium,15,yellow iris,1
+57,gaura,102,blackberry lily,1
+57,gaura,92,bee balm,1
+57,gaura,67,spring crocus,1
+57,gaura,66,osteospermum,1
+57,gaura,58,geranium,1
+57,gaura,50,common dandelion,1
+57,gaura,38,great masterwort,1
+57,gaura,35,alpine sea holly,1
+57,gaura,29,artichoke,1
+57,gaura,27,prince of wales feathers,1
+57,gaura,20,giant white arum lily,1
+57,gaura,16,globe-flower,1
+57,gaura,10,globe thistle,1
+57,gaura,7,moon orchid,1
+56,bishop of llandaff,92,bee balm,1
+56,bishop of llandaff,83,hibiscus,1
+56,bishop of llandaff,68,bearded iris,1
+56,bishop of llandaff,67,spring crocus,1
+56,bishop of llandaff,62,japanese anemone,1
+56,bishop of llandaff,59,orange dahlia,1
+56,bishop of llandaff,57,gaura,1
+56,bishop of llandaff,55,pelargonium,1
+56,bishop of llandaff,37,cape flower,1
+56,bishop of llandaff,27,prince of wales feathers,1
+59,orange dahlia,18,peruvian lily,1
+59,orange dahlia,41,barbeton daisy,1
+59,orange dahlia,58,geranium,1
+62,japanese anemone,31,carnation,1
+63,black-eyed susan,89,watercress,1
+63,black-eyed susan,42,daffodil,1
+63,black-eyed susan,16,globe-flower,1
+63,black-eyed susan,15,yellow iris,1
+62,japanese anemone,94,foxglove,1
+62,japanese anemone,80,anthurium,1
+62,japanese anemone,77,passion flower,1
+62,japanese anemone,75,thorn apple,1
+62,japanese anemone,70,tree poppy,1
+62,japanese anemone,68,bearded iris,1
+1,pink primrose,17,purple coneflower,1
+62,japanese anemone,37,cape flower,1
+62,japanese anemone,35,alpine sea holly,1
+62,japanese anemone,30,sweet william,1
+59,orange dahlia,102,blackberry lily,1
+62,japanese anemone,22,pincushion flower,1
+62,japanese anemone,20,giant white arum lily,1
+62,japanese anemone,13,king protea,1
+62,japanese anemone,12,colt's foot,1
+61,cautleya spicata,57,gaura,1
+61,cautleya spicata,37,cape flower,1
+61,cautleya spicata,29,artichoke,1
+61,cautleya spicata,27,prince of wales feathers,1
+61,cautleya spicata,24,red ginger,1
+60,pink-yellow dahlia?,97,mallow,1
+60,pink-yellow dahlia?,61,cautleya spicata,1
+60,pink-yellow dahlia?,59,orange dahlia,1
+60,pink-yellow dahlia?,6,tiger lily,1
+56,bishop of llandaff,26,corn poppy,1
+56,bishop of llandaff,13,king protea,1
+64,silverbush,23,fritillary,1
+56,bishop of llandaff,12,colt's foot,1
+53,primula,29,artichoke,1
+53,primula,27,prince of wales feathers,1
+53,primula,25,grape hyacinth,1
+53,primula,20,giant white arum lily,1
+53,primula,16,globe-flower,1
+53,primula,15,yellow iris,1
+53,primula,14,spear thistle,1
+52,wild pansy,101,trumpet creeper,1
+52,wild pansy,95,bougainvillea,1
+52,wild pansy,92,bee balm,1
+52,wild pansy,84,columbine,1
+52,wild pansy,70,tree poppy,1
+52,wild pansy,68,bearded iris,1
+52,wild pansy,59,orange dahlia,1
+52,wild pansy,53,primula,1
+52,wild pansy,48,buttercup,1
+52,wild pansy,45,bolero deep blue,1
+52,wild pansy,42,daffodil,1
+52,wild pansy,40,lenten rose,1
+52,wild pansy,37,cape flower,1
+52,wild pansy,34,mexican aster,1
+52,wild pansy,31,carnation,1
+52,wild pansy,29,artichoke,1
+52,wild pansy,24,red ginger,1
+52,wild pansy,22,pincushion flower,1
+52,wild pansy,21,fire lily,1
+52,wild pansy,18,peruvian lily,1
+52,wild pansy,16,globe-flower,1
+52,wild pansy,14,spear thistle,1
+53,primula,33,love in the mist,1
+53,primula,35,alpine sea holly,1
+53,primula,43,sword lily,1
+53,primula,101,trumpet creeper,1
+55,pelargonium,66,osteospermum,1
+55,pelargonium,38,great masterwort,1
+55,pelargonium,37,cape flower,1
+55,pelargonium,21,fire lily,1
+55,pelargonium,6,tiger lily,1
+54,sunflower,92,bee balm,1
+54,sunflower,90,canna lily,1
+54,sunflower,78,lotus,1
+54,sunflower,71,gazania,1
+54,sunflower,67,spring crocus,1
+54,sunflower,65,californian poppy,1
+54,sunflower,53,primula,1
+54,sunflower,41,barbeton daisy,1
+53,primula,96,camellia,1
+53,primula,48,buttercup,1
+53,primula,95,bougainvillea,1
+53,primula,92,bee balm,1
+53,primula,81,frangipani,1
+53,primula,76,morning glory,1
+53,primula,75,thorn apple,1
+53,primula,71,gazania,1
+53,primula,70,tree poppy,1
+53,primula,69,windflower,1
+53,primula,68,bearded iris,1
+53,primula,62,japanese anemone,1
+53,primula,56,bishop of llandaff,1
+53,primula,54,sunflower,1
+53,primula,51,petunia,1
+64,silverbush,16,globe-flower,1
+64,silverbush,62,japanese anemone,1
+52,wild pansy,10,globe thistle,1
+70,tree poppy,67,spring crocus,1
+72,azalea,82,clematis,1
+72,azalea,78,lotus,1
+72,azalea,58,geranium,1
+72,azalea,55,pelargonium,1
+72,azalea,49,oxeye daisy,1
+72,azalea,45,bolero deep blue,1
+72,azalea,38,great masterwort,1
+72,azalea,34,mexican aster,1
+72,azalea,29,artichoke,1
+72,azalea,23,fritillary,1
+72,azalea,22,pincushion flower,1
+72,azalea,17,purple coneflower,1
+72,azalea,12,colt's foot,1
+72,azalea,11,snapdragon,1
+72,azalea,7,moon orchid,1
+72,azalea,3,canterbury bells,1
+71,gazania,100,blanket flower,1
+71,gazania,78,lotus,1
+71,gazania,74,rose,1
+71,gazania,47,marigold,1
+71,gazania,38,great masterwort,1
+71,gazania,8,bird of paradise,1
+70,tree poppy,101,trumpet creeper,1
+70,tree poppy,98,mexican petunia,1
+70,tree poppy,95,bougainvillea,1
+70,tree poppy,88,cyclamen,1
+70,tree poppy,87,magnolia,1
+70,tree poppy,79,toad lily,1
+70,tree poppy,75,thorn apple,1
+72,azalea,83,hibiscus,1
+72,azalea,85,desert-rose,1
+72,azalea,90,canna lily,1
+73,water lily,36,ruby-lipped cattleya,1
+73,water lily,84,columbine,1
+73,water lily,82,clematis,1
+73,water lily,79,toad lily,1
+73,water lily,67,spring crocus,1
+73,water lily,65,californian poppy,1
+73,water lily,60,pink-yellow dahlia?,1
+73,water lily,58,geranium,1
+73,water lily,52,wild pansy,1
+73,water lily,49,oxeye daisy,1
+73,water lily,46,wallflower,1
+73,water lily,44,poinsettia,1
+73,water lily,39,siam tulip,1
+73,water lily,37,cape flower,1
+73,water lily,29,artichoke,1
+72,azalea,95,bougainvillea,1
+73,water lily,27,prince of wales feathers,1
+73,water lily,25,grape hyacinth,1
+73,water lily,20,giant white arum lily,1
+73,water lily,19,balloon flower,1
+73,water lily,16,globe-flower,1
+73,water lily,15,yellow iris,1
+73,water lily,11,snapdragon,1
+73,water lily,10,globe thistle,1
+73,water lily,7,moon orchid,1
+73,water lily,5,english marigold,1
+73,water lily,2,hard-leaved pocket orchid,1
+72,azalea,98,mexican petunia,1
+72,azalea,96,camellia,1
+70,tree poppy,73,water lily,1
+70,tree poppy,64,silverbush,1
+64,silverbush,70,tree poppy,1
+70,tree poppy,53,primula,1
+68,bearded iris,43,sword lily,1
+68,bearded iris,34,mexican aster,1
+68,bearded iris,30,sweet william,1
+68,bearded iris,29,artichoke,1
+68,bearded iris,25,grape hyacinth,1
+68,bearded iris,22,pincushion flower,1
+68,bearded iris,19,balloon flower,1
+68,bearded iris,13,king protea,1
+68,bearded iris,8,bird of paradise,1
+68,bearded iris,3,canterbury bells,1
+67,spring crocus,91,hippeastrum,1
+67,spring crocus,53,primula,1
+67,spring crocus,49,oxeye daisy,1
+67,spring crocus,38,great masterwort,1
+67,spring crocus,37,cape flower,1
+67,spring crocus,35,alpine sea holly,1
+67,spring crocus,32,garden phlox,1
+67,spring crocus,28,stemless gentian,1
+67,spring crocus,22,pincushion flower,1
+67,spring crocus,14,spear thistle,1
+67,spring crocus,8,bird of paradise,1
+67,spring crocus,7,moon orchid,1
+67,spring crocus,3,canterbury bells,1
+66,osteospermum,92,bee balm,1
+65,californian poppy,97,mallow,1
+65,californian poppy,59,orange dahlia,1
+65,californian poppy,51,petunia,1
+65,californian poppy,48,buttercup,1
+64,silverbush,95,bougainvillea,1
+68,bearded iris,53,primula,1
+68,bearded iris,67,spring crocus,1
+68,bearded iris,76,morning glory,1
+69,windflower,57,gaura,1
+70,tree poppy,38,great masterwort,1
+70,tree poppy,37,cape flower,1
+70,tree poppy,31,carnation,1
+70,tree poppy,28,stemless gentian,1
+70,tree poppy,22,pincushion flower,1
+70,tree poppy,12,colt's foot,1
+69,windflower,102,blackberry lily,1
+69,windflower,95,bougainvillea,1
+69,windflower,87,magnolia,1
+69,windflower,80,anthurium,1
+69,windflower,79,toad lily,1
+69,windflower,67,spring crocus,1
+69,windflower,64,silverbush,1
+69,windflower,50,common dandelion,1
+68,bearded iris,79,toad lily,1
+69,windflower,41,barbeton daisy,1
+69,windflower,38,great masterwort,1
+69,windflower,35,alpine sea holly,1
+69,windflower,31,carnation,1
+69,windflower,21,fire lily,1
+69,windflower,16,globe-flower,1
+69,windflower,15,yellow iris,1
+69,windflower,4,sweet pea,1
+68,bearded iris,95,bougainvillea,1
+68,bearded iris,92,bee balm,1
+68,bearded iris,90,canna lily,1
+68,bearded iris,83,hibiscus,1
+68,bearded iris,82,clematis,1
+52,wild pansy,12,colt's foot,1
+52,wild pansy,3,canterbury bells,1
+36,ruby-lipped cattleya,38,great masterwort,1
+40,lenten rose,61,cautleya spicata,1
+41,barbeton daisy,74,rose,1
+41,barbeton daisy,69,windflower,1
+41,barbeton daisy,66,osteospermum,1
+41,barbeton daisy,64,silverbush,1
+41,barbeton daisy,58,geranium,1
+41,barbeton daisy,56,bishop of llandaff,1
+41,barbeton daisy,54,sunflower,1
+41,barbeton daisy,47,marigold,1
+41,barbeton daisy,46,wallflower,1
+41,barbeton daisy,40,lenten rose,1
+41,barbeton daisy,38,great masterwort,1
+41,barbeton daisy,36,ruby-lipped cattleya,1
+41,barbeton daisy,33,love in the mist,1
+41,barbeton daisy,31,carnation,1
+41,barbeton daisy,30,sweet william,1
+41,barbeton daisy,28,stemless gentian,1
+41,barbeton daisy,25,grape hyacinth,1
+41,barbeton daisy,24,red ginger,1
+41,barbeton daisy,23,fritillary,1
+41,barbeton daisy,21,fire lily,1
+41,barbeton daisy,18,peruvian lily,1
+41,barbeton daisy,13,king protea,1
+41,barbeton daisy,10,globe thistle,1
+41,barbeton daisy,3,canterbury bells,1
+41,barbeton daisy,1,pink primrose,1
+40,lenten rose,100,blanket flower,1
+40,lenten rose,99,bromelia,1
+40,lenten rose,87,magnolia,1
+40,lenten rose,84,columbine,1
+41,barbeton daisy,81,frangipani,1
+41,barbeton daisy,85,desert-rose,1
+41,barbeton daisy,88,cyclamen,1
+42,daffodil,52,wild pansy,1
+43,sword lily,25,grape hyacinth,1
+43,sword lily,24,red ginger,1
+43,sword lily,18,peruvian lily,1
+43,sword lily,16,globe-flower,1
+43,sword lily,15,yellow iris,1
+43,sword lily,14,spear thistle,1
+42,daffodil,78,lotus,1
+42,daffodil,73,water lily,1
+42,daffodil,71,gazania,1
+42,daffodil,62,japanese anemone,1
+42,daffodil,57,gaura,1
+42,daffodil,54,sunflower,1
+42,daffodil,53,primula,1
+42,daffodil,47,marigold,1
+41,barbeton daisy,89,watercress,1
+42,daffodil,43,sword lily,1
+42,daffodil,41,barbeton daisy,1
+42,daffodil,31,carnation,1
+42,daffodil,23,fritillary,1
+42,daffodil,22,pincushion flower,1
+42,daffodil,21,fire lily,1
+42,daffodil,20,giant white arum lily,1
+42,daffodil,15,yellow iris,1
+41,barbeton daisy,101,trumpet creeper,1
+41,barbeton daisy,96,camellia,1
+41,barbeton daisy,95,bougainvillea,1
+41,barbeton daisy,92,bee balm,1
+41,barbeton daisy,90,canna lily,1
+40,lenten rose,75,thorn apple,1
+40,lenten rose,57,gaura,1
+43,sword lily,34,mexican aster,1
+40,lenten rose,51,petunia,1
+38,great masterwort,57,gaura,1
+38,great masterwort,55,pelargonium,1
+38,great masterwort,51,petunia,1
+38,great masterwort,41,barbeton daisy,1
+38,great masterwort,34,mexican aster,1
+38,great masterwort,30,sweet william,1
+38,great masterwort,28,stemless gentian,1
+38,great masterwort,21,fire lily,1
+38,great masterwort,11,snapdragon,1
+37,cape flower,94,foxglove,1
+37,cape flower,84,columbine,1
+37,cape flower,74,rose,1
+37,cape flower,55,pelargonium,1
+37,cape flower,44,poinsettia,1
+37,cape flower,43,sword lily,1
+37,cape flower,34,mexican aster,1
+37,cape flower,30,sweet william,1
+37,cape flower,10,globe thistle,1
+37,cape flower,4,sweet pea,1
+36,ruby-lipped cattleya,98,mexican petunia,1
+36,ruby-lipped cattleya,94,foxglove,1
+36,ruby-lipped cattleya,93,ball moss,1
+36,ruby-lipped cattleya,91,hippeastrum,1
+36,ruby-lipped cattleya,79,toad lily,1
+36,ruby-lipped cattleya,77,passion flower,1
+36,ruby-lipped cattleya,75,thorn apple,1
+36,ruby-lipped cattleya,72,azalea,1
+36,ruby-lipped cattleya,49,oxeye daisy,1
+36,ruby-lipped cattleya,41,barbeton daisy,1
+38,great masterwort,61,cautleya spicata,1
+38,great masterwort,68,bearded iris,1
+38,great masterwort,72,azalea,1
+40,lenten rose,6,tiger lily,1
+40,lenten rose,46,wallflower,1
+40,lenten rose,39,siam tulip,1
+40,lenten rose,38,great masterwort,1
+40,lenten rose,32,garden phlox,1
+40,lenten rose,31,carnation,1
+40,lenten rose,30,sweet william,1
+40,lenten rose,26,corn poppy,1
+40,lenten rose,25,grape hyacinth,1
+40,lenten rose,22,pincushion flower,1
+40,lenten rose,20,giant white arum lily,1
+40,lenten rose,16,globe-flower,1
+40,lenten rose,14,spear thistle,1
+40,lenten rose,13,king protea,1
+39,siam tulip,84,columbine,1
+38,great masterwort,75,thorn apple,1
+39,siam tulip,77,passion flower,1
+39,siam tulip,72,azalea,1
+39,siam tulip,60,pink-yellow dahlia?,1
+39,siam tulip,55,pelargonium,1
+39,siam tulip,45,bolero deep blue,1
+39,siam tulip,35,alpine sea holly,1
+39,siam tulip,29,artichoke,1
+39,siam tulip,28,stemless gentian,1
+39,siam tulip,27,prince of wales feathers,1
+39,siam tulip,14,spear thistle,1
+39,siam tulip,1,pink primrose,1
+38,great masterwort,91,hippeastrum,1
+38,great masterwort,85,desert-rose,1
+43,sword lily,31,carnation,1
+43,sword lily,36,ruby-lipped cattleya,1
+51,petunia,100,blanket flower,1
+46,wallflower,90,canna lily,1
+49,oxeye daisy,75,thorn apple,1
+49,oxeye daisy,62,japanese anemone,1
+49,oxeye daisy,53,primula,1
+49,oxeye daisy,44,poinsettia,1
+49,oxeye daisy,42,daffodil,1
+49,oxeye daisy,38,great masterwort,1
+49,oxeye daisy,36,ruby-lipped cattleya,1
+49,oxeye daisy,22,pincushion flower,1
+49,oxeye daisy,12,colt's foot,1
+49,oxeye daisy,7,moon orchid,1
+48,buttercup,102,blackberry lily,1
+48,buttercup,89,watercress,1
+48,buttercup,76,morning glory,1
+48,buttercup,71,gazania,1
+48,buttercup,49,oxeye daisy,1
+48,buttercup,43,sword lily,1
+48,buttercup,42,daffodil,1
+48,buttercup,33,love in the mist,1
+48,buttercup,21,fire lily,1
+48,buttercup,15,yellow iris,1
+48,buttercup,6,tiger lily,1
+48,buttercup,5,english marigold,1
+47,marigold,90,canna lily,1
+47,marigold,75,thorn apple,1
+47,marigold,74,rose,1
+47,marigold,54,sunflower,1
+47,marigold,43,sword lily,1
+47,marigold,16,globe-flower,1
+46,wallflower,92,bee balm,1
+49,oxeye daisy,82,clematis,1
+49,oxeye daisy,85,desert-rose,1
+50,common dandelion,28,stemless gentian,1
+51,petunia,28,stemless gentian,1
+51,petunia,99,bromelia,1
+51,petunia,78,lotus,1
+51,petunia,77,passion flower,1
+51,petunia,75,thorn apple,1
+51,petunia,62,japanese anemone,1
+51,petunia,61,cautleya spicata,1
+51,petunia,55,pelargonium,1
+51,petunia,52,wild pansy,1
+51,petunia,48,buttercup,1
+51,petunia,41,barbeton daisy,1
+51,petunia,39,siam tulip,1
+51,petunia,38,great masterwort,1
+51,petunia,33,love in the mist,1
+51,petunia,26,corn poppy,1
+50,common dandelion,40,lenten rose,1
+51,petunia,24,red ginger,1
+51,petunia,23,fritillary,1
+51,petunia,21,fire lily,1
+51,petunia,18,peruvian lily,1
+51,petunia,14,spear thistle,1
+51,petunia,9,monkshood,1
+51,petunia,6,tiger lily,1
+51,petunia,1,pink primrose,1
+50,common dandelion,90,canna lily,1
+50,common dandelion,57,gaura,1
+50,common dandelion,48,buttercup,1
+50,common dandelion,47,marigold,1
+50,common dandelion,41,barbeton daisy,1
+46,wallflower,91,hippeastrum,1
+46,wallflower,88,cyclamen,1
+43,sword lily,42,daffodil,1
+46,wallflower,84,columbine,1
+44,poinsettia,61,cautleya spicata,1
+44,poinsettia,38,great masterwort,1
+44,poinsettia,14,spear thistle,1
+44,poinsettia,13,king protea,1
+44,poinsettia,6,tiger lily,1
+44,poinsettia,4,sweet pea,1
+43,sword lily,99,bromelia,1
+43,sword lily,96,camellia,1
+43,sword lily,95,bougainvillea,1
+43,sword lily,93,ball moss,1
+43,sword lily,89,watercress,1
+43,sword lily,88,cyclamen,1
+43,sword lily,87,magnolia,1
+43,sword lily,85,desert-rose,1
+43,sword lily,83,hibiscus,1
+43,sword lily,79,toad lily,1
+43,sword lily,75,thorn apple,1
+43,sword lily,74,rose,1
+43,sword lily,72,azalea,1
+43,sword lily,71,gazania,1
+43,sword lily,70,tree poppy,1
+43,sword lily,67,spring crocus,1
+43,sword lily,66,osteospermum,1
+43,sword lily,56,bishop of llandaff,1
+43,sword lily,54,sunflower,1
+43,sword lily,53,primula,1
+43,sword lily,51,petunia,1
+43,sword lily,49,oxeye daisy,1
+43,sword lily,46,wallflower,1
+44,poinsettia,84,columbine,1
+44,poinsettia,85,desert-rose,1
+44,poinsettia,87,magnolia,1
+45,bolero deep blue,55,pelargonium,1
+46,wallflower,57,gaura,1
+46,wallflower,54,sunflower,1
+46,wallflower,51,petunia,1
+46,wallflower,41,barbeton daisy,1
+46,wallflower,38,great masterwort,1
+46,wallflower,37,cape flower,1
+46,wallflower,29,artichoke,1
+46,wallflower,26,corn poppy,1
+46,wallflower,21,fire lily,1
+46,wallflower,16,globe-flower,1
+46,wallflower,11,snapdragon,1
+45,bolero deep blue,82,clematis,1
+45,bolero deep blue,68,bearded iris,1
+45,bolero deep blue,31,carnation,1
+44,poinsettia,88,cyclamen,1
+45,bolero deep blue,30,sweet william,1
+45,bolero deep blue,28,stemless gentian,1
+45,bolero deep blue,27,prince of wales feathers,1
+45,bolero deep blue,10,globe thistle,1
+45,bolero deep blue,9,monkshood,1
+45,bolero deep blue,3,canterbury bells,1
+44,poinsettia,101,trumpet creeper,1
+44,poinsettia,100,blanket flower,1
+44,poinsettia,96,camellia,1
+44,poinsettia,95,bougainvillea,1
+44,poinsettia,94,foxglove,1
+44,poinsettia,91,hippeastrum,1
+44,poinsettia,89,watercress,1
+102,blackberry lily,101,trumpet creeper,1

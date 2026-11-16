@@ -1,0 +1,44 @@
+[
+  {
+    "experiment": "E7",
+    "feature": "h8_hsv",
+    "params": {
+      "criterion": "gini",
+      "max_depth": 20,
+      "min_samples_leaf": 1
+    },
+    "accuracy": 0.09215686274509804,
+    "macro_f1": 0.08911041964797212,
+    "fit_seconds": 5.158221874997253,
+    "predict_seconds": 0.0007435840088874102,
+    "pca_fit_seconds": 0.0
+  },
+  {
+    "experiment": "E6_size128",
+    "feature": "E6_size128",
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "accuracy": 0.22549019607843138,
+    "macro_f1": 0.2033994301707549,
+    "fit_seconds": 0.0005400000081863254,
+    "predict_seconds": 0.01233558300009463,
+    "pca_fit_seconds": 0.1021965830004774
+  },
+  {
+    "experiment": "E6_bins32",
+    "feature": "E6_bins32",
+    "params": {
+      "n_neighbors": 3,
+      "metric": "cosine",
+      "weights": "distance"
+    },
+    "accuracy": 0.23431372549019608,
+    "macro_f1": 0.21511805056276034,
+    "fit_seconds": 0.0007220410043373704,
+    "predict_seconds": 0.009074084009625949,
+    "pca_fit_seconds": 0.030763749993639067
+  }
+]

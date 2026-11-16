@@ -1,9 +1,5 @@
-# Contributing
+# Đóng góp
 
-Use a branch and a Python 3.11 virtual environment with `requirements-v4-lock.txt`; the verified lock is macOS arm64 and another platform may need compatible wheels. Never commit raw data, generated binaries, caches or model pickles. Compact CSV/JSON result evidence can be tracked after review; preserve existing scores and provenance. Preserve official dataset splits and experiment IDs E1–E6.
+Dùng Python 3.11 và `requirements-v4-lock.txt`; giữ split Oxford, không đưa ảnh, cache hoặc pickle vào Git. Mọi scaler/PCA phải fit trên train hoặc fold train; chỉ chọn cấu hình bằng validation. Test đã được thực hiện cho E1 và E6 16 bin; **không chạy lại**. Đọc [kiểm toán quy trình](docs/kiem_toan_quy_trinh.md) trước khi diễn giải kết quả.
 
-Keep V1–V3 artifacts and historical scores unchanged. Learned transforms belong inside the training fold; use validation for development and never select or tune with the official test. Notebook 05 and `python -m src.pipeline all` perform the historical V1 test evaluation; do not rerun them as routine QA. `python -m src.pipeline_v2` regenerates V2 outputs, so run it in an isolated copy if the historical outputs must be preserved. Ask the project owner before any new final E6 test evaluation.
-
-Before submitting, run `python -m pytest -q`, `python -m scripts.check_v4_audit`, and `python -m scripts.verify_v4_notebooks` where the relevant local artifacts and loopback access are available. The V4 integration tests depend on the trusted frozen model, feature cache and official data. Jupyter needs local loopback. Explain reproducibility, observed results and limitations, and update `AI_USAGE.md` for assistance used.
-
-The model is a Python pickle: only load the original trusted local file and manifest. A matching local hash detects accidental drift but does not authenticate a maliciously replaced manifest and model. Changing trained model or preprocessing requires a new, reviewed versioned manifest and a separate documented evaluation protocol; never overwrite the frozen one.
+Chạy `python -m pytest -q` và báo rõ các bước đã kiểm tra. Output CSV/JSON nhỏ trong `results/v5`, `results/final_test`, `results/v4` là bằng chứng; notebook đã thực thi trong `results/notebooks` là log lịch sử, không phải mã nguồn. Chỉ nạp pickle từ nguồn tin cậy. Ghi hỗ trợ AI trong `AI_USAGE.md`; không tự gán phần việc cho thành viên. Không chạy lại đánh giá test cuối hoặc xóa khóa/output để vượt qua cơ chế bảo vệ.
