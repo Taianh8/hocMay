@@ -24,7 +24,13 @@ CV lấy năm fold từ train; dấu `—` nghĩa là chưa báo cáo. Test E1/E
 
 ### 1. Cài đặt môi trường và dữ liệu
 
-Tải [Oxford 102 Flowers](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/) và đặt các tệp `102flowers.tgz`, `imagelabels.mat`, `setid.mat` cùng thư mục `jpg/` vào `data/raw/`. Giữ nguyên split chính thức 1.020 ảnh train, 1.020 ảnh validation và 6.149 ảnh test.
+Tải và chuẩn bị [Oxford 102 Flowers](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/) bằng script (script tự kiểm tra SHA-256 và giải nén ảnh):
+
+```bash
+python scripts/download_dataset.py
+```
+
+Script có thể chạy lại an toàn; dùng `--force` để tải lại. Dữ liệu được đặt trong `data/raw/` với split chính thức 1.020 ảnh train, 1.020 ảnh validation và 6.149 ảnh test.
 
 Cài Python 3.11, tạo và kích hoạt môi trường:
 
