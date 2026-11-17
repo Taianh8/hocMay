@@ -11,11 +11,11 @@ FALLBACK = ROOT / 'configs/flowers102_labels.json'
 
 def load_catalog() -> dict[int, dict]:
     """Đọc 102 tên; kiểm tra thứ tự và tên gốc theo bảng TFDS đã lưu."""
-    reference = json.loads(FALLBACK.read_text())['labels']
+    reference = json.loads(FALLBACK.read_text(encoding='utf-8'))['labels']
     if len(reference) != 102 or [row['class_id'] for row in reference] != list(range(1, 103)):
         raise ValueError('Bảng tên tham chiếu không đủ 102 lớp theo thứ tự.')
     if CATALOG.is_file():
-        raw = json.loads(CATALOG.read_text())
+        raw = json.loads(CATALOG.read_text(encoding='utf-8'))
         if not isinstance(raw, dict) or set(raw) != {str(i) for i in range(1, 103)}:
             raise ValueError('Bảng tên hoa phải có đúng các ID 1–102.')
         data = [{'class_id': i, 'name_en': raw[str(i)]['name_en'], 'name_vi': raw[str(i)].get('name_vi')} for i in range(1, 103)]
