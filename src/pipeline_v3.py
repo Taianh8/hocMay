@@ -8,7 +8,6 @@ import hashlib
 import json
 import os
 from pathlib import Path
-import resource
 import subprocess
 import sys
 from time import perf_counter
@@ -16,6 +15,7 @@ from time import perf_counter
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import psutil
 import yaml
 from PIL import Image
 from scipy.io import loadmat
@@ -27,6 +27,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from .features_v2 import hog_color
 from .preprocessing import preprocess
 from .utils import ROOT, digest, save_json
+
+try:
+    import resource
+except ImportError:
+    resource = None
 
 OUT = ROOT / 'results/v3'
 WORK = OUT / 'work'
@@ -143,8 +148,12 @@ def worker(model_name, fold_number, seed):
     X = np.load(WORK/f"{model['feature']}.npy"); y = np.load(WORK/'labels.npy')
     folds = json.loads((OUT/'metrics/folds.json').read_text()); fold = folds[fold_number]
     result = run_fold(X, y, np.array(fold['train_index']), np.array(fold['holdout_index']), model, seed)
-    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-    result['peak_rss_bytes'] = int(rss if sys.platform == 'darwin' else rss * 1024)
+    if resource is not None:
+        rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        peak_rss = rss if sys.platform == 'darwin' else rss * 1024
+    else:
+        peak_rss = psutil.Process().memory_info().rss
+    result['peak_rss_bytes'] = int(peak_rss)
     result.update(experiment=model_name, fold=fold_number+1, pca_seed=seed if model_name == 'E6' else None)
     print(json.dumps(result))
 
