@@ -20,14 +20,14 @@ def test_flower_names_json_structure():
     import json
     p = ROOT / 'configs/flower_names.json'
     assert p.is_file()
-    data = json.loads(p.read_text())
+    data = json.loads(p.read_text(encoding='utf-8'))
     assert len(data) == 102
     for i in range(1, 103):
         assert str(i) in data
         assert isinstance(data[str(i)]['name_en'], str) and len(data[str(i)]['name_en']) > 0
 
 
-def test_top_k_predictions():
+def test_top_k_predictions(integration_artifacts):
     from src.inference import predict_top_k
     manifest, payload = load_frozen_model(default_manifest_path())
     data = (ROOT / 'data/raw/jpg/image_06765.jpg').read_bytes()
@@ -43,7 +43,7 @@ def test_top_k_predictions():
     assert c_ids[0] == predict_image(data, manifest, payload)
 
 
-def test_references_are_training_images_of_predicted_class():
+def test_references_are_training_images_of_predicted_class(integration_artifacts):
     manifest, payload = load_frozen_model(default_manifest_path())
     data=(ROOT/'data/raw/jpg/image_06765.jpg').read_bytes()
     class_id, projected = predict_with_features(data, manifest, payload)
@@ -58,7 +58,7 @@ def test_references_are_training_images_of_predicted_class():
         assert image_id in train and labels[image_id-1]==class_id
 
 
-def test_reference_mismatch_rejected():
+def test_reference_mismatch_rejected(integration_artifacts):
     manifest, payload = load_frozen_model(default_manifest_path())
     manifest=dict(manifest);manifest['sha256']=dict(manifest['sha256'])
     manifest['sha256']['data/processed/features_v2.npz']='0'*64
@@ -69,7 +69,7 @@ def test_reference_mismatch_rejected():
 def test_catalog_rejects_wrong_official_name(tmp_path, monkeypatch):
     import json
     import src.flower_catalog as catalog_module
-    data=json.loads((ROOT/'configs/flower_names.json').read_text())
+    data=json.loads((ROOT/'configs/flower_names.json').read_text(encoding='utf-8'))
     data['92']['name_en']='wrong flower'
     path=tmp_path/'flower_names.json'; path.write_text(json.dumps(data))
     monkeypatch.setattr(catalog_module,'CATALOG',path)

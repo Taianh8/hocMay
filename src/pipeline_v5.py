@@ -28,7 +28,7 @@ CACHE_PATH = OUT / 'features_v5.npz'
 
 
 def load_config():
-    with CFG_PATH.open() as f:
+    with CFG_PATH.open(encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 

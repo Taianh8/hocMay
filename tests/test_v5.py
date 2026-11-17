@@ -16,7 +16,7 @@ def test_v5_config_and_unified_comparison():
 
     comp_file = ROOT / 'results/v5/unified_comparison.json'
     assert comp_file.is_file(), "unified_comparison.json should exist"
-    data = json.loads(comp_file.read_text())
+    data = json.loads(comp_file.read_text(encoding='utf-8'))
     assert data['selected_model'] == 'E6'
     assert 'validation macro F1' in data['selection_rule']
     assert len(data['unified_comparison']) >= 7

@@ -61,11 +61,13 @@ Trong VS Code mở `notebooks/00_data_source.ipynb`, chọn kernel **Hoa Oxford 
 
 Notebook 00–04 chuẩn bị dữ liệu, đặc trưng và mô hình nền; 05–08 đánh giá và phân tích lỗi; 09–10 tái lập các thí nghiệm V2/V3 khi cần. Lần đầu tạo feature/model có thể mất vài phút. Notebook không chạy lại đánh giá test cuối; không xóa khóa hoặc output trong `results/final_test/`.
 
-Có thể kiểm tra nhanh các bất biến của mã bằng:
+Có thể kiểm tra các bất biến của mã bằng:
 
 ```bash
 python -m pytest -q
 ```
+
+Các kiểm thử tích hợp model cần dataset và artifact V2 cục bộ. Nếu chưa có, pytest sẽ báo `skipped`; để chạy đủ, tải dataset và chạy `python scripts/chuan_bi_ui.py` trước, sau đó chạy lại pytest. Model và cache không nằm trong Git.
 
 ### 3. Chuẩn bị và chạy UI/UX
 

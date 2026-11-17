@@ -17,14 +17,14 @@ def load_current():
     return load_frozen_model(manifest_path())
 
 
-def test_frozen_model_load_and_training_dimensions():
+def test_frozen_model_load_and_training_dimensions(integration_artifacts):
     manifest, payload = load_current()
     assert manifest['experiment'] == 'E6' and payload['pca'].n_samples_ == 1020
     assert payload['model'].n_features_in_ == 128
     assert np.array_equal(payload['model'].classes_, np.arange(102))
 
 
-def test_image_features_and_prediction_match_saved_validation():
+def test_image_features_and_prediction_match_saved_validation(integration_artifacts):
     manifest, payload = load_current()
     with np.load(ROOT/'data/processed/features_v2.npz', allow_pickle=False) as cache:
         idx = np.flatnonzero(cache['splits']=='val')[0]
@@ -45,12 +45,12 @@ def test_modified_artifact_hash_rejected(tmp_path):
     with pytest.raises(ValueError, match='artifact đóng băng đã bị thay đổi'): load_frozen_model(path)
 
 
-def test_invalid_input_rejected():
+def test_invalid_input_rejected(integration_artifacts):
     manifest, _ = load_current()
     with pytest.raises(ValueError, match='Không thể giải mã ảnh'): image_features(b'not an image', manifest)
 
 
-def test_frozen_model_matches_only_official_training_features():
+def test_frozen_model_matches_only_official_training_features(integration_artifacts):
     manifest, payload = load_current()
     with np.load(ROOT/'data/processed/features_v2.npz', allow_pickle=False) as cache:
         train = cache['splits'] == 'train'
@@ -61,7 +61,7 @@ def test_frozen_model_matches_only_official_training_features():
         assert np.array_equal(y, payload['model']._y)
 
 
-def test_streamlit_upload_flow(monkeypatch):
+def test_streamlit_upload_flow(monkeypatch, integration_artifacts):
     from io import BytesIO
     import streamlit as st
     from streamlit.testing.v1 import AppTest
@@ -80,7 +80,7 @@ def test_streamlit_upload_flow(monkeypatch):
     assert any('ĐỐI CHIẾU BẰNG MẮT' in element.value for element in app.markdown)
 
 
-def test_modified_manifest_preprocessing_rejected(tmp_path):
+def test_modified_manifest_preprocessing_rejected(tmp_path, integration_artifacts):
     manifest = json.loads(manifest_path().read_text())
     manifest['features']['histogram_bins_per_channel'] = 8
     path = tmp_path/'manifest.json'; path.write_text(json.dumps(manifest))
