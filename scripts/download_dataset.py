@@ -5,9 +5,12 @@ import argparse
 import hashlib
 import os
 from pathlib import Path
+import ssl
 import tarfile
 from urllib.error import URLError
 from urllib.request import Request, urlopen
+
+import certifi
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,7 +45,8 @@ def download_file(name: str, destination: Path, force: bool) -> None:
     partial.unlink(missing_ok=True)
     request = Request(f"{BASE_URL}/{name}", headers={"User-Agent": "hocMay-dataset-downloader/1.0"})
     try:
-        with urlopen(request, timeout=60) as response, partial.open("wb") as stream:
+        context = ssl.create_default_context(cafile=certifi.where())
+        with urlopen(request, timeout=60, context=context) as response, partial.open("wb") as stream:
             total = response.headers.get("Content-Length")
             expected_size = int(total) if total else None
             downloaded = 0
