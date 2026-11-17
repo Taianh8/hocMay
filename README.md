@@ -75,6 +75,12 @@ Chuẩn bị các artifact UI từ model E6 train-only:
 python scripts/chuan_bi_ui.py
 ```
 
+Nếu thư mục `results/` có artifact V1/V2 dở dang sau một lần chạy bị ngắt, dùng:
+
+```bash
+python scripts/chuan_bi_ui.py --rebuild
+```
+
 Khởi động giao diện:
 
 ```bash

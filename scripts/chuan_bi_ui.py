@@ -1,6 +1,7 @@
 """Tạo model E6 và manifest cục bộ từ train/validation, không dùng test."""
 from pathlib import Path
 import json
+import argparse
 import subprocess
 import sys
 
@@ -15,6 +16,13 @@ from src.utils import config
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        '--rebuild',
+        action='store_true',
+        help='Tạo lại các artifact V1/V2 đang thiếu hoặc chưa đầy đủ.',
+    )
+    args = parser.parse_args()
     manifest = ROOT/'configs/e6_manifest_moi.json'
     if manifest.exists():
         load_frozen_model(manifest)
@@ -28,19 +36,21 @@ def main():
     if all(x.is_file() for x in baseline):
         p.selected(config())
         print('Dùng model V1 đã có.')
-    elif any(x.exists() for x in baseline):
-        raise SystemExit('Kết quả V1 chưa đầy đủ. Sao lưu hoặc kiểm tra results/metrics và results/models trước khi chạy lại.')
+    elif any(x.exists() for x in baseline) and not args.rebuild:
+        raise SystemExit('Kết quả V1 chưa đầy đủ. Chạy lại với --rebuild để tạo lại artifact.')
     else:
-        print('Đang kiểm tra dữ liệu và huấn luyện E1–E3 trên train/validation...', flush=True)
+        action = 'tạo lại' if args.rebuild else 'kiểm tra và huấn luyện'
+        print(f'Đang {action} E1–E3 trên train/validation...', flush=True)
         df = p.data(); cfg = config(); p.feature_cache(df, cfg); p.train(df, cfg)
     comparison = ROOT/'results/v2/metrics/comparison.json'
     model = ROOT/'results/v2/models/E6.pkl'
     if comparison.is_file() and model.is_file():
         print('Dùng kết quả V2 đã có.')
-    elif comparison.exists() or model.exists():
-        raise SystemExit('Kết quả V2 chưa đầy đủ. Sao lưu hoặc kiểm tra results/v2 trước khi chạy lại.')
+    elif (comparison.exists() or model.exists()) and not args.rebuild:
+        raise SystemExit('Kết quả V2 chưa đầy đủ. Chạy lại với --rebuild để tạo lại artifact.')
     else:
-        print('Đang huấn luyện E4–E6 trên train/validation...', flush=True)
+        action = 'tạo lại' if args.rebuild else 'huấn luyện'
+        print(f'Đang {action} E4–E6 trên train/validation...', flush=True)
         run_v2()
     data = json.loads(comparison.read_text())
     if data['selected_experiment'] != 'E6':
