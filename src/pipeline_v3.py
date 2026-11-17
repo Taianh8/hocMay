@@ -40,7 +40,7 @@ V2 = ROOT / 'results/v2'
 
 def load_config():
     """Load predeclared CV settings and the fixed historical winners."""
-    with (ROOT / 'configs/experiments_v3.yaml').open() as f: return yaml.safe_load(f)
+    with (ROOT / 'configs/experiments_v3.yaml').open(encoding='utf-8') as f: return yaml.safe_load(f)
 
 
 def fixed_winners(cfg):
@@ -54,7 +54,7 @@ def fixed_winners(cfg):
             raise ValueError(f'{name} configuration differs from the recorded V1/V2 winner')
     if digest(ROOT/'configs/experiments_v2.yaml') != data['config_sha256']:
         raise ValueError('V2 configuration differs from historical results')
-    with (ROOT/'configs/experiments_v2.yaml').open() as f:
+    with (ROOT/'configs/experiments_v2.yaml').open(encoding='utf-8') as f:
         v2_cfg = yaml.safe_load(f)
     if cfg['models']['E6']['pca_iterated_power'] != v2_cfg['pca_iterated_power'] or cfg['models']['E6']['pca_components'] != v2_cfg['pca_max_components'] or v2_cfg['seed'] not in cfg['pca_seeds']:
         raise ValueError('E6 PCA settings do not include the historical V2 configuration')

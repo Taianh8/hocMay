@@ -9,7 +9,7 @@ TEXT_SUFFIXES = {'.csv', '.json', '.md', '.py', '.txt', '.yaml', '.yml'}
 
 def config() -> dict:
     """Load experiment settings from the project root."""
-    with (ROOT / 'configs/experiments.yaml').open() as f:
+    with (ROOT / 'configs/experiments.yaml').open(encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 def digest(path: Path) -> str:

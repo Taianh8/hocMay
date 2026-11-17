@@ -32,7 +32,7 @@ V2_MANIFEST = V1_PROC / 'features_v2.json'
 
 def load_config():
     """Read V2 settings independently so V1 provenance remains unchanged."""
-    with (ROOT / 'configs/experiments_v2.yaml').open() as f:
+    with (ROOT / 'configs/experiments_v2.yaml').open(encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 
